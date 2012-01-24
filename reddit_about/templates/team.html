@@ -1,0 +1,27 @@
+<%!
+  from r2.lib.template_helpers import static
+%>
+<%namespace file="backbone_utils.html" import="backbone_collection"/>
+
+<%def name="person_grid(id, data)">
+  <ul id="${id}" class="inner people-grid">
+    %for person in data:
+      <li class="person ${person['username']}">
+          <img class="avatar" src="${static('about/avatar/' + person['username'].lower() + '.png')}" alt="${person['username']}'s avatar" />
+          <div class="username">${person['username']}</div>
+      </li>
+    %endfor
+  </ul>
+</%def>
+
+<div class="sort-menu">
+  ${thing.sort_menu}
+</div>
+${person_grid('team-grid', thing.team)}
+<h2 class="centered">reddit alumni</h2>
+${person_grid('alumni-grid', thing.alumni)}
+
+${backbone_collection('teamSorts', thing.sorts)}
+${backbone_collection('team', thing.team)}
+${backbone_collection('alumni', thing.alumni)}
+<script>$('.people-grid').addClass('loading')</script>

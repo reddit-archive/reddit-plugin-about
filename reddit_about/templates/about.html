@@ -1,0 +1,115 @@
+<%!
+  import locale
+  from r2.lib.template_helpers import format_number
+%>
+<%namespace file="utils.html" import="timestamp, _md, text_with_links" />
+<%namespace file="backbone_utils.html" import="backbone_collection"/>
+
+<%def name="stat(key, text, title=None)">
+  <%
+      text_start, text_end = map(unicode.strip, text.split('%(value)s'))
+  %>
+  <div class="stat stat-${key}">
+    <div>${text_start}</div>
+    <div class="value">${format_number(thing.stats[key])}</div>
+    <div>
+    %if title:
+      <span class="metric" title="${title}">${text_end}</span>
+    %else:
+      ${text_end}
+    %endif
+    </div>
+  </div>
+</%def>
+
+<div class="definition">
+  <div class="info">
+    <strong>reddit</strong><em>noun, verb</em>
+    <p class="etc">redd&middot;it, redd&middot;it&middot;ing; see redditor, subreddit</p>
+  </div>
+  <div class="entries">
+    <p><em>noun</em> a type of online community where users vote on content</p>
+    <p><em>verb</em> to take part in a reddit community</p>
+  </div>
+</div>
+<div class="quote">
+  <blockquote><a href="${thing.quote['url']}">&ldquo;${thing.quote['body']}&rdquo;</a></blockquote>
+  <div class="credit">
+    &mdash;<a href="${thing.quote['author_url']}" class="author">${thing.quote['author']}</a>,&nbsp;${timestamp(thing.quote['date'], thing.quote['date'].strftime('%D'))}
+  </div>
+  <div class="via">
+    ${text_with_links(_('submitted by %(user)s'),
+        user=dict(
+          link_text=thing.quote['via'],
+          path=thing.quote['via_url'],
+          _class='user'
+        )
+    )}
+    <a class="${thing.quote['comment_class']}" href="${thing.quote['permalink']}">${thing.quote['comment_label']}</a>
+  </div>
+</div>
+<div id="slideshow">
+  <div class="image">
+    <img class="current" src="${thing.images[0]['src']}" alt="${thing.images[0]['title']}" />
+  </div>
+  <div class="info">
+    <span class="controls">
+      <button class="prev">&lsaquo;</button>
+      <span class="count"><span class="current-index">1</span>&#32;/&#32;<span class="total">${len(thing.images)}</span></span>
+      <button class="next">&rsaquo;</button>
+    </span>
+    <span class="description">
+      <a class="title" href="${thing.images[0]['url']}">${thing.images[0]['title']}</a>
+      &#32;by
+      &#32;<a class="author" href="${thing.images[0]['author_url']}">${thing.images[0]['author']}</a>
+    </span>
+    <span class="via">
+      ${text_with_links(_('submitted by %(user)s'),
+          user=dict(
+            link_text=thing.images[0]['via'],
+            path=thing.images[0]['via_url'],
+            _class='user'
+          )
+      )}
+      <a class="${thing.images[0]['comment_class']}" href="${thing.images[0]['permalink']}">${thing.images[0]['comment_label']}</a>
+    </span>
+  </div>
+</div>
+<h2>${_('how reddit works')}</h2>
+<div class="howitworks inner">
+  <div class="voting">${_md('**redditors vote** on which stories and discussions are important. the hottest stories rise to the top, while cooler stories sink.')}</div>
+  <div class="comments">${_md('**comments can be posted on every story** on reddit. comments add information, context, and humor.')}</div>
+  <div class="communities">${_md('**anyone can create a community** (called "subreddits"). each subreddit is independent and moderated by a team of volunteers.')}</div>
+  <div class="opensource">${_md('**reddit is open source**. community members are constantly tinkering and contributing features, bug fixes, and translations back to the site.')}</div>
+</div>
+%if thing.stats:
+<h2>${_('stats at a glance')}</h2>
+<div class="inner">
+  ${stat('subreddits_active_past_day', _('today, reddit powers %(value)s active communities'), _('communities with a post or comment in the past day'))}
+  ${stat('redditors_visited_yesterday', _('consisting of over %(value)s active redditors'), _('logged-in redditors yesterday'))}
+  ${stat('country_count_yesterday', _('hailing from over %(value)s different countries'))}
+  ${stat('vote_count_past_day', _('casting over %(value)s votes'))}
+</div>
+%endif
+<h2>${_('history')}</h2>
+<div id="history" class="inner">
+  <span class="bglabel org">org</span>
+  <span class="bglabel culture">culture</span>
+  <ol class="events">
+    %for event in thing.events:
+      <li class="event ${event['class']}">
+        <a class="event-content" href="${event['url']}" target="_blank">
+          ${timestamp(event['date'], event['date'].strftime('%D'))}&#32;<span class="title">${event['title']}</span>
+        </a>
+      </li>
+    %endfor
+  </ol>
+</div>
+<h2>${_('brothers & sisters')}</h2>
+<ul class="sites inner">
+  %for site in thing.sites:
+    <li><a href="${site['url']}"><img src="${site["icon"]}" alt="${site['name']} icon" /> ${site['name']}</a></li>
+  %endfor
+</ul>
+
+${backbone_collection('slideshowImages', thing.images)}
