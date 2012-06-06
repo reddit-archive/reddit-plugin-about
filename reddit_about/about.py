@@ -12,7 +12,7 @@ from r2.controllers.reddit_base import RedditController
 from r2.models import Subreddit
 from r2.models.builder import IDBuilder
 from r2.lib.db.queries import CachedResults
-from r2.lib.template_helpers import comment_label
+from r2.lib.template_helpers import static, comment_label
 from pages import AboutPage, AboutTitle, About, Team, Postcards, AlienMedia
 
 def parse_date_text(date_str):
@@ -108,7 +108,7 @@ class AboutController(RedditController):
         for image_link in image_links:
             image = self.image_title_re.match(image_link.title).groupdict()
             image['url'] = image_link.url
-            image['src'] = getattr(image_link, 'slideshow_src', image_link.url)
+            image['src'] = getattr(image_link, 'slideshow_src', static('about/slideshow/%s.jpg' % image_link._id36))
             image['author_url'] = getattr(image_link, 'author_url', image['url'])
             image['via'] = image['via'] or image_link.author.name
             image['via_url'] = '/user/' + image['via']
