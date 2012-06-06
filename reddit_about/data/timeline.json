@@ -1,8 +1,12 @@
 [
     {"date": "2005-06-23", "class": "org important", "title": "reddit goes live", "url": "http://www.flickr.com/photos/33809408@N00/315068778/"},
+    {"date": "2005-12-12", "class": "org important", "title": "reddit adds comments", "url": "http://blog.reddit.com/2005/12/comments.html"},
+    {"date": "2006-02-20", "class": "org important", "title": "multilingual reddit", "url": "http://blog.reddit.com/2006/02/reddit-becomes-multilingual.html"},
+    {"date": "2006-04-01", "class": "culture aprilfools", "title": "orwellian reddit", "url": "http://blog.reddit.com/2007/04/reddit-now-doubleplusgood.html"},
+    {"date": "2006-05-06", "class": "org important", "title": "orangered envelope", "url": "http://blog.reddit.com/2007/03/everyone-likes-getting-mail.html"},
     {"date": "2007-04-01", "class": "culture aprilfools", "title": "reddit censors the front page", "url": "http://blog.reddit.com/2007/04/reddit-now-doubleplusgood.html"},
     {"date": "2007-11-26", "class": "culture important", "title": "Mr. Splashy Pants", "url": "http://www.reddit.com/comments/61gqb/greenpeace_are_having_a_vote_to_name_a_whale_they"},
-    {"date": "2008-03-12", "class": "org important", "title": "subreddits launched", "url": "http://blog.reddit.com/2008/03/make-your-own-reddit.html"},
+    {"date": "2008-03-12", "class": "org important", "title": "user subreddits launched", "url": "http://blog.reddit.com/2008/03/make-your-own-reddit.html"},
     {"date": "2008-04-01", "class": "culture aprilfools", "title": "karma exchange marketplace opens", "url": "http://blog.reddit.com/2008/04/put-those-dollars-into-something-safe.html"},
     {"date": "2008-06-17", "class": "org important", "title": "reddit goes open source", "url": "http://blog.reddit.com/2008/06/reddit-goes-open-source.html"},
     {"date": "2008-09-09", "class": "culture important", "title": "crowbar shipped to CERN", "url": "http://blog.reddit.com/2008/09/crowbar-headcrab-and-half-life-strategy.html"},
