@@ -31,7 +31,7 @@ def read_csv(path):
             'wpm': tryconv(int, line[10]),
         }
         if line[11]:
-            u[line[12]] = tryconv(int, line[13])
+            u[line[12]] = tryconv(int, line[13], line[13])
 
         for k in u.keys():
             if u[k] is None:
