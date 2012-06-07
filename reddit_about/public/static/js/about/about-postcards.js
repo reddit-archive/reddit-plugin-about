@@ -498,6 +498,7 @@ var PostcardGridView = Backbone.View.extend({
             this.unzoom(true)
             this.zoomScroll = $(window).scrollTop()
             this.$el.addClass('zoomed')
+            this.trigger('showcard', postcard.model.id, side)
             var zoom = this.currentZoom = new PostcardZoomView({parent: postcard, zoomer: this})
             zoom.on('flip', this.onFlip, this)
             $('#about-postcards').append(zoom.render().el)
@@ -508,7 +509,6 @@ var PostcardGridView = Backbone.View.extend({
                 if (side == 'back') {
                     zoom.flip()
                 }
-                this.trigger('showcard', postcard.model.id, side)
             }, this))
         } else if (this.currentZoom.currentSide != side) {
             this.currentZoom.flip()
