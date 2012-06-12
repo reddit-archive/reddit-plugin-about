@@ -13,7 +13,3 @@ static: $(LESS_OUTPUTS)
 
 %.css : %.less
 	$(LESSC) $< $@
-
-.PHONY: reddit_make
-reddit_make:
-	echo "OTHER_STYLESHEETS += about.css"

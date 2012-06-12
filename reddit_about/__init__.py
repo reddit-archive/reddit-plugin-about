@@ -2,7 +2,7 @@ from os import path
 import json
 
 from r2.lib.plugin import Plugin
-from r2.lib.app_globals import ConfigValue
+from r2.lib.configparse import ConfigValue
 from r2.lib.js import Module
 
 def not_in_sr(environ, results):
