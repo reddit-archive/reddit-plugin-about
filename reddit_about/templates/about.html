@@ -85,7 +85,7 @@
 %if thing.stats:
 <h2>${_('stats at a glance')}</h2>
 <div class="inner">
-  ${stat('subreddits_active_past_day', _('today, reddit powers %(value)s active communities'), _('communities with a post or comment in the past day'))}
+  ${stat('subreddits_active_past_day', _('today, reddit powers %(value)s active communities'), _('communities with at least 5 posts or comments in the past day'))}
   ${stat('redditors_visited_yesterday', _('consisting of over %(value)s active redditors (in a day)'), _('logged-in redditors yesterday'))}
   ${stat('country_count_yesterday', _('hailing from over %(value)s different countries'))}
   ${stat('vote_count_past_day', _('casting over %(value)s votes'))}
