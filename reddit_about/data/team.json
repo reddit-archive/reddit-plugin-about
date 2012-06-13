@@ -1,6 +1,7 @@
 {
     "sorts": [
          {"id": "random", "title": "random", "dir": 1},
+         {"id": "username", "title": "username", "dir": 1},
          {"id": "new", "title": "new", "dir": -1},
          {"id": "top", "title": "top", "dir": -1},
          {"id": "beard", "title": "beard", "dir": -1},

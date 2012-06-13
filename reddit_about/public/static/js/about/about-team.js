@@ -65,7 +65,12 @@ SortableCollection = Backbone.Collection.extend({
         if (!sort) {
             return
         }
-        return sort.get('dir') * model.get(sort.id) || model.get('random')
+
+        var sortVal = model.get(sort.id)
+        if (_.isNumber(sortVal)) {
+            sortVal = sortVal * sort.get('dir')
+        }
+        return sortVal || model.get('random')
     }
 })
 
