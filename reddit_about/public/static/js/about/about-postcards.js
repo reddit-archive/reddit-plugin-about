@@ -484,9 +484,6 @@ var PostcardGridView = Backbone.View.extend({
 
     addAll: function() {
         this.collection.each(this.addOne, this)
-
-        // Ensure the viewport is full of postcards after collection load.
-        _.defer(this._scroll)
     },
 
     zoomById: function(cardId, side) {
