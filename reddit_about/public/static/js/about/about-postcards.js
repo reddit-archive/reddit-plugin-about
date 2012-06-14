@@ -85,7 +85,7 @@ PostcardCollection = Backbone.Collection.extend({
             dataType: 'jsonp',
             jsonp: false,
             jsonpCallback: 'postcardCallback' + ('chunk' in options ? options.chunk : ''),
-            cache: true
+            cache: options.chunk != null
         }, options))
     },
 
