@@ -110,7 +110,7 @@ PostcardRouter = Backbone.Router.extend({
             this.navigate('view/' + cardId + '/' + side, {replace: true})
         }, this)
         this.zoomer.on('hidecard', function(cardId) {
-            this.navigate('browse', {replace: true})
+            this.navigate('/', {replace: true})
         }, this)
     },
 
@@ -182,17 +182,22 @@ var PostcardInfoView = PostcardOverlayView.extend({
     },
 
     updateMap: function(zoom) {
+        var mapSize = 85
+
         this.$('.maplink').attr('href', mapURL({
             lat: this.model.get('latitude'),
             'long': this.model.get('longitude')
         }))
-        this.$('.map').attr('src', mapImageURL({
-            lat: this.model.get('latitude'),
-            'long': this.model.get('longitude'),
-            width: 85,
-            height: 85,
-            zoom: zoom
-        }))
+        this.$('.map')
+            .attr('src', mapImageURL({
+                lat: this.model.get('latitude'),
+                'long': this.model.get('longitude'),
+                width: mapSize,
+                height: mapSize,
+                zoom: zoom
+            }))
+            .width(mapSize)
+            .height(mapSize)
     },
 
     _target: function() {
@@ -210,7 +215,10 @@ var PostcardRedditView = PostcardOverlayView.extend({
     className: 'redditbutton',
 
     render: function() {
-        var iframe = $('<iframe src="'+redditButtonURL({url: window.location})+'">')
+        // Strip the # from the URL to normalize to the pushState-style permalink URL.
+        var postcardURL = encodeURIComponent(String(window.location).replace('#', '')),
+            iframe = $('<iframe src="'+redditButtonURL({url: postcardURL})+'">')
+
         iframe
             .css('opacity', 0)
             .load(function() {
@@ -569,9 +577,7 @@ r.about.pages['about-postcards'] = function() {
 
     var cardRouter = new PostcardRouter({zoomer: grid})
     postcards.load(function() {
-        if (!Backbone.history.start()) {
-            cardRouter.navigate('browse')
-        }
+        Backbone.history.start({pushState: true, root: '/about/postcards/'})
         $('.abouttitle h1')
             .find('.count').text(postcards.totalCount).end()
             .fadeIn(100)
