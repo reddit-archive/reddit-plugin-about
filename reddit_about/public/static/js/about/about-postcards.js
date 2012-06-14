@@ -182,17 +182,22 @@ var PostcardInfoView = PostcardOverlayView.extend({
     },
 
     updateMap: function(zoom) {
+        var mapSize = 85
+
         this.$('.maplink').attr('href', mapURL({
             lat: this.model.get('latitude'),
             'long': this.model.get('longitude')
         }))
-        this.$('.map').attr('src', mapImageURL({
-            lat: this.model.get('latitude'),
-            'long': this.model.get('longitude'),
-            width: 85,
-            height: 85,
-            zoom: zoom
-        }))
+        this.$('.map')
+            .attr('src', mapImageURL({
+                lat: this.model.get('latitude'),
+                'long': this.model.get('longitude'),
+                width: mapSize,
+                height: mapSize,
+                zoom: zoom
+            }))
+            .width(mapSize)
+            .height(mapSize)
     },
 
     _target: function() {
