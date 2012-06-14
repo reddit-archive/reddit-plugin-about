@@ -215,9 +215,9 @@ var PostcardRedditView = PostcardOverlayView.extend({
     className: 'redditbutton',
 
     render: function() {
-        // Strip the # from the URL to normalize to the pushState-style permalink URL.
-        var postcardURL = encodeURIComponent(String(window.location).replace('#', '')),
-            iframe = $('<iframe src="'+redditButtonURL({url: postcardURL})+'">')
+        // Canonicalize the URL to the pushState-style permalink URL.
+        var postcardURL = String(window.location).replace('#', '').replace(/\/(front|back)$/, ''),
+            iframe = $('<iframe src="'+redditButtonURL({url: encodeURIComponent(postcardURL)})+'">')
 
         iframe
             .css('opacity', 0)
@@ -424,7 +424,7 @@ var PostcardView = Backbone.View.extend({
     },
 
     zoom: function() {
-        this.options.zoomer.zoom(this)
+        this.options.zoomer.zoom(this, 'back')
     }
 })
 
@@ -501,7 +501,7 @@ var PostcardGridView = Backbone.View.extend({
     },
 
     zoom: function(postcard, side) {
-        side = side || 'back'
+        side = side || 'front'
         if (!this.currentZoom || postcard.model.id != this.currentZoom.model.id) {
             this.unzoom(true)
             this.zoomScroll = $(window).scrollTop()
