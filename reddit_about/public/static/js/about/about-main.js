@@ -14,6 +14,7 @@ AboutSlideshowView = SlideshowView.extend({
             .text(image.get('via'))
         this.$('.comments')
             .attr('class', image.get('comment_class'))
+            .attr('href', image.get('permalink'))
             .addClass('comments')
             .text(image.get('comment_label'))
         return this
