@@ -259,9 +259,13 @@
         @icon-size: 60px;
         @icon-spacing: 18px;
         @right-padding: 50px;
+        @vertical-spacing: 16px;
+        margin-bottom: -@vertical-spacing;
 
         div {
-            float: left;
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: @vertical-spacing;
             width: @inner-width / 2 - @icon-size - @icon-spacing - @right-padding;
             padding-left: @icon-size + @icon-spacing;
             padding-right: @right-padding;
