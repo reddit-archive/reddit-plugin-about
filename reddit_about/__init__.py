@@ -17,7 +17,8 @@ class About(Plugin):
     }
 
     js = {
-        'less': Module('lib/less-1.3.0.min.js',
+        'less': Module('less.js',
+            'lib/less-1.3.0.min.js',
             prefix='about/',
             should_compile=False
         ),
