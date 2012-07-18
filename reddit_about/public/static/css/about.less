@@ -348,22 +348,34 @@
         }
     }
 
-    .stat {
-        float: left;
-        width: @inner-width / 4;
-        text-align: center;
-
-        .value {
-            color: #555;
-            font-weight: bold;
-            font-size: 44px;
-            letter-spacing: -.1em;
-            text-shadow: 0 3px 5px @lightblue;
+    .statsgrid {
+        .yesterday {
+            margin-top: 1.5em;
         }
 
-        .metric {
-            border-bottom: 1px dotted #aaa;
-            cursor: help;
+        .stat {
+            width: @inner-width / 3;
+            display: inline-block;
+            text-align: center;
+
+            strong {
+                font-weight: bold;
+                color: orangered;
+            }
+
+            .value {
+                color: #555;
+                font-weight: bold;
+                font-size: 44px;
+                letter-spacing: -.1em;
+                text-shadow: 0 3px 5px @lightblue;
+            }
+
+            .metric p {
+                display: inline;
+                border-bottom: 1px dotted #aaa;
+                cursor: help;
+            }
         }
     }
 

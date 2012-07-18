@@ -1,20 +1,22 @@
 <%!
   import locale
   from r2.lib.template_helpers import format_number
+  from r2.lib.filters import safemarkdown
 %>
 <%namespace file="utils.html" import="timestamp, _md, text_with_links" />
 <%namespace file="backbone_utils.html" import="backbone_collection"/>
 
 <%def name="stat(key, text, title=None)">
   <%
-      text_start, text_end = map(unicode.strip, text.split('%(value)s'))
+    text_start, text_end = [unsafe(safemarkdown(s.strip(), wrap=False))
+                            for s in text.split('%(value)s')]
   %>
   <div class="stat stat-${key}">
     <div>${text_start}</div>
     <div class="value">${format_number(thing.stats[key])}</div>
     <div>
     %if title:
-      <span class="metric" title="${title}">${text_end}</span>
+      <div class="metric" title="${title}">${text_end}</div>
     %else:
       ${text_end}
     %endif
@@ -84,11 +86,17 @@
 </div>
 %if thing.stats:
 <h2>${_('stats at a glance')}</h2>
-<div class="inner">
-  ${stat('subreddits_active_past_day', _('today, reddit powers %(value)s active communities'), _('communities with at least 5 posts or comments in the past day'))}
-  ${stat('redditors_visited_yesterday', _('consisting of over %(value)s active redditors (in a day)'), _('logged-in redditors yesterday'))}
-  ${stat('country_count_yesterday', _('hailing from over %(value)s different countries'))}
-  ${stat('vote_count_past_day', _('casting over %(value)s votes'))}
+<div class="statsgrid inner">
+  <div class="line month">
+    ${stat('uniques_last_month', _('**last month**, reddit had %(value)s unique visitors'))}
+    ${stat('country_count_last_month', _('hailing from over %(value)s different countries'))}
+    ${stat('pageviews_last_month', _('viewing a total of %(value)s pages'))}
+  </div>
+  <div class="line yesterday">
+    ${stat('subreddits_active_yesterday', _('**yesterday**, reddit powered %(value)s active communities'), _('communities with at least 5 posts or comments in the past day'))}
+    ${stat('redditors_visited_yesterday', _('consisting of over %(value)s logged in redditors'), _('logged-in redditors yesterday'))}
+    ${stat('vote_count_yesterday', _('casting over %(value)s votes'))}
+  </div>
 </div>
 %endif
 <h2>${_('history')}</h2>

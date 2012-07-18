@@ -11,18 +11,25 @@ from r2.lib.db.tdb_sql import get_thing_table, get_rel_table
 from r2.lib.db.operators import asc
 from r2.lib.utils import timeago
 
-def subreddit_stats(config):
+def subreddit_stats(config, ranges):
+    def get_id(*args, **kwargs):
+        kwargs.setdefault('limit', 1)
+        results = list(kind._query(*args, **kwargs))
+        if not results:
+            return None
+        else:
+            return results[0]._id
+
     sr_counts = defaultdict(int)
     for kind in (Link, Comment):
         thing_table, data_table = get_thing_table(kind._type_id)
-        first_id = list(kind._query(kind.c._date > timeago('1 day'), sort=asc('_date'), limit=1))
-        if not first_id:
+        first_id = get_id(kind.c._date > ranges['yesterday'][0], sort=asc('_date'))
+        last_id = get_id(kind.c._date < ranges['yesterday'][1], sort=asc('_date'))
+        if not first_id or not last_id:
             continue
-        else:
-            first_id = first_id[0]._id
 
         q = sa.select([data_table.c.value, sa.func.count(data_table.c.value)],
-                (data_table.c.thing_id > first_id)
+                (data_table.c.thing_id > first_id & data_table.c.thing_id < last_id)
                     & (data_table.c.key == 'sr_id')
                     & (thing_table.c.thing_id == data_table.c.thing_id)
                     & (thing_table.c.spam == False),
@@ -31,9 +38,9 @@ def subreddit_stats(config):
         for sr_id, count in q.execute():
             sr_counts[sr_id] += count
 
-    return {'subreddits_active_past_day': len(list(count for count in sr_counts.itervalues() if count > 5))}
+    return {'subreddits_active_yesterday': len(list(count for count in sr_counts.itervalues() if count > 5))}
 
-def vote_stats(config):
+def vote_stats(config, ranges):
     stats = {}
 
     link_votes = Vote.rel(Account, Link)
@@ -41,13 +48,15 @@ def vote_stats(config):
 
     for name, rel in (('link', link_votes), ('comment', comment_votes)):
         table = get_rel_table(rel._type_id)[0]
-        q = table.count(table.c.date > timeago('1 day'))
-        stats[name+'_vote_count_past_day'] = q.execute().fetchone()[0]
+        q = table.count(
+                (table.c.date > ranges['yesterday'][0])
+                & (table.c.date < ranges['yesterday'][1]))
+        stats[name+'_vote_count_yesterday'] = q.execute().fetchone()[0]
 
-    stats['vote_count_past_day'] = stats['link_vote_count_past_day'] + stats['comment_vote_count_past_day']
+    stats['vote_count_yesterday'] = stats['link_vote_count_yesterday'] + stats['comment_vote_count_yesterday']
     return stats
 
-def ga_stats(config):
+def ga_stats(config, ranges):
     stats = {}
 
     from apiclient.discovery import build
@@ -73,27 +82,44 @@ def ga_stats(config):
 
     analytics = build("analytics", "v3", http=http)
 
-    today = datetime.date.today()
-    start_date = (today - datetime.timedelta(days=2)).strftime('%Y-%m-%d')
-    end_date = (today - datetime.timedelta(days=1)).strftime('%Y-%m-%d')
-    visitors = analytics.data().ga().get(
+    # get last month stats
+    month_stats = analytics.data().ga().get(
         ids='ga:24573069',
-        start_date=start_date,
-        end_date=end_date,
+        start_date=ranges['last_month'][0].strftime('%Y-%m-%d'),
+        end_date=ranges['last_month'][1].strftime('%Y-%m-%d'),
+        metrics='ga:visitors, ga:pageviews',
+        dimensions='ga:country'
+    ).execute()
+    stats['country_count_last_month'] = month_stats['totalResults']
+    stats['uniques_last_month'] = int(month_stats['totalsForAllResults']['ga:visitors'])
+    stats['pageviews_last_month'] = int(month_stats['totalsForAllResults']['ga:pageviews'])
+
+    # get yesterday's stats
+    day_loggedin_stats = analytics.data().ga().get(
+        ids='ga:24573069',
+        start_date=ranges['yesterday'][0].strftime('%Y-%m-%d'),
+        end_date=ranges['yesterday'][1].strftime('%Y-%m-%d'),
         metrics='ga:visitors',
-        dimensions='ga:country',
         filters='ga:customVarValue3=@loggedin'
     ).execute()
-
-    stats['country_count_yesterday'] = visitors['totalResults']
-    stats['redditors_visited_yesterday'] = int(visitors['totalsForAllResults']['ga:visitors'])
+    stats['redditors_visited_yesterday'] = int(day_loggedin_stats['totalsForAllResults']['ga:visitors'])
     return stats
 
 def update_stats(config):
+    today = datetime.date.today()
+    yesterday_start = (today - datetime.timedelta(days=2))
+    yesterday_end = (today - datetime.timedelta(days=1))
+    last_month_end = (today.replace(day=1) - datetime.timedelta(days=1))
+    last_month_start = last_month_end.replace(day=1)
+    ranges = {
+        'yesterday': (yesterday_start, yesterday_end),
+        'last_month': (last_month_start, last_month_end),
+    }
+
     stats = {}
     def run_stats(f):
         start_time = time.time()
-        stats.update(f(config))
+        stats.update(f(config, ranges))
         end_time = time.time()
         print >> sys.stderr, '%s took %0.2f seconds.' % (f.__name__, end_time - start_time)
 
