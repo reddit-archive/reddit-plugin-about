@@ -24,12 +24,13 @@ def subreddit_stats(config, ranges):
     for kind in (Link, Comment):
         thing_table, data_table = get_thing_table(kind._type_id)
         first_id = get_id(kind.c._date > ranges['yesterday'][0], sort=asc('_date'))
-        last_id = get_id(kind.c._date < ranges['yesterday'][1], sort=asc('_date'))
+        last_id = get_id(kind.c._date < ranges['yesterday'][1], sort=desc('_date'))
         if not first_id or not last_id:
             continue
 
         q = sa.select([data_table.c.value, sa.func.count(data_table.c.value)],
-                (data_table.c.thing_id > first_id & data_table.c.thing_id < last_id)
+                (data_table.c.thing_id > first_id)
+                    & (data_table.c.thing_id < last_id)
                     & (data_table.c.key == 'sr_id')
                     & (thing_table.c.thing_id == data_table.c.thing_id)
                     & (thing_table.c.spam == False),
