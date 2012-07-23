@@ -8,7 +8,7 @@ from collections import defaultdict
 from pylons import g
 from r2.models import Account, Link, Comment, Vote
 from r2.lib.db.tdb_sql import get_thing_table, get_rel_table
-from r2.lib.db.operators import asc
+from r2.lib.db.operators import asc, desc
 from r2.lib.utils import timeago
 
 def subreddit_stats(config, ranges):
@@ -129,7 +129,7 @@ def update_stats(config):
     run_stats(vote_stats)
     run_stats(ga_stats)
     print >> sys.stderr, 'finished:', stats
-    g.memcache.set('about_reddit_stats', stats)
+    g.memcache.set('about_reddit_stats', stats, time=60*60*48)
 
 def main(config_file):
     parser = ConfigParser.RawConfigParser()
