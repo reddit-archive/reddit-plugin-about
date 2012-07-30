@@ -129,7 +129,7 @@ def update_stats(config):
     run_stats(vote_stats)
     run_stats(ga_stats)
     print >> sys.stderr, 'finished:', stats
-    g.memcache.set('about_reddit_stats', stats, time=60*60*48)
+    g.memcache.set('about_reddit_stats', stats, time=60*60*24*20)
 
 def main(config_file):
     parser = ConfigParser.RawConfigParser()
