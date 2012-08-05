@@ -15,6 +15,7 @@ from r2.lib.db.queries import CachedResults
 from r2.lib.template_helpers import static, comment_label
 from pages import AboutPage, AboutTitle, About, Team, Postcards, AlienMedia
 
+
 def parse_date_text(date_str):
     if not date_str:
         return None
@@ -28,6 +29,7 @@ def parse_date_text(date_str):
         parsed_date = parsed_date.replace(tzinfo=g.tz)
 
     return parsed_date
+
 
 @add_controller
 class AboutController(RedditController):

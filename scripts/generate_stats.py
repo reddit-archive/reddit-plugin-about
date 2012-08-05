@@ -3,13 +3,16 @@ import time
 import datetime
 import httplib2
 import ConfigParser
-import sqlalchemy as sa
 from collections import defaultdict
+
 from pylons import g
+import sqlalchemy as sa
+
 from r2.models import Account, Link, Comment, Vote
 from r2.lib.db.tdb_sql import get_thing_table, get_rel_table
 from r2.lib.db.operators import asc, desc
 from r2.lib.utils import timeago
+
 
 def subreddit_stats(config, ranges):
     def get_id(*args, **kwargs):
@@ -41,6 +44,7 @@ def subreddit_stats(config, ranges):
 
     return {'subreddits_active_yesterday': len(list(count for count in sr_counts.itervalues() if count > 5))}
 
+
 def vote_stats(config, ranges):
     stats = {}
 
@@ -56,6 +60,7 @@ def vote_stats(config, ranges):
 
     stats['vote_count_yesterday'] = stats['link_vote_count_yesterday'] + stats['comment_vote_count_yesterday']
     return stats
+
 
 def ga_stats(config, ranges):
     stats = {}
@@ -106,6 +111,7 @@ def ga_stats(config, ranges):
     stats['redditors_visited_yesterday'] = int(day_loggedin_stats['totalsForAllResults']['ga:visitors'])
     return stats
 
+
 def update_stats(config):
     today = datetime.date.today()
     yesterday_start = (today - datetime.timedelta(days=2))
@@ -131,11 +137,13 @@ def update_stats(config):
     print >> sys.stderr, 'finished:', stats
     g.memcache.set('about_reddit_stats', stats, time=60*60*24*20)
 
+
 def main(config_file):
     parser = ConfigParser.RawConfigParser()
     with open(config_file, "r") as cf:
         parser.readfp(cf)
     update_stats(parser)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

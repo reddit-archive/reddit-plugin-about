@@ -5,8 +5,10 @@ from r2.lib.plugin import Plugin
 from r2.lib.configparse import ConfigValue
 from r2.lib.js import Module
 
+
 def not_in_sr(environ, results):
     return 'subreddit' not in environ and 'sub_domain' not in environ
+
 
 class About(Plugin):
     config = {

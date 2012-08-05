@@ -6,6 +6,7 @@ from pylons.i18n import _
 from r2.lib.pages import Templated, BoringPage
 from r2.lib.menus import NavMenu, NavButton, OffsiteButton
 
+
 class AboutPage(BoringPage):
     css_class = 'about-page'
 
