@@ -1,5 +1,6 @@
 <%!
   import locale
+  import time
   from r2.lib.template_helpers import format_number
   from r2.lib.filters import safemarkdown
 %>
@@ -85,7 +86,10 @@
   <div class="opensource">${_md('**reddit is open source**. community members are constantly tinkering and contributing features, bug fixes, and translations back to the site.')}</div>
 </div>
 %if thing.stats:
-<h2>${_('stats at a glance')}</h2>
+<h2>${_('stats at a glance')}
+  <% datestr = time.strftime('%b %d, %Y', time.localtime(thing.stats['timestamp'])) %>
+  <span class="stats-timestamp">&#32;(${_('as of %(value)s') % dict(value=datestr)})</span>
+</h2>
 <div class="statsgrid inner">
   <div class="line month">
     ${stat('uniques_last_month', _('**last month**, reddit had %(value)s unique visitors'))}

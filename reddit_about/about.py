@@ -11,9 +11,11 @@ from r2.controllers import add_controller
 from r2.controllers.reddit_base import RedditController
 from r2.models import Subreddit
 from r2.models.builder import IDBuilder
+from r2.models.keyvalue import NamedGlobals
 from r2.lib.db.queries import CachedResults
 from r2.lib.template_helpers import static, comment_label
 from pages import AboutPage, AboutTitle, About, Team, Postcards, AlienMedia
+
 
 def parse_date_text(date_str):
     if not date_str:
@@ -29,12 +31,13 @@ def parse_date_text(date_str):
 
     return parsed_date
 
+
 @add_controller
 class AboutController(RedditController):
     def GET_index(self):
         quote = self._get_quote()
         images = self._get_images()
-        stats = g.memcache.get('about_reddit_stats', None)
+        stats = NamedGlobals.get('about_reddit_stats', None)
         content = About(quote=quote, images=images, stats=stats,
                         events=g.plugins['about'].timeline_data, sites=g.plugins['about'].sites_data)
         return AboutPage('about-main', _('we power awesome communities.'), _('about reddit'), content).render()
