@@ -124,7 +124,7 @@ def update_stats(config):
         'last_month': (last_month_start, last_month_end),
     }
 
-    stats = {}
+    stats = {"timestamp": int(time.time())}
     def run_stats(f):
         start_time = time.time()
         stats.update(f(config, ranges))
