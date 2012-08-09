@@ -138,17 +138,17 @@ PersonDetailsPopup = Backbone.View.extend({
             .addClass(leftSide ? 'left' : 'right')
     },
 
-    show: function(model, view) {
+    show: function(view) {
         this.hide()
-        this.model = model
         this.targetView = view
+        this.model = view.model
 
         this.render()
         this.position()
         this.$el.show()
 
         this.targetView.$el.addClass('focused')
-        this.trigger('show', model)
+        this.trigger('show', this.model)
     },
 
     hide: function() {
@@ -161,11 +161,11 @@ PersonDetailsPopup = Backbone.View.extend({
         this.targetView = null
     },
 
-    toggle: function(model, view) {
-        if (this.model == model) {
+    toggle: function(view) {
+        if (view == this.targetView) {
             this.hide()
         } else {
-            this.show(model, view)
+            this.show(view)
         }
     }
 })
@@ -176,7 +176,7 @@ PersonView = Backbone.View.extend({
     },
 
     showInfo: function() {
-        this.options.popup.toggle(this.model, this)
+        this.options.popup.toggle(this)
     }
 })
 
