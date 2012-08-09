@@ -3,7 +3,7 @@ TeamRouter = Backbone.Router.extend({
         '': 'sort',
         'sort/:sortId': 'sort',
         'sort/:sortId/user/:username': 'sort',
-        'user/:username': 'username',
+        'user/:username': 'username'
     },
 
     defaultSortId: 'random',
