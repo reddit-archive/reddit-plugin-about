@@ -1,14 +1,60 @@
-SortRouter = Backbone.Router.extend({
+TeamRouter = Backbone.Router.extend({
     routes: {
-        'sort/:sortId': 'sort'
+        '': 'sort',
+        'sort/:sortId': 'sort',
+        'sort/:sortId/user/:username': 'sort',
+        'user/:username': 'username',
     },
+
+    defaultSortId: 'random',
 
     initialize: function(options) {
-        this.collection = options.collection
+        this.sortState = options.sortState
+        this.popup = options.popup
+        this.grids = options.grids
+
+        options.popup.on('show hide', this.updateState, this)
     },
 
-    sort: function(sortId) {
-        this.collection.state.set('sort', sortId)
+    updateState: function() {
+        var url = [],
+            sortId = this.sortState.get('sort'),
+            username = this.popup.model && this.popup.model.id
+
+        if (sortId && !(username && sortId == this.defaultSortId)) {
+            url.push('sort/' + sortId)
+        }
+
+        if (username) {
+            url.push('user/' + username)
+        }
+
+        this.navigate(url.join('/'), {replace: true})
+    },
+
+    sort: function(sortId, username) {
+        if (!sortId && !this.sortState.has('sort')) {
+            sortId = this.defaultSortId
+        }
+
+        if (sortId) {
+            this.sortState.set('sort', sortId)
+        }
+
+        if (username) {
+            this.username(username)
+        }
+    },
+
+    username: function(username) {
+        this.sort()
+
+        // Defer so that target view has final position if sort changed.
+        _.defer(_.bind(function() {
+            _.find(this.grids, function(grid) {
+                grid.showPopup(username, true)
+            })
+        }, this))
     }
 })
 
@@ -69,6 +115,8 @@ SortableCollection = Backbone.Collection.extend({
         var sortVal = model.get(sort.id)
         if (_.isNumber(sortVal)) {
             sortVal = sortVal * sort.get('dir')
+        } else if (_.isString(sortVal)) {
+            sortVal = sortVal.toLowerCase()
         }
         return sortVal || model.get('random')
     }
@@ -136,34 +184,37 @@ PersonDetailsPopup = Backbone.View.extend({
             .addClass(leftSide ? 'left' : 'right')
     },
 
-    show: function(model, view) {
-        this.hide()
-        this.model = model
+    show: function(view) {
+        this.hide(true)
         this.targetView = view
+        this.model = view.model
 
         this.render()
         this.position()
         this.$el.show()
 
         this.targetView.$el.addClass('focused')
-        this.trigger('show', model)
+        this.trigger('show', this.model)
     },
 
-    hide: function() {
+    hide: function(isChange) {
+        var oldModel = this.model
+        this.model = null
         if (this.targetView) {
             this.targetView.$el.removeClass('focused')
-            this.trigger('hide', this.model)
+            this.targetView = null
+            if (!isChange) {
+                this.trigger('hide', oldModel)
+            }
         }
         this.$el.hide()
-        this.model = null
-        this.targetView = null
     },
 
-    toggle: function(model, view) {
-        if (this.model == model) {
+    toggle: function(view) {
+        if (view == this.targetView) {
             this.hide()
         } else {
-            this.show(model, view)
+            this.show(view)
         }
     }
 })
@@ -174,7 +225,7 @@ PersonView = Backbone.View.extend({
     },
 
     showInfo: function() {
-        this.options.popup.toggle(this.model, this)
+        this.options.popup.toggle(this)
     }
 })
 
@@ -193,6 +244,22 @@ PeopleGridView = GridView.extend({
             model: model,
             popup: this.options.popup
         })
+    },
+
+    showPopup: function(username, scroll) {
+        var view = this.itemViews[username]
+        if (!view) {
+            return false
+        }
+
+        this.options.popup.show(view)
+
+        if (scroll) {
+            var viewBottom = view.$el.offset().top + view.$el.height()
+            $(window).scrollTop(Math.max(0, viewBottom - $(window).height() / 2))
+        }
+
+        return view
     },
 
     focus: function(model) {
@@ -234,9 +301,11 @@ r.about.pages['about-team'] = function() {
         popup: personPopup
     })
 
-    var sortRouter = new SortRouter({collection: team})
-    if (!Backbone.history.start()) {
-        // Default to the random sort if no sort is in the URL.
-        team.state.set('sort', 'random')
-    }
+    var sortRouter = new TeamRouter({
+        sortState: team.state,
+        popup: personPopup,
+        grids: [teamGrid, alumniGrid]
+    })
+
+    Backbone.history.start()
 }
