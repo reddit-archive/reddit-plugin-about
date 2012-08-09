@@ -139,7 +139,7 @@ PersonDetailsPopup = Backbone.View.extend({
     },
 
     show: function(view) {
-        this.hide()
+        this.hide(true)
         this.targetView = view
         this.model = view.model
 
@@ -151,14 +151,17 @@ PersonDetailsPopup = Backbone.View.extend({
         this.trigger('show', this.model)
     },
 
-    hide: function() {
+    hide: function(isChange) {
+        var oldModel = this.model
+        this.model = null
         if (this.targetView) {
             this.targetView.$el.removeClass('focused')
-            this.trigger('hide', this.model)
+            this.targetView = null
+            if (!isChange) {
+                this.trigger('hide', oldModel)
+            }
         }
         this.$el.hide()
-        this.model = null
-        this.targetView = null
     },
 
     toggle: function(view) {
