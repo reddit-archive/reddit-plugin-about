@@ -6,6 +6,7 @@ GridView = Backbone.View.extend({
             .on('all', _.debounce(this.render), this)
 
         this.itemViews = {}
+        this.addAll()
     },
 
     createItemView: function(model) {
