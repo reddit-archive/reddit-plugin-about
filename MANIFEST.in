@@ -1,2 +1,3 @@
 recursive-include reddit_about/static *
 recursive-include reddit_about/templates *
+recursive-include reddit_about/data *
