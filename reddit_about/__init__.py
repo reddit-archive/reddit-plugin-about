@@ -11,6 +11,8 @@ def not_in_sr(environ, results):
 
 
 class About(Plugin):
+    needs_static_build = True
+
     config = {
         ConfigValue.int: [
             'about_images_count',
