@@ -146,7 +146,7 @@ TimelineView = Backbone.View.extend({
                 var view = this.eventViews[model.cid],
                     side = this.filterTop(model) ? 'top' : 'bottom',
                     posFrac = this.position(model.get('date')),
-                    dotLeft = posFrac * xmax,
+                    dotLeft = Math.round(posFrac * xmax),
                     labelWidth = view.labelWidth(),
                     // Negatively offset event labels that would bleed off
                     // the right side.
