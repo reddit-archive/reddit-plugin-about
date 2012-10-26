@@ -11,7 +11,6 @@ def tryconv(conv, s, fallback=None):
 def read_csv(path):
     r = csv.reader(open(path), delimiter=',', quotechar='"')
     r.next()
-    r.next()
     users = []
     for line in r:
         if not line[0]:
