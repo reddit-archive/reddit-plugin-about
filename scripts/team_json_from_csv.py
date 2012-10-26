@@ -14,7 +14,7 @@ def read_csv(path):
     users = []
     for line in r:
         if not line[0]:
-            continue
+            users.append(None)
 
         u = {
             'username': line[0],
@@ -43,7 +43,10 @@ def read_csv(path):
 def main():
     users = read_csv(sys.argv[1])
     for u in users:
-        print json.dumps(u, sort_keys=True) + ','
+        if u:
+            print json.dumps(u, sort_keys=True) + ','
+        else:
+            print
 
 if __name__ == "__main__":
     main()
