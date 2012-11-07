@@ -1,4 +1,4 @@
-<%namespace file="less.html" import="less_stylesheet, less_js"/>
+<%namespace file="less.html" import="less_stylesheet"/>
 <%inherit file="reddit.html"/>
 
 <%def name="stylesheet()">
@@ -7,7 +7,6 @@
 </%def>
 
 <%def name="javascript()">
-  ${less_js()}
   ${parent.javascript()}
   <% from r2.lib import js %>
   ${unsafe(js.use('about'))}

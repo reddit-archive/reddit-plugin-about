@@ -1,3 +1,0 @@
-[submodule "contrib/less.js"]
-	path = contrib/less.js
-	url = git://github.com/chromakode/less.js.git
