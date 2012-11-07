@@ -1,1 +1,1 @@
-OTHER_STYLESHEETS += about.css
+LESS_STYLESHEETS += about.less
