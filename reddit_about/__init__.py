@@ -4,10 +4,7 @@ import json
 from r2.lib.plugin import Plugin
 from r2.lib.configparse import ConfigValue
 from r2.lib.js import Module
-
-
-def not_in_sr(environ, results):
-    return 'subreddit' not in environ and 'sub_domain' not in environ
+from r2.config.routing import not_in_sr
 
 
 class About(Plugin):
