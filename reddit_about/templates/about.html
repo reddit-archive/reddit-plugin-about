@@ -117,11 +117,5 @@
     %endfor
   </ol>
 </div>
-<h2>${_('brothers & sisters')}</h2>
-<ul class="sites inner">
-  %for site in thing.sites:
-    <li><a href="${site['url']}"><img src="${site["icon"]}" alt="${site['name']} icon" /> ${site['name']}</a></li>
-  %endfor
-</ul>
 
 ${backbone_collection('slideshowImages', thing.images)}
