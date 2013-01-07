@@ -230,7 +230,7 @@ var PostcardRedditView = PostcardOverlayView.extend({
 
     _target: function() {
         var infopos = PostcardInfoView.prototype._target.apply(this)
-        infopos.top += 110
+        infopos.top += 115
         return infopos
     }
 })
