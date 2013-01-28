@@ -18,16 +18,8 @@ class About(Plugin):
     }
 
     js = {
-        'less': Module('less.js',
-            'lib/less-1.3.0.min.js',
-            prefix='about/',
-            should_compile=False
-        ),
-
         'about': Module('about.js',
             'lib/modernizr.custom.3d+shadow.js',
-            'lib/underscore-1.3.3.js',
-            'lib/backbone-0.9.2.js',
             'lib/iso8601.js',
             'about-utils.js',
             'slideshow.js',
