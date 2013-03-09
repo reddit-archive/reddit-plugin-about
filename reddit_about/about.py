@@ -40,11 +40,18 @@ class AboutController(RedditController):
         stats = NamedGlobals.get('about_reddit_stats', None)
         content = About(quote=quote, images=images, stats=stats,
                         events=g.plugins['about'].timeline_data, sites=g.plugins['about'].sites_data)
-        return AboutPage('about-main', _('we power awesome communities.'), _('about reddit'), content).render()
+        return AboutPage('about-main', _('we power awesome communities.'), _('about reddit'), content, js_preload={
+            '#images': images,
+        }).render()
 
     def GET_team(self):
-        content = Team(**g.plugins['about'].team_data)
-        return AboutPage('about-team', _('we spend our days building reddit.'), _('about the reddit team'), content).render()
+        team_data = g.plugins['about'].team_data
+        content = Team(**team_data)
+        return AboutPage('about-team', _('we spend our days building reddit.'), _('about the reddit team'), content, js_preload={
+            '#sorts': team_data['sorts'],
+            '#team': team_data['team'],
+            '#alumni': team_data['alumni'],
+        }).render()
 
     def GET_postcards(self):
         postcard_count = '&#32;<span class="count">...</span>&#32;'

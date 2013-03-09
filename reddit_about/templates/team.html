@@ -1,7 +1,6 @@
 <%!
   from r2.lib.template_helpers import static
 %>
-<%namespace file="backbone_utils.html" import="backbone_collection"/>
 
 <%def name="person_grid(id, data)">
   <ul id="${id}" class="inner people-grid">
@@ -21,7 +20,4 @@ ${person_grid('team-grid', thing.team)}
 <h2 class="centered">reddit alumni</h2>
 ${person_grid('alumni-grid', thing.alumni)}
 
-${backbone_collection('teamSorts', thing.sorts)}
-${backbone_collection('team', thing.team)}
-${backbone_collection('alumni', thing.alumni)}
 <script>$('.people-grid').addClass('loading')</script>

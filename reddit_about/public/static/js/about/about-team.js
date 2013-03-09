@@ -278,11 +278,15 @@ PeopleGridView = GridView.extend({
     }
 })
 
-teamSorts = new Backbone.Collection
-team = new SortableCollection(null, {sorts: teamSorts})
-alumni = new SortableCollection(null, {sorts: teamSorts, state: team.state})
-
 r.about.pages['about-team'] = function() {
+    var teamSorts = new Backbone.Collection,
+        team = new SortableCollection(null, {sorts: teamSorts}),
+        alumni = new SortableCollection(null, {sorts: teamSorts, state: team.state})
+
+    teamSorts.fetch({url: '#sorts'})
+    team.fetch({url: '#team'})
+    alumni.fetch({url: '#alumni'})
+
     var sortDropdown = new DropdownView({
         el: $('#about-team .sort-menu'),
         model: team.state,
