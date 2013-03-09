@@ -5,7 +5,6 @@
   from r2.lib.filters import safemarkdown
 %>
 <%namespace file="utils.html" import="timestamp, _md, text_with_links" />
-<%namespace file="backbone_utils.html" import="backbone_collection"/>
 
 <%def name="stat(key, text, title=None)">
   <%
@@ -117,5 +116,3 @@
     %endfor
   </ol>
 </div>
-
-${backbone_collection('slideshowImages', thing.images)}

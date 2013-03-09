@@ -1,9 +1,0 @@
-<%!
-  import json
-  from r2.lib.filters import websafe_json
-%>
-
-<%def name="backbone_collection(name, data)">
-  <% data_json = websafe_json(json.dumps(data)) %>
-  <script>${name}.reset(${unsafe(data_json)})</script>
-</%def>

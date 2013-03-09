@@ -4,7 +4,7 @@ from os import path
 from itertools import chain
 from datetime import datetime
 
-from pylons import g
+from pylons import g, c
 from pylons.i18n import _
 
 from r2.controllers import add_controller
@@ -38,12 +38,17 @@ class AboutController(RedditController):
         quote = self._get_quote()
         images = self._get_images()
         stats = NamedGlobals.get('about_reddit_stats', None)
+        c.js_preload.set('#images', images)
         content = About(quote=quote, images=images, stats=stats,
                         events=g.plugins['about'].timeline_data, sites=g.plugins['about'].sites_data)
         return AboutPage('about-main', _('we power awesome communities.'), _('about reddit'), content).render()
 
     def GET_team(self):
-        content = Team(**g.plugins['about'].team_data)
+        team_data = g.plugins['about'].team_data
+        c.js_preload.set('#sorts', team_data['sorts'])
+        c.js_preload.set('#team', team_data['team'])
+        c.js_preload.set('#alumni', team_data['alumni'])
+        content = Team(**team_data)
         return AboutPage('about-team', _('we spend our days building reddit.'), _('about the reddit team'), content).render()
 
     def GET_postcards(self):

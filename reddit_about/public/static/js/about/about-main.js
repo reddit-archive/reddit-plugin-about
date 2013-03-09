@@ -33,9 +33,10 @@ AboutTimelineView = TimelineView.extend({
     }
 })
 
-slideshowImages = new Backbone.Collection
 
 r.about.pages['about-main'] = function() {
+    slideshowImages = new Backbone.Collection
+    slideshowImages.fetch({url: '#images'})
     var slideshow = new AboutSlideshowView({
         el: $('#slideshow'),
         collection: slideshowImages
