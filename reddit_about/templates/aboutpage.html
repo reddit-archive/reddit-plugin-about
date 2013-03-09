@@ -6,8 +6,8 @@
   ${less_stylesheet('about.less')}
 </%def>
 
-<%def name="javascript()">
-  ${parent.javascript()}
+<%def name="javascript_bottom()">
+  ${parent.javascript_bottom()}
   <% from r2.lib import js %>
   ${unsafe(js.use('about'))}
 </%def>
