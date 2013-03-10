@@ -154,6 +154,7 @@ var PostcardOverlayView = Backbone.View.extend({
 
 var PostcardInfoView = PostcardOverlayView.extend({
     className: 'infobox',
+    template: _.template('<a class="maplink" target="_blank"><img class="map"></a><span class="date"></span>'),
 
     events: {
         'mouseover': 'zoomIn',
@@ -161,13 +162,7 @@ var PostcardInfoView = PostcardOverlayView.extend({
     },
 
     render: function() {
-        this.$el.append(
-            this.make('a', {'class': 'maplink', target: '_blank'}, [
-                this.make('img', {'class': 'map'})
-            ]),
-            this.make('span', {'class': 'date'})
-        )
-
+        this.$el.append(this.template())
         this.zoomOut()
         this.$('.date').text(this.model.get('date'))
         return this
@@ -260,6 +255,7 @@ var PostcardZoomView = Backbone.View.extend({
     tagName: 'div',
     className: 'postcard-zoombox',
     topSpace: 20,
+    template: _.template('<div class="zoom"><img class="face front"><img class="face back"></div>'),
 
     events: {
         'click .zoom .face': 'flip'
@@ -268,13 +264,7 @@ var PostcardZoomView = Backbone.View.extend({
     initialize: function() {
         this.model = this.model || this.options.parent.model
 
-        $(this.el).append(
-            this.make('div', {'class': 'zoom'}, [
-                this.make('img', {'class': 'face front'}),
-                this.make('img', {'class': 'face back'})
-            ])
-        )
-
+        this.$el.append(this.template())
         this.$el.append(new PostcardInfoView({model: this.model, parent: this}).render().el)
         this.$el.append(new PostcardRedditView({parent: this}).render().el)
         this.$el.append(new PostcardCloseView({parent: this, zoomer: this.options.zoomer}).render().el)
@@ -413,12 +403,14 @@ var PostcardView = Backbone.View.extend({
         var thumb = this.model.get('images').small,
             front = thumb.front || {}
         this.$el
-            .append(
-                $(this.make('img', {
+            .append($('<img>')
+                .attr({
                     src: baseURL + front.filename,
                     width: front.width,
                     height: front.height
-                })).css('margin-top', -front.height / 2))
+                })
+                .css('margin-top', -front.height / 2)
+            )
             .addClass('postcard-'+this.model.id)
         return this
     },
