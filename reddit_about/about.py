@@ -38,32 +38,63 @@ class AboutController(RedditController):
         quote = self._get_quote()
         images = self._get_images()
         stats = NamedGlobals.get('about_reddit_stats', None)
-        content = About(quote=quote, images=images, stats=stats,
-                        events=g.plugins['about'].timeline_data, sites=g.plugins['about'].sites_data)
-        return AboutPage('about-main', _('we power awesome communities.'), _('about reddit'), content, js_preload={
-            '#images': images,
-        }).render()
+        content = About(
+            quote=quote,
+            images=images,
+            stats=stats,
+            events=g.plugins['about'].timeline_data,
+            sites=g.plugins['about'].sites_data,
+        )
+        return AboutPage(
+            content_id='about-main',
+            title_msg=_('we power awesome communities.'),
+            pagename=_('about reddit'),
+            content=content,
+            js_preload={
+                '#images': images,
+            },
+        ).render()
 
     def GET_team(self):
         team_data = g.plugins['about'].team_data
         content = Team(**team_data)
-        return AboutPage('about-team', _('we spend our days building reddit.'), _('about the reddit team'), content, js_preload={
-            '#sorts': team_data['sorts'],
-            '#team': team_data['team'],
-            '#alumni': team_data['alumni'],
-        }).render()
+        return AboutPage(
+            content_id='about-team',
+            title_msg=_('we spend our days building reddit.'),
+            pagename=_('about the reddit team'),
+            content=content,
+            js_preload={
+                '#sorts': team_data['sorts'],
+                '#team': team_data['team'],
+                '#alumni': team_data['alumni'],
+            },
+        ).render()
 
     def GET_postcards(self):
         postcard_count = '&#32;<span class="count">...</span>&#32;'
         content = Postcards()
-        return AboutPage('about-postcards', _('you\'ve sent us over %s postcards.') % postcard_count, _('postcards'), content).render()
+        return AboutPage(
+            content_id='about-postcards',
+            title_msg=_('you\'ve sent us over %s postcards.') % postcard_count,
+            pagename=_('postcards'),
+            content=content,
+        ).render()
 
     def GET_alien(self):
         content = AlienMedia(colors=g.plugins['about'].colors_data)
-        return AboutPage('about-alien', _('I also do birthday parties.'), _('the alien'), content).render()
+        return AboutPage(
+            content_id='about-alien',
+            title_msg=_('I also do birthday parties.'),
+            pagename=_('the alien'),
+            content=content,
+        ).render()
 
     def GET_guide(self):
-        return AboutPage('about-guide', _('new to reddit? welcome.'), _('guide')).render()
+        return AboutPage(
+            content_id='about-guide',
+            title_msg=_('new to reddit? welcome.'),
+            pagename=_('guide'),
+        ).render()
 
     def _get_hot_posts(self, sr, count, shuffle=False, filter=None):
         links = sr.get_links('hot', 'all')
@@ -96,7 +127,8 @@ class AboutController(RedditController):
         quote['author_url'] = getattr(quote_link, 'author_url', quote['url'])
         quote['via'] = quote['via'] or quote_link.author.name
         quote['via_url'] = '/user/' + quote['via']
-        quote['comment_label'], quote['comment_class'] = comment_label(quote_link.num_comments)
+        quote['comment_label'], quote['comment_class'] = \
+                comment_label(quote_link.num_comments)
         quote['permalink'] = quote_link.permalink
         return quote
 
@@ -118,11 +150,13 @@ class AboutController(RedditController):
         for image_link in image_links:
             image = self.image_title_re.match(image_link.title).groupdict()
             image['url'] = image_link.url
-            image['src'] = getattr(image_link, 'slideshow_src', static('about/slideshow/%s.jpg' % image_link._id36))
+            default_src = static('about/slideshow/%s.jpg' % image_link._id36)
+            image['src'] = getattr(image_link, 'slideshow_src', default_src)
             image['author_url'] = getattr(image_link, 'author_url', image['url'])
             image['via'] = image['via'] or image_link.author.name
             image['via_url'] = '/user/' + image['via']
-            image['comment_label'], image['comment_class'] = comment_label(image_link.num_comments)
+            image['comment_label'], image['comment_class'] = \
+                    comment_label(image_link.num_comments)
             image['permalink'] = image_link.permalink
             images.append(image)
         return images
