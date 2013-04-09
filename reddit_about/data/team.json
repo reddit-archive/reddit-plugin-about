@@ -31,7 +31,9 @@
         {"id": "karma", "title": "total karma", "dir": -1},
         {"id": "cubes", "title": "solving rubik's cubes", "dir": -1},
         {"id": "preemption", "title": "says things before you do", "dir": -1},
-        {"id": "heroism", "title": "plastic guitar skill", "dir": -1}
+        {"id": "heroism", "title": "plastic guitar skill", "dir": -1},
+        {"id": "ties", "title": "consecutive tie tuesdays", "dir": -1},
+        {"id": "starwars", "title": "star wars trivia", "dir": -1}
     ],
 
     "team": [
@@ -42,6 +44,8 @@
         {"beard": 0, "description": "Spam killa. I also help subreddits do awesome stuff. If your subreddit wants to do awesome stuff, PM me!", "favorite_subreddits": ["/r/fifthworldproblems", "/r/aww", "/r/AskScience", "/r/civ"], "name": "Alex Angel", "new": 201006, "pokemon": 9999, "pyro": 0, "role": "Community Manager", "role_details": "bringer of baked goods", "top": 1.63, "username": "cupcake1713", "wpm": 88},
         {"beard": 5, "cubes": 9999, "description": "You can talk to Dac if you need some help. Just pull his head out of his DS before you do.", "favorite_subreddits": ["/r/IAmA", "/r/Games", "/r/TheoryOfReddit", "/r/gamemusic", "/r/justiceporn", "/r/iPhone"], "name": "Dac", "new": 201208, "pyro": 9, "role": "Community Manager", "role_details": "high-score destroyer", "top": 1.85, "username": "Dacvak", "wpm": 85},
         {"beard": 1, "description": "Chad's job is to make you want to buy reddit gold out of *desire*, not just guilt.", "favorite_subreddits": ["/r/Games", "/r/TheoryOfReddit", "/r/ideasfortheadmins", "/r/truegaming"], "heroism": 9999, "name": "Chad Birch", "new": 201301, "pyro": 5, "role": "Social Media Viral Cloud Synergy Analyst", "role_details": "turns reddit lead into reddit gold", "top": 1.8, "username": "Deimorz", "wpm": 107},
+        {"beard": 3, "description": "I am the Robin to the sales team Batman. I make their lives prettier and easier, and make ads suck less.", "favorite_subreddits": ["/r/frogdogs", "/r/askreddit", "/r/nyc", "/r/jailbreak", "/r/crazyideas"], "name": "Dylan Hulser", "new": 201302, "pyro": 5, "role": "Sales Associate", "role_details": "Fermented Beverage Consumption Expert", "ties": 9999, "top": 1.82, "username": "dylan", "wpm": 93},
+        {"beard": 0, "description": "Mike metaphorically tears down walls and constructs bridges. You know, sales.", "favorite_subreddits": ["/r/askscience", "/r/bostonsports", "/r/theoryofreddit", "/r/stellathestar"], "name": "Mike Cole", "new": 201302, "pyro": 4, "role": "Sales and Strategy", "role_details": "international art smuggler", "starwars": 9999, "top": 1.8, "username": "freedomthebucket"},
         {"beard": 10, "description": "Erik is our general manager and nerd herder. He has an awesome dog named Mog who can often be found around the office.", "favorite_subreddits": ["/r/fifthworldproblems"], "name": "Erik Martin", "new": 200810, "pyro": 6, "role": "General Manager", "role_details": "psychic detective", "scorpions": 9999, "top": 1.83, "username": "hueypriest", "wpm": 12},
         {"beard": 3, "description": "Hacks reddit by day, races motorcycles by night. Or is it the other way around?", "favorite_subreddits": ["/r/motorcycles", "/r/forza", "/r/theoryofreddit", "/r/TheBook"], "name": "Logan Hanks", "new": 201106, "pyro": 3, "role": "Programmer", "role_details": "\\m/", "top": 1.83, "username": "intortus", "wpm": 9999},
         {"beard": 0, "description": "<insert witty comment about doing all the boring operational stuff here />", "favorite_subreddits": ["/r/TwoXChromosomes", "/r/GetMotivated", "/r/HistoryPorn", ""], "name": "Jena Donlin", "new": 201101, "pyro": 1, "role": "Business Operations", "role_details": "smooth operator", "top": 1.73, "username": "jenakalif", "wpm": 60, "zombies": 9999},
