@@ -36,7 +36,8 @@ class About(Plugin):
     def add_routes(self, mc):
         # handle wildcard after /about/:action/ for postcard pushState URLs.
         for route in ('/about/:action', '/about/:action/*etc'):
-            mc(route, controller='about', conditions={'function':not_in_sr})
+            mc(route, controller='about', conditions={'function':not_in_sr},
+               requirements={'action':'team|postcards|alien'})
 
     def load_controllers(self):
         def load(name):
