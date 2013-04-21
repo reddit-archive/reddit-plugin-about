@@ -12,30 +12,6 @@ PostcardCollection = Backbone.Collection.extend({
     chunkSize: null,
     loadedChunks: {},
 
-    load: function(callback) {
-        this.fetch({success: _.bind(function(collection, response) {
-            this.chunkSize = response.postcards.length
-            this.totalCount = response.total_postcard_count
-            this.chunkIndex = response.index
-            this.chunkCount = _.size(this.chunkIndex)
-
-            var minId = collection.min(function(m) { return m.id }).id
-            _.each(this.chunkIndex, function(bounds, idx) {
-                // The initial fetch gives us the latest N postcards.
-                // We need to skip any chunks we already have.
-                bounds[1] = Math.min(minId, bounds[1])
-                if (bounds[1] > bounds[0]) {
-                    this.add(new PostcardsPlaceholder({
-                        chunkStart: bounds[0],
-                        chunkEnd: bounds[1],
-                        id: 'chunk'+idx
-                    }))
-                }
-            }, this)
-            callback()
-        }, this)})
-    },
-
     ensureLoaded: function(cardId, callback) {
         if (this.get(cardId)) {
             if (callback) {
@@ -61,23 +37,57 @@ PostcardCollection = Backbone.Collection.extend({
                 callback()
             }
         } else {
-            this.fetch({chunk: chunkId, success: callback})
+            this.fetchChunk({chunk: chunkId, success: callback})
         }
     },
 
-    fetch: function(options) {
-        if (options && 'chunk' in options) {
-            options.url = baseURL + 'postcards' + options.chunk + '.js'
-            options.add = true
-        }
+    fetchInitial: function(options) {
         var success = options.success
-        options.success = function(collection, response) {
-            if (response.chunk_id) {
-                collection.loadedChunks[response.chunk_id] = true
-            }
+        options.reset = true
+        options.success = _.bind(function(collection, response) {
+            this.chunkSize = response.postcards.length
+            this.totalCount = response.total_postcard_count
+            this.chunkIndex = response.index
+            this.chunkCount = _.size(this.chunkIndex)
+
+            var minId = collection.min(function(m) { return m.id }).id
+            _.each(this.chunkIndex, function(bounds, idx) {
+                // The initial fetch gives us the latest N postcards.
+                // We need to skip any chunks we already have.
+                bounds[1] = Math.min(minId, bounds[1])
+                if (bounds[1] > bounds[0]) {
+                    this.add(new PostcardsPlaceholder({
+                        chunkStart: bounds[0],
+                        chunkEnd: bounds[1],
+                        id: 'chunk'+idx
+                    }))
+                }
+            }, this)
+            this.trigger('load', this, this.options)
             if (success) { success(collection, response) }
-        }
-        Backbone.Collection.prototype.fetch.call(this, options)
+        }, this)
+        this.fetch(options)
+    },
+
+    fetchChunk: function(options) {
+        options.url = baseURL + 'postcards' + options.chunk + '.js'
+        options.remove = false
+        options.merge = false
+        var success = options.success
+        options.success = _.bind(function(collection, response) {
+            var chunk = this.get('chunk'+response.chunk_id),
+                newModels = _.chain(response.postcards)
+                    .map(function(card) {
+                        return this.get(card.id)
+                    }, this)
+                    .sortBy(this.comparator)
+                    .value()
+            this.loadedChunks[response.chunk_id] = true
+            this.remove(chunk)
+            this.trigger('replace', chunk, newModels, this, this.options)
+            if (success) { success(this, response) }
+        }, this)
+        this.fetch(options)
     },
 
     sync: function(method, model, options) {
@@ -438,9 +448,8 @@ var PostcardsPlaceholderView = Backbone.View.extend({
 var PostcardGridView = Backbone.View.extend({
     initialize: function() {
         this.collection
-            .on('add', this.addOne, this)
-            .on('remove', this.removeOne, this)
-            .on('reset', this.addAll, this)
+            .on('replace', this.replace, this)
+            .on('load', this.addAll, this)
 
         this.itemViews = []
         this.placeholders = []
@@ -450,32 +459,29 @@ var PostcardGridView = Backbone.View.extend({
         $(window).bind('scroll', this._scroll)
     },
 
-    addOne: function(model) {
-        if (model instanceof Postcard) {
-            var view = new PostcardView({model: model, zoomer: this})
-        } else if (model instanceof PostcardsPlaceholder) {
-            var view = new PostcardsPlaceholderView({model: model, parent: this})
-            this.placeholders.push(view)
-        }
+    replace: function(model, newModels) {
+        var newViews = document.createDocumentFragment()
+        _.each(newModels, function(model) {
+            if (model instanceof Postcard) {
+                var view = new PostcardView({model: model, zoomer: this})
+            } else if (model instanceof PostcardsPlaceholder) {
+                var view = new PostcardsPlaceholderView({model: model, parent: this})
+                this.placeholders.push(view)
+            }
+            newViews.appendChild(view.render().el)
+            this.itemViews[model.id] = view
+        }, this)
 
-        var index = this.collection.indexOf(model),
-            elBefore = this.$el.children().eq(index - 1)
-        if (elBefore.length) {
-            elBefore.after(view.render().el)
+        if (model && model.id in this.itemViews) {
+            this.itemViews[model.id].$el.replaceWith(newViews)
+            delete this.itemViews[model.id]
         } else {
-            this.$el.append(view.render().el)
+            this.$el.append(newViews)
         }
-        this.itemViews[model.id] = view
-    },
-
-    removeOne: function(model) {
-        var view = this.itemViews[model.id]
-        view.remove()
-        this.itemViews[model.id] = null
     },
 
     addAll: function() {
-        this.collection.each(this.addOne, this)
+        this.replace(null, this.collection.models)
     },
 
     zoomById: function(cardId, side) {
@@ -546,9 +552,7 @@ var PostcardGridView = Backbone.View.extend({
                 height = placeholder.$el.height()
             if (Math.abs(scrollTop - pos.top) < height + $(window).height() ) {
                 var model = placeholder.model
-                this.collection.ensureLoaded(model.get('chunkStart'), _.bind(function() {
-                    this.collection.remove(model)
-                }, this))
+                this.collection.ensureLoaded(model.get('chunkStart'))
                 return true
             }
         }, this)
@@ -565,10 +569,10 @@ r.about.pages['about-postcards'] = function() {
     })
 
     var cardRouter = new PostcardRouter({zoomer: grid})
-    postcards.load(function() {
+    postcards.fetchInitial({success: function() {
         Backbone.history.start({pushState: true, root: '/about/postcards/'})
         $('.abouttitle h1')
             .find('.count').text(postcards.totalCount).end()
             .fadeIn(100)
-    })
+    }})
 }
