@@ -293,7 +293,7 @@ r.about.pages['about-team'] = function() {
         attribute: 'sort'
     })
 
-    new scrollFixed($('#about-team .sort-menu'))
+    new r.ui.scrollFixed($('#about-team .sort-menu'))
 
     var personPopup = new PersonDetailsPopup()
     $('#about-team').append(personPopup.el)
