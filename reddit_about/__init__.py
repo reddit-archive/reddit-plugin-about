@@ -21,7 +21,6 @@ class About(Plugin):
         'about': Module('about.js',
             'lib/modernizr.custom.3d+shadow.js',
             'lib/iso8601.js',
-            'about-utils.js',
             'slideshow.js',
             'timeline.js',
             'grid.js',
