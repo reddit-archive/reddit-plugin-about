@@ -55,7 +55,8 @@ class AboutController(RedditController):
 
     def GET_team(self):
         team_data = g.plugins['about'].team_data
-        c.js_preload.set('#sorts', team_data['sorts'])
+        all_sorts = team_data['sorts'] + team_data['extra_sorts']
+        c.js_preload.set('#sorts', all_sorts)
         c.js_preload.set('#team', team_data['team'])
         c.js_preload.set('#alumni', team_data['alumni'])
         content = Team(**team_data)
