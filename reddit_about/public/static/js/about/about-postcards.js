@@ -1,7 +1,7 @@
 var baseURL = 'http://postcards.redditstatic.com/',
     mapURL = _.template('http://maps.google.com/?q=<%= d.lat %>,<%= d.long %>'),
-    mapImageURL = _.template('http://maps.googleapis.com/maps/api/staticmap?zoom=<%= d.zoom %>&size=<%= d.width %>x<%= d.height %>&sensor=false&markers=size:mid%7Ccolor:red%7C<%= d.lat %>,<%= d.long %>'),
-    redditButtonURL = _.template('http://www.reddit.com/static/button/button2.html?sr=postcards&url=<%= d.url %>')
+    mapImageURL = _.template('//maps.googleapis.com/maps/api/staticmap?zoom=<%= d.zoom %>&size=<%= d.width %>x<%= d.height %>&sensor=false&markers=size:mid%7Ccolor:red%7C<%= d.lat %>,<%= d.long %>'),
+    redditButtonURL = _.template(r.utils.staticURL('button/button2.html?sr=postcards&url=<%= d.url %>'))
 
 Postcard = Backbone.Model.extend({})
 PostcardsPlaceholder = Backbone.Model.extend({})
@@ -70,7 +70,7 @@ PostcardCollection = Backbone.Collection.extend({
     },
 
     fetchChunk: function(options) {
-        options.url = baseURL + 'postcards' + options.chunk + '.js'
+        options.url = r.utils.s3HTTPS(baseURL + 'postcards' + options.chunk + '.js')
         options.remove = false
         options.merge = false
         var success = options.success
@@ -360,8 +360,8 @@ var PostcardZoomView = Backbone.View.extend({
             })
 
         if (!keepImages) {
-            this.$('.front').attr('src', baseURL + images.front.filename)
-            this.$('.back').attr('src', baseURL + images.back.filename)
+            this.$('.front').attr('src', r.utils.s3HTTPS(baseURL + images.front.filename))
+            this.$('.back').attr('src', r.utils.s3HTTPS(baseURL + images.back.filename))
         }
     },
 
