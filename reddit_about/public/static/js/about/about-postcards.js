@@ -8,7 +8,7 @@ PostcardsPlaceholder = Backbone.Model.extend({})
 
 PostcardCollection = Backbone.Collection.extend({
     model: Postcard,
-    url: baseURL + 'postcards-latest.js',
+    url: r.utils.s3HTTPS(baseURL + 'postcards-latest.js'),
     chunkSize: null,
     loadedChunks: {},
 
@@ -415,7 +415,7 @@ var PostcardView = Backbone.View.extend({
         this.$el
             .append($('<img>')
                 .attr({
-                    src: baseURL + front.filename,
+                    src: r.utils.s3HTTPS(baseURL + front.filename),
                     width: front.width,
                     height: front.height
                 })
