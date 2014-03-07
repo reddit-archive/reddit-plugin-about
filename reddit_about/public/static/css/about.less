@@ -609,6 +609,10 @@
             padding-bottom: 50px;
             .transition(all, .5s, ease);
 
+            // work around weird chrome bug causing 1 pixel jitters during
+            // opacity change transitions
+            -webkit-transform: translateZ(0);
+
             .avatar {
                 position: relative;
                 z-index: 2;
