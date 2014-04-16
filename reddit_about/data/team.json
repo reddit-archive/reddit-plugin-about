@@ -51,7 +51,8 @@
         {"dir": -1, "id": "physics", "title": "bona fide scientist"},
         {"dir": -1, "id": "doodles", "title": "life-time reddit alien doodles"},
         {"dir": -1, "id": "karma", "title": "karma"},
-        {"dir": -1, "id": "giants", "title": "puppy bling; giants schwag"}
+        {"dir": -1, "id": "giants", "title": "puppy bling; giants schwag"},
+        {"dir": -1, "id": "flannel", "title": "wearingness of flannel"}
     ],
 
     "team": [
@@ -97,7 +98,8 @@
         {"beard": 1, "description": "I like your weird niche interests.", "favorite_subreddits": ["/r/serendipity", "/r/woodworking", "/r/fantasy"], "name": "Chris Dary", "new": 201402, "pyro": 1, "role": "Programming and <3s", "role_details": "Mumble mumble products, mumble mumble communities", "top": 1.11, "username": "umbrae", "wpm": 95},
         {"beard": 0, "description": "I divvy my time pretty consistently between redditgifts, reddit, and yarn. Trying to excel in *not* breaking redditgifts.", "favorite_subreddits": ["/r/secretsanta", "/r/yarnaddicts", "/u/weffey/m/cute_overload", "/u/weffey/m/nerdom"], "name": "Lesley Brownlee", "new": 201208, "pyro": 3, "role": "Programmer", "role_details": "syrup snob extraordinaire", "top": 1.72, "username": "weffey", "wpm": 73, "yarn": 1},
         {"beard": 2, "description": "what is this i don't even", "favorite_subreddits": ["/r/yishansucks", "/r/GoForGold", "/r/nameaserver"], "name": "Yishan Wong", "new": 201202, "pyro": 1, "rabbits": 4, "role": "CEO", "role_details": "sparklepants", "top": 1.74, "username": "yishan", "wpm": 91},
-        {"beard": 4, "description": "I like laughing obnoxiously loud. Every single piece of clothing I own is covered in paint.", "favorite_subreddits": ["/r/secretsanta", "/r/science", "/r/design", "/r/humanporn", "/r/art", "/r/watercolor"], "name": "Dante Orpilla", "new": 201308, "pyro": 10, "role": "Designer", "role_details": "Professional Mess Maker", "shirt": 0, "top": 1.72, "username": "youngluck", "wpm": 42}
+        {"beard": 4, "description": "I like laughing obnoxiously loud. Every single piece of clothing I own is covered in paint.", "favorite_subreddits": ["/r/secretsanta", "/r/science", "/r/design", "/r/humanporn", "/r/art", "/r/watercolor"], "name": "Dante Orpilla", "new": 201308, "pyro": 10, "role": "Designer", "role_details": "Professional Mess Maker", "shirt": 0, "top": 1.72, "username": "youngluck", "wpm": 42},
+        {"beard": 7, "description": "I try to make things work.", "favorite_subreddits": ["/r/askreddit", "/r/pareidolia", "/r/javascript", "/r/depthhub"], "flannel": 5000, "name": "Matt Lee", "new": 201404, "pyro": 4, "role": "Front End Engineer, Ads", "role_details": "engineering the front end of ads", "top": 1.63, "username": "madlee", "wpm": 85}
     ],
 
     "alumni": [
