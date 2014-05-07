@@ -1,5 +1,5 @@
 [
-    {"date": "2005-06-23", "class": "org important", "title": "reddit goes live", "url": "http://www.flickr.com/photos/33809408@N00/315068778/"},
+    {"date": "2005-06-23", "class": "org important", "title": "reddit goes live", "url": "http://www.flickr.com/photos/33809408@N00/315068778"},
     {"date": "2005-12-12", "class": "org important", "title": "reddit adds comments", "url": "http://blog.reddit.com/2005/12/comments.html"},
     {"date": "2006-02-20", "class": "org important", "title": "multilingual reddit", "url": "http://blog.reddit.com/2006/02/reddit-becomes-multilingual.html"},
     {"date": "2006-05-06", "class": "org important", "title": "orangered envelope", "url": "http://blog.reddit.com/2007/03/everyone-likes-getting-mail.html"},
@@ -13,7 +13,7 @@
     {"date": "2009-04-01", "class": "culture aprilfools", "title": "long overdue styling update", "url": "http://blog.reddit.com/2009/04/long-overdue-update.html"},
     {"date": "2009-08-24", "class": "culture", "title": "reddit's fantastic voyage", "url": "http://blog.reddit.com/2009/08/reddits-fatastic-voyage-reddit.html"},
     {"date": "2009-09-09", "class": "org important", "title": "self serve advertising opens", "url": "http://blog.reddit.com/2009/12/self-serve-advertising-on-reddit-is-now.html"},
-    {"date": "2010-04-01", "class": "culture aprilfools important", "title": "everyone is an admin", "url": "http://www.reddit.com/r/reddit.com/comments/bkzbt/everyone_is_fucked_we_are_all_admin/"},
+    {"date": "2010-04-01", "class": "culture aprilfools important", "title": "everyone is an admin", "url": "http://www.reddit.com/r/reddit.com/comments/bkzbt/everyone_is_fucked_we_are_all_admin"},
     {"date": "2010-07-26", "class": "org important", "title": "reddit gold released", "url": "http://blog.reddit.com/2010/07/reddit-needs-help.html"},
     {"date": "2010-10-30", "class": "culture important", "title": "rally in DC", "url": "http://blog.reddit.com/2010/10/everything-you-need-to-know-about.html"},
     {"date": "2011-04-01", "class": "culture aprilfools important", "title": "reddit mold", "url": "http://blog.reddit.com/2011/04/mold-mph-mmmph-mph.html"},
@@ -21,7 +21,9 @@
     {"date": "2012-01-18", "class": "culture important", "title": "SOPA blackout", "url": "http://blog.reddit.com/2012/01/stopped-they-must-be-on-this-all.html"},
     {"date": "2012-03-08", "class": "org important", "title": "CEO announced", "url": "http://blog.reddit.com/2012/03/new-reddit-ceo-reporting-for-duty.html"},
     {"date": "2012-04-01", "class": "culture", "title": "reddit timeline", "url": "http://blog.reddit.com/2012/03/introducing-reddit-timeline.html"},
-    {"date": "2012-08-29", "class": "culture important", "title": "first presidential AMA", "url": "http://www.reddit.com/r/blog/comments/z5ftg/potus_iama_stats/"}
-    {"date": "2013-12-20", "class": "culture important", "title": "121,000 secret santas", "url": "http://redditgifts.com/exchanges/secret-santa-2013/"}
-    {"date": "2013-12-31", "class": "org important", "title": "100M unique visitors every month", "url": ""}
+    {"date": "2012-08-29", "class": "culture important", "title": "first presidential AMA", "url": "http://www.reddit.com/r/blog/comments/z5ftg/potus_iama_stats"}
+    {"date": "2013-04-01", "class": "culture aprilfools", "title": "reddit buys Team Fortress 2", "url": "http://www.redditblog.com/2013/04/reddit-buys-team-fortress-2.html"}
+    {"date": "2013-12-20", "class": "culture", "title": "121,000 secret santas", "url": "http://redditgifts.com/exchanges/secret-santa-2013"}
+    {"date": "2013-12-31", "class": "org important", "title": "100M unique visitors every month", "url": "http://reddit.com/about"}
+    {"date": "2014-04-01", "class": "culture aprilfools", "title": "headdit mode launched", "url": "http://www.redditblog.com/2014/03/headdit-revolutionary-new-way-to-browse.html"}
 ]
