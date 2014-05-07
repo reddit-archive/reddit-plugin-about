@@ -1,1 +1,1 @@
-LESS_STYLESHEETS += about.less
+LESS_STYLESHEETS += about.less advertising.less

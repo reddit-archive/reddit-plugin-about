@@ -1,0 +1,7 @@
+<%namespace file="less.html" import="less_stylesheet"/>
+<%inherit file="reddit.html"/>
+
+<%def name="stylesheet()">
+  ${parent.stylesheet()}
+  ${less_stylesheet('advertising.less')}
+</%def>

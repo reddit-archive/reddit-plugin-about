@@ -3,7 +3,7 @@ import random
 from pylons import request
 from pylons.i18n import _
 
-from r2.lib.pages import Templated, BoringPage
+from r2.lib.pages import Templated, BoringPage, FormPage
 from r2.lib.menus import NavMenu, NavButton, OffsiteButton
 
 
@@ -55,9 +55,17 @@ class Team(Templated):
         self.sort_menu.cachable = False
 
 
+class AdvertisingPage(FormPage):
+    pass
+
+
 class Postcards(Templated):
     pass
 
 
 class AlienMedia(Templated):
+    pass
+
+
+class SelfServeBlurb(Templated):
     pass

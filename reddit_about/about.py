@@ -14,7 +14,7 @@ from r2.models.builder import IDBuilder
 from r2.models.keyvalue import NamedGlobals
 from r2.lib.db.queries import CachedResults
 from r2.lib.template_helpers import static, comment_label
-from pages import AboutPage, AboutTitle, About, Team, Postcards, AlienMedia
+from pages import AboutPage, AboutTitle, About, Team, Postcards, AlienMedia, AdvertisingPage, SelfServeBlurb
 
 
 def parse_date_text(date_str):
@@ -91,6 +91,13 @@ class AboutController(RedditController):
             content_id='about-guide',
             title_msg=_('new to reddit? welcome.'),
             pagename=_('guide'),
+        ).render()
+
+    def GET_advertising(self):
+        return AdvertisingPage(
+            "advertise",
+            content=SelfServeBlurb(),
+            loginbox=False,
         ).render()
 
     def _get_hot_posts(self, sr, count, shuffle=False, filter=None):

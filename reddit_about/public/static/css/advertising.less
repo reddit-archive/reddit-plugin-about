@@ -1,0 +1,142 @@
+// LESS Stuff
+.border-radius(@radius: 3px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.box-shadow(@properties) {
+  -webkit-box-shadow: @properties;
+  -moz-box-shadow: @properties;
+  box-shadow: @properties;
+}
+
+// Variables for colors
+@box-bg: hsl(210, 100%, 97%);
+@box-border: hsl(209, 54%, 59%);
+
+// !universal styles
+.button {
+  background-color: darken(@box-bg, 12%);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(darken(@box-bg, 7%)), to(darken(@box-bg, 17%)));
+  background: -moz-linear-gradient(top, darken(@box-bg, 7%), darken(@box-bg, 17%));
+	// Gradient soup is for cross-browser 
+  border: 1px solid @box-border;
+  font-size: 16px;
+  color: #000000;
+  padding: 5px;
+  text-shadow: 0px 1px 0px hsla(0,0%,100%,.7);
+  
+  .box-shadow(inset 0px 1px 0px hsla(0,0%,100%,.6));
+  .border-radius(10px);
+  
+  
+  &:active {
+    background-color: darken(@box-bg, 7%+10%);
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(darken(@box-bg, 7%)), to(darken(@box-bg, 17%)));
+    background: -moz-linear-gradient(bottom, darken(@box-bg, 7%), darken(@box-bg, 17%));
+  }
+}
+
+// !Landing page
+.redditad-header {
+  margin-top: none;
+  
+}
+
+.column-container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.center-col-1, .center-col-2 {
+  margin: 0 20px;
+}
+
+.center-col-2 {
+  margin-left: 0px;
+}
+
+.column {
+  width: 220px;
+  float: left;
+  position: relative;
+ 
+  .image {
+    width: 220px;
+    height: 128px;
+    border: 1px solid @box-border;
+  }
+}
+
+.col-bottom-box {
+  background: @box-bg;
+  border: 1px solid @box-border;
+  padding: 10px;
+  margin-top: 30px;
+  
+  .border-radius(5px);
+  
+  .bottom-box-title {
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+  
+  .ad-launch-buttons {
+    float: right;
+    padding-left: 10px;
+        display: block;
+    
+    .manage-ads {
+      font-size: 12px;
+    }
+        .button {
+            display: block;
+        }    
+  }
+  
+}
+
+#testimonial-parent {
+  .testimonial-col {
+    width: 460px;
+    margin-right: 20px;
+    float: left;
+  }
+
+  .testimonial-title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #D4D4D4;
+    margin: 20px 20px 20px 0;
+  }
+
+  .testimonial {
+    font-size: 1.2em;
+    font-family: Georgia, Times New Roman, Times, serif;
+    text-align: justify;
+    line-height: 1.4em;
+    margin: 0 10px 2.8em;
+
+    q {
+      position: relative;
+      color: #4A4A4A;
+
+        &::before {
+            content: "\201c"; //Pretty quote
+            position: absolute;
+            right: 100%;
+        }
+        &::after {
+            content: "\201d"; //Pretty quote
+        }
+    }
+    cite {
+      display: block;
+      text-align: right;
+    }
+  }
+}

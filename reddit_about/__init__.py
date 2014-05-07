@@ -37,6 +37,10 @@ class About(Plugin):
         for route in ('/about/:action', '/about/:action/*etc'):
             mc(route, controller='about', conditions={'function':not_in_sr},
                requirements={'action':'team|postcards|alien'})
+        mc('/ad_inq', controller='redirect', action='redirect',
+            dest='/advertising')
+        mc('/advertising', controller='about', action='advertising', 
+            conditions={'function':not_in_sr})
 
     def load_controllers(self):
         def load(name):
