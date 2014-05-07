@@ -21,9 +21,9 @@
     {"date": "2012-01-18", "class": "culture important", "title": "SOPA blackout", "url": "http://blog.reddit.com/2012/01/stopped-they-must-be-on-this-all.html"},
     {"date": "2012-03-08", "class": "org important", "title": "CEO announced", "url": "http://blog.reddit.com/2012/03/new-reddit-ceo-reporting-for-duty.html"},
     {"date": "2012-04-01", "class": "culture", "title": "reddit timeline", "url": "http://blog.reddit.com/2012/03/introducing-reddit-timeline.html"},
-    {"date": "2012-08-29", "class": "culture important", "title": "first presidential AMA", "url": "http://www.reddit.com/r/blog/comments/z5ftg/potus_iama_stats"}
-    {"date": "2013-04-01", "class": "culture aprilfools", "title": "reddit buys Team Fortress 2", "url": "http://www.redditblog.com/2013/04/reddit-buys-team-fortress-2.html"}
-    {"date": "2013-12-20", "class": "culture", "title": "121,000 secret santas", "url": "http://redditgifts.com/exchanges/secret-santa-2013"}
-    {"date": "2013-12-31", "class": "org important", "title": "100M unique visitors every month", "url": "http://reddit.com/about"}
+    {"date": "2012-08-29", "class": "culture important", "title": "first presidential AMA", "url": "http://www.reddit.com/r/blog/comments/z5ftg/potus_iama_stats"},
+    {"date": "2013-04-01", "class": "culture aprilfools", "title": "reddit buys Team Fortress 2", "url": "http://www.redditblog.com/2013/04/reddit-buys-team-fortress-2.html"},
+    {"date": "2013-12-20", "class": "culture", "title": "121,000 secret santas", "url": "http://redditgifts.com/exchanges/secret-santa-2013"},
+    {"date": "2013-12-31", "class": "org important", "title": "100M unique visitors every month", "url": "http://reddit.com/about"},
     {"date": "2014-04-01", "class": "culture aprilfools", "title": "headdit mode launched", "url": "http://www.redditblog.com/2014/03/headdit-revolutionary-new-way-to-browse.html"}
 ]
