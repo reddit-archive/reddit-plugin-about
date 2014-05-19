@@ -160,7 +160,7 @@
             "new": 201202,
             "pyro": 8,
             "role": "General Counsel",
-            "role_details": "freedom fighter ",
+            "role_details": "freedom fighter",
             "top": 1.63,
             "username": "rebecalyn",
             "wpm": 101
@@ -183,6 +183,11 @@
     "extra_sorts": [
         {
             "dir": -1,
+            "id": "acta",
+            "title": "experential traveler"
+        },
+        {
+            "dir": -1,
             "id": "arnold",
             "title": "love of arnold schwarzenegger"
         },
@@ -203,6 +208,16 @@
         },
         {
             "dir": -1,
+            "id": "coffee methods",
+            "title": "coffee brewing methods practiced"
+        },
+        {
+            "dir": -1,
+            "id": "costumes",
+            "title": "costumes in the armor bin"
+        },
+        {
+            "dir": -1,
             "id": "cubes",
             "title": "solving rubik's cubes"
         },
@@ -213,13 +228,23 @@
         },
         {
             "dir": -1,
+            "id": "daysbikedtowork",
+            "title": "days biked to work"
+        },
+        {
+            "dir": -1,
+            "id": "dogs",
+            "title": "dogs lived with"
+        },
+        {
+            "dir": -1,
             "id": "doodles",
             "title": "life-time reddit alien doodles"
         },
         {
             "dir": -1,
-            "id": "elves",
-            "title": "collector of vintage christmas elves"
+            "id": "fencing",
+            "title": "fences skied into"
         },
         {
             "dir": -1,
@@ -318,13 +343,23 @@
         },
         {
             "dir": -1,
+            "id": "puzzlehunts",
+            "title": "puzzlehunt participation"
+        },
+        {
+            "dir": -1,
+            "id": "rabbit children",
+            "title": "number of rabbit children"
+        },
+        {
+            "dir": -1,
             "id": "rabbits",
             "title": "number of rabbits owned"
         },
         {
             "dir": -1,
-            "id": "scalpel weilding",
-            "title": "surgeries performed"
+            "id": "reality",
+            "title": "mentions in who's who"
         },
         {
             "dir": -1,
@@ -436,23 +471,6 @@
     ],
     "team": [
         {
-            "beard": 0,
-            "description": "Keeper of the cupcakes.",
-            "elves": 9999,
-            "favorite_subreddits": [
-                "/r/secretsanta",
-                "/r/dogswitheyebrows",
-                "/r/animalsbeingderps"
-            ],
-            "name": "Jessica Moreno",
-            "new": 200911,
-            "pyro": 5,
-            "role": "Community Manager, redditgifts",
-            "role_details": "chief cupcake officer",
-            "top": 1.63,
-            "username": "5days"
-        },
-        {
             "beard": 1,
             "description": "Arranging pixels for the greater good.",
             "favorite_subreddits": [
@@ -511,7 +529,29 @@
             "wpm": 107
         },
         {
-            "beard": 10,
+            "beard": 0,
+            "costumes": "",
+            "description": "Answers injustice with justice (and/or snark). Fine, mostly snark.",
+            "favorite_subreddits": [
+                "/r/gameofthrones",
+                "/r/starwars",
+                "/r/startrek",
+                "/r/diablo",
+                "/r/cosplay",
+                "/r/DIY"
+            ],
+            "name": "Lisa Liebig",
+            "new": 201404,
+            "pyro": 11,
+            "role": "Community Manager",
+            "role_details": "Chalk outline artist emeritus",
+            "top": 1.62,
+            "username": "Sporkicide",
+            "wpm": 87
+        },
+        {
+            "beard": 9,
+            "coffee methods": 7,
             "description": "Purveyor of fine javascripts. Insufferable coffee connoisseur and foodie.",
             "favorite_subreddits": [
                 "/r/coffee",
@@ -522,7 +562,7 @@
             ],
             "name": "Jack Lawson",
             "new": 201403,
-            "pyro": 7,
+            "pyro": 9,
             "role": "Angle Bracket Inspector",
             "role_details": "Frontend engineer and /r/coffee liason",
             "username": "ajacksified",
@@ -568,13 +608,13 @@
         },
         {
             "beard": 0,
-            "description": "Handling office things in New York.",
+            "description": "I take care of office things, and whatever else is needed.",
             "favorite_subreddits": [
                 "/r/horror",
                 "/r/AskScience",
                 "/r/AskReligion"
             ],
-            "name": "Cynthia Hickon",
+            "name": "Cynthia Hickson",
             "new": 201402,
             "pyro": 0,
             "role": "Office Manager, New York",
@@ -657,22 +697,42 @@
         },
         {
             "beard": 0,
-            "description": "Spam killa. I also help subreddits do awesome stuff. If your subreddit wants to do awesome stuff, PM me!",
+            "description": "Spam killa. I also help subreddits do awesome stuff.",
             "favorite_subreddits": [
                 "/r/fifthworldproblems",
-                "/r/aww",
-                "/r/AskScience",
+                "/r/redditlaqueristas",
                 "/r/civ"
             ],
             "name": "Alex Angel",
             "new": 201006,
             "pokemon": 9999,
-            "pyro": 0,
+            "pyro": 8,
             "role": "Community Manager",
             "role_details": "bringer of baked goods",
             "top": 1.63,
             "username": "cupcake1713",
             "wpm": 88
+        },
+        {
+            "beard": 6,
+            "description": "talk to people about ads while I raid their fridge",
+            "favorite_subreddits": [
+                "/r/cfb",
+                "/r/hockey",
+                "/r/beer",
+                "/r/skiing",
+                "/r/nfl",
+                "/r/books"
+            ],
+            "fencing": 1,
+            "name": "William Westendorf",
+            "new": 201404,
+            "pyro": 4,
+            "role": "Manager of Client Relations",
+            "role_details": "email wizard",
+            "top": 1.77,
+            "username": "doubleusquared",
+            "wpm": 82
         },
         {
             "beard": 3,
@@ -822,6 +882,24 @@
         },
         {
             "beard": 0,
+            "description": "Makes things easier to use.",
+            "favorite_subreddits": [
+                "/r/rabbits",
+                "/r/fifthworldpics",
+                "/r/ImaginaryLandscapes"
+            ],
+            "name": "Jaleh Afshar",
+            "new": 201404,
+            "pyro": 0,
+            "rabbit children": 4,
+            "role": "UX/Product, redditgifts",
+            "role_details": "",
+            "top": 1.6002,
+            "username": "jaleh",
+            "wpm": 82
+        },
+        {
+            "beard": 0,
             "description": "/u/reostra ditto",
             "favorite_subreddits": [
                 "/r/TwoXChromosomes",
@@ -935,15 +1013,16 @@
                 "/r/askreddit",
                 "/r/pareidolia",
                 "/r/javascript",
-                "/r/depthhub"
+                "/r/depthhub",
+                "/r/webdev"
             ],
             "flannel": 5000,
             "name": "Matt Lee",
             "new": 201404,
             "pyro": 4,
-            "role": "Front End Engineer, Ads",
-            "role_details": "engineering the front end of ads",
-            "top": 1.63,
+            "role": "Front-End Engineer, Ads",
+            "role_details": "number 2",
+            "top": 1.93,
             "username": "madlee",
             "wpm": 85
         },
@@ -958,14 +1037,14 @@
             "new": 201402,
             "pyro": 0,
             "role": "Office Manager, Utah",
-            "role_details": "Culture Keeper/Glue ",
+            "role_details": "Culture Keeper/Glue",
             "top": 1.7526,
             "username": "maxgprime",
             "wpm": 90
         },
         {
             "beard": 9,
-            "description": "Backend developer for redditgifts",
+            "description": "Engineer for redditgifts",
             "favorite_subreddits": [
                 "/r/secretsanta",
                 "/r/python",
@@ -975,7 +1054,7 @@
             "new": 201309,
             "oceans": 9999,
             "pyro": 4,
-            "role": "Programmer",
+            "role": "Engineer",
             "role_details": "mysterious fish",
             "top": 1.8,
             "username": "mrefish",
@@ -1091,6 +1170,31 @@
             "wpm": 50
         },
         {
+            "acta": "3.14",
+            "beard": 10,
+            "description": "I make stuff happen through the power of viking blood, beard presence, refusing to play nice, and being friendly.",
+            "favorite_subreddits": [
+                "/r/Norse",
+                "/r/scotch",
+                "/r/planetside",
+                "/r/goat",
+                "/r/saltlakecity",
+                "/r/earthporn",
+                "/r/kayaking",
+                "/r/gaming",
+                "/r/animalsbeingjerks",
+                "/r/DIY"
+            ],
+            "name": "Sean Forsgren",
+            "new": 201504,
+            "pyro": 7,
+            "role": "Product Manager",
+            "role_details": "viking with manners",
+            "top": 1.854,
+            "username": "rhygaar",
+            "wpm": 76
+        },
+        {
             "beard": 1,
             "description": "Our personal puertorrique\u00f1o pyromaniac pilot. The best days for him involve home made sangria, wrangling servers, and plenty of small fires.",
             "favorite_subreddits": [
@@ -1107,6 +1211,45 @@
             "role_details": "reboot master",
             "top": 1.65,
             "username": "rram",
+            "wpm": 60
+        },
+        {
+            "beard": 9,
+            "daysbikedtowork": 9999,
+            "description": "I like writing software and studying programming language theory.",
+            "favorite_subreddits": [
+                "/r/haskell"
+            ],
+            "name": "Rich McKinley",
+            "new": 201404,
+            "pyro": 5,
+            "role": "Software Engineer",
+            "role_details": "bestie",
+            "top": 1.88,
+            "username": "rrmckinley",
+            "wpm": 43
+        },
+        {
+            "beard": 2,
+            "description": "Makes sure stuff adds up, looking for (non evil) ways to make some numbers bigger and other numbers smaller.",
+            "dogs": "1000+",
+            "favorite_subreddits": [
+                "/r/science",
+                "/r/pics",
+                "/r/music",
+                "/r/todayIlearned",
+                "/r/IamA",
+                "/r/news",
+                "/r/soul",
+                "/r/funk"
+            ],
+            "name": "Scott Tomlinson",
+            "new": 201404,
+            "pyro": 2,
+            "role": "Keeper of the Ducats",
+            "role_details": "C.R.E.A.M.",
+            "top": 1.8034,
+            "username": "sgtjamz",
             "wpm": 60
         },
         {
@@ -1237,6 +1380,24 @@
             "top": 1.72,
             "username": "youngluck",
             "wpm": 42
+        },
+        {
+            "beard": -10,
+            "description": "Astral projecting through Alan Turing's nightmares",
+            "favorite_subreddits": [
+                "/r/sandwiches",
+                "/r/asianamerican",
+                "/r/UnresolvedMysteries"
+            ],
+            "name": "Zean Tsoi",
+            "new": 201404,
+            "pyro": 0,
+            "reality": 0,
+            "role": "Engineer",
+            "role_details": "sandwich pickup artist",
+            "top": 1.8034,
+            "username": "zeantsoi",
+            "wpm": 68
         }
     ]
 }
