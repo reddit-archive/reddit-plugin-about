@@ -11,7 +11,6 @@ def tryconv(conv, s, fallback=None):
 def read_csv(path):
     with open(path) as f:
         r = csv.DictReader(f, delimiter=',', quotechar='"')
-        r.next()
         users = []
         alums = []
         extra_sorts = []
