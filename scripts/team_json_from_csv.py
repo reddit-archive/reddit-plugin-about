@@ -9,44 +9,75 @@ def tryconv(conv, s, fallback=None):
         return fallback
 
 def read_csv(path):
-    r = csv.reader(open(path), delimiter=',', quotechar='"')
-    r.next()
-    users = []
-    for line in r:
-        if not line[0]:
-            users.append(None)
+    with open(path) as f:
+        r = csv.DictReader(f, delimiter=',', quotechar='"')
+        users = []
+        alums = []
+        extra_sorts = []
+        for fields in r:
+            fields = {k: v.strip() for k, v in fields.iteritems()}
 
-        u = {
-            'username': line[0],
-            'name': line[1],
-            'role': line[2],
-            'role_details': line[3],
-            'description': line[4],
-            'favorite_subreddits': line[5].split(' ') if line[5] else [],
-            'new': tryconv(int, line[6]),
-            'top': tryconv(float, line[7]),
-            'beard': tryconv(int, line[8], 0),
-            'pyro': tryconv(int, line[9], 0),
-            'wpm': tryconv(int, line[10]),
-        }
-        if line[11]:
-            u[line[12]] = tryconv(int, line[13], line[13])
+            if not fields['username']:
+                continue
 
-        for k in u.keys():
-            if u[k] is None:
-                del u[k]
+            u = {
+                'username': fields['username'],
+                'name': fields['name'],
+                'role': fields['silly role'],
+                'role_details': fields['sillier role'],
+                'description': fields['description'],
+                'favorite_subreddits': fields['favorite subreddits'].split(),
+                'new': tryconv(int, fields['new']),
+                'top': tryconv(float, fields['top']),
+                'beard': tryconv(int, fields['beard'], 0),
+                'pyro': tryconv(int, fields['pyro'], 0),
+                'wpm': tryconv(int, fields['wpm']),
+            }
+            if fields['extra sort title']:
+                sort_value = tryconv(int, fields['extra sort value'], fields['extra sort value'])
+                sort = {
+                    'id': fields['extra sort id'],
+                    'title': fields['extra sort title'],
+                    'dir': -1 if sort_value >= 0 else 1,
+                }
+                u[sort['id']] = sort_value
+                extra_sorts.append(sort)
 
-        users.append(u)
+            for k in u.keys():
+                if u[k] is None:
+                    del u[k]
 
-    return users
+            if fields['alum']:
+                alums.append(u)
+            else:
+                users.append(u)
+
+    extra_sorts.sort(key=lambda s: s['id'])
+    users.sort(key=lambda s: s['username'])
+    alums.sort(key=lambda s: s['username'])
+    return users, alums, extra_sorts
+
 
 def main():
-    users = read_csv(sys.argv[1])
-    for u in users:
-        if u:
-            print json.dumps(u, sort_keys=True) + ','
-        else:
-            print
+    if len(sys.argv) != 3:
+        print 'usage: team_json_from_csv.py CSV_FILE JSON_FILE'
+        sys.exit(1)
+
+    with open(sys.argv[2], 'r') as team_file:
+        team_data = json.load(team_file)
+
+    users, alums, extra_sorts = read_csv(sys.argv[1])
+
+    team_data['team'] = users
+    team_data['alumni'] = alums
+    team_data['extra_sorts'] = extra_sorts
+
+    print json.dumps(
+        team_data,
+        sort_keys=True,
+        indent=4,
+        separators=(',', ': '),  # remove pretty print trailing whitespace
+    )
 
 if __name__ == "__main__":
     main()
