@@ -77,7 +77,7 @@ def main():
         team_data,
         sort_keys=True,
         indent=4,
-        separators=(',', ': '),
+        separators=(',', ': '),  # remove pretty print trailing whitespace
     )
 
 if __name__ == "__main__":
