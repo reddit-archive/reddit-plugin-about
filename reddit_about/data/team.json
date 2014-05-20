@@ -243,6 +243,11 @@
         },
         {
             "dir": -1,
+            "id": "elves",
+            "title": "collector of vintage christmas elves"
+        },
+        {
+            "dir": -1,
             "id": "fencing",
             "title": "fences skied into"
         },
@@ -470,6 +475,23 @@
         }
     ],
     "team": [
+        {
+            "beard": 0,
+            "description": "Keeper of the cupcakes.",
+            "elves": 9999,
+            "favorite_subreddits": [
+                "/r/secretsanta",
+                "/r/dogswitheyebrows",
+                "/r/animalsbeingderps"
+            ],
+            "name": "Jessica Moreno",
+            "new": 200911,
+            "pyro": 5,
+            "role": "Community Manager, redditgifts",
+            "role_details": "chief cupcake officer",
+            "top": 1.63,
+            "username": "5days"
+        },
         {
             "beard": 1,
             "description": "Arranging pixels for the greater good.",
@@ -1186,7 +1208,7 @@
                 "/r/DIY"
             ],
             "name": "Sean Forsgren",
-            "new": 201504,
+            "new": 201404,
             "pyro": 7,
             "role": "Product Manager",
             "role_details": "viking with manners",
@@ -1237,8 +1259,8 @@
                 "/r/science",
                 "/r/pics",
                 "/r/music",
-                "/r/todayIlearned",
-                "/r/IamA",
+                "/r/todayilearned",
+                "/r/IAmA",
                 "/r/news",
                 "/r/soul",
                 "/r/funk"
