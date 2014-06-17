@@ -13,8 +13,16 @@ class About(Plugin):
     config = {
         ConfigValue.int: [
             'about_images_count',
-            'about_images_min_score'
-        ]
+            'about_images_min_score',
+        ],
+        ConfigValue.str: [
+            'advertising_links_sr',
+            'wiki_page_selfserve_advertisers',
+            'wiki_page_selfserve_content',
+            'wiki_page_selfserve_blurbs',
+            'wiki_page_selfserve_quotes',
+            'wiki_page_selfserve_help',
+        ],
     }
 
     js = {
@@ -55,4 +63,3 @@ class About(Plugin):
         self.sites_data = load('sites.json')
         self.team_data = load('team.json')
         self.colors_data = load('colors.json')
-
