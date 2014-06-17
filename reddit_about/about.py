@@ -14,7 +14,16 @@ from r2.models.builder import IDBuilder
 from r2.models.keyvalue import NamedGlobals
 from r2.lib.db.queries import CachedResults
 from r2.lib.template_helpers import static, comment_label
-from pages import AboutPage, AboutTitle, About, Team, Postcards, AlienMedia, AdvertisingPage, Advertising
+from pages import (
+    About, 
+    AboutPage, 
+    AboutTitle, 
+    Advertising,
+    AdvertisingPage, 
+    AlienMedia, 
+    Postcards, 
+    Team, 
+)
 from r2.lib.pages.things import wrap_links
 from r2.models import Link, WikiPage
 
