@@ -14,8 +14,9 @@ from r2.models.builder import IDBuilder
 from r2.models.keyvalue import NamedGlobals
 from r2.lib.db.queries import CachedResults
 from r2.lib.template_helpers import static, comment_label
-from pages import AboutPage, AboutTitle, About, Team, Postcards, AlienMedia, AdvertisingPage, SelfServeBlurb
-
+from pages import AboutPage, AboutTitle, About, Team, Postcards, AlienMedia, AdvertisingPage, Advertising
+from r2.lib.pages.things import wrap_links
+from r2.models import Link, WikiPage
 
 def parse_date_text(date_str):
     if not date_str:
@@ -94,11 +95,28 @@ class AboutController(RedditController):
         ).render()
 
     def GET_advertising(self):
+        subreddit_links = self._get_selfserve_links(3)
+
+        content = Advertising(
+            subreddit_links=subreddit_links,
+        )
+
         return AdvertisingPage(
             "advertise",
-            content=SelfServeBlurb(),
+            content=content,
             loginbox=False,
         ).render()
+
+    advertising_link_id36_re = re.compile("^.*/comments/(\w+).*$")
+
+    def _get_selfserve_links(self, count):
+        links = Subreddit._by_name(g.advertising_links_sr).get_links('new', 'all')
+        ids = list(links)
+        builder = IDBuilder(ids, skip=True, num=count)
+        items = builder.get_items()[0]
+        id36s = map(lambda x: self.advertising_link_id36_re.match(x.url).group(1), items)
+        ad_links = Link._byID36(id36s, return_dict=False)
+        return wrap_links(ad_links, num=count)
 
     def _get_hot_posts(self, sr, count, shuffle=False, filter=None):
         links = sr.get_links('hot', 'all')

@@ -1,11 +1,13 @@
 import random
+import string
 
-from pylons import request
+from babel.numbers import format_currency
+from pylons import request, g, c
 from pylons.i18n import _
-
 from r2.lib.pages import Templated, BoringPage, FormPage
 from r2.lib.menus import NavMenu, NavButton, OffsiteButton
-
+from r2.models import WikiPage, Frontpage
+from reddit_about.models import *
 
 class AboutPage(BoringPage):
     css_class = 'about-page'
@@ -67,5 +69,38 @@ class AlienMedia(Templated):
     pass
 
 
-class SelfServeBlurb(Templated):
-    pass
+class Advertising(Templated):
+    def __init__(self, *args, **kwargs):
+        nav_buttons = [
+            NavButton(_('overview'), '/advertising'),
+            OffsiteButton(_('getting started'), 'http://www.redditstatic.com/ads/reddit-Advertising-Manual.pdf'),
+            NavButton(_('audience'), '/wiki/mediakit'),
+            NavButton(_('best practices'), '/wiki/selfserve#wiki_what_are_the_best_practices_for_reddit_advertising.3F'),
+            NavButton(_('help center'), '/wiki/selfserve'),
+            NavButton(_('manage ads'), '/promoted'),
+        ]
+
+        self.nav_menu = NavMenu(nav_buttons,
+            type='flatlist',
+            base_path='',
+            css_class='advertising-menu',
+            separator=None).render()
+
+        sections = SelfServeContent.get_all(return_list=False)
+        self.banner = sections['banner'] if 'banner' in sections else None
+        self.info = sections['info'] if 'info' in sections else None
+        self.advertisers = sections['advertisers'] if 'advertisers' in sections else None
+        self.subreddit = sections['subreddit'] if 'subreddit' in sections else None
+        self.help = sections['help'] if 'help' in sections else None
+        blurbs = SelfServeBlurb.get_all(return_list=False)
+        if 'platform' in blurbs:
+            formatted_cpm = format_currency(g.cpm_selfserve.decimal, 'USD', locale=c.locale)
+            formatted_min_bid = format_currency(g.min_promote_bid, 'USD', locale=c.locale)
+            blurbs['platform'].text = blurbs['platform'].text.replace(
+                '[min_promote_bid]', formatted_min_bid).replace(
+                '[cpm_selfserve]', formatted_cpm)
+        self.blurbs = blurbs.values()
+        self.advertiser_logos = SelfServeAdvertiser.get_all()
+        self.quotes = SelfServeQuote.get_all()
+        self.help_text = WikiPage.get(Frontpage, g.wiki_page_selfserve_help).content
+        Templated.__init__(self, *args, **kwargs)
