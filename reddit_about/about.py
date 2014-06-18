@@ -15,14 +15,14 @@ from r2.models.keyvalue import NamedGlobals
 from r2.lib.db.queries import CachedResults
 from r2.lib.template_helpers import static, comment_label
 from pages import (
-    About, 
-    AboutPage, 
-    AboutTitle, 
+    About,
+    AboutPage,
+    AboutTitle,
     Advertising,
-    AdvertisingPage, 
-    AlienMedia, 
-    Postcards, 
-    Team, 
+    AdvertisingPage,
+    AlienMedia,
+    Postcards,
+    Team,
 )
 from r2.lib.pages.things import wrap_links
 from r2.models import Link, WikiPage
