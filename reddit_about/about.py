@@ -14,7 +14,7 @@ from r2.models.builder import IDBuilder
 from r2.models.keyvalue import NamedGlobals
 from r2.lib.db.queries import CachedResults
 from r2.lib.template_helpers import static, comment_label
-from pages import (
+from reddit_about.pages import (
     About,
     AboutPage,
     AboutTitle,
