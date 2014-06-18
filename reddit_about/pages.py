@@ -86,13 +86,13 @@ class Advertising(Templated):
             css_class='advertising-menu',
             separator=None).render()
 
-        sections = SelfServeContent.get_all(return_list=False)
+        sections = SelfServeContent.get_all(return_dict=True)
         self.banner = sections.get('banner')
         self.info = sections.get('info')
         self.advertisers = sections.get('advertisers')
         self.subreddit = sections.get('subreddit')
         self.help = sections.get('help')
-        blurbs = SelfServeBlurb.get_all(return_list=False)
+        blurbs = SelfServeBlurb.get_all(return_dict=True)
         if 'platform' in blurbs:
             formatted_cpm = format_currency(g.cpm_selfserve.decimal, 'USD', locale=c.locale)
             formatted_min_bid = format_currency(g.min_promote_bid, 'USD', locale=c.locale)
