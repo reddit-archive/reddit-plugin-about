@@ -87,11 +87,11 @@ class Advertising(Templated):
             separator=None).render()
 
         sections = SelfServeContent.get_all(return_list=False)
-        self.banner = sections['banner'] if 'banner' in sections else None
-        self.info = sections['info'] if 'info' in sections else None
-        self.advertisers = sections['advertisers'] if 'advertisers' in sections else None
-        self.subreddit = sections['subreddit'] if 'subreddit' in sections else None
-        self.help = sections['help'] if 'help' in sections else None
+        self.banner = sections.get('banner')
+        self.info = sections.get('info')
+        self.advertisers = sections.get('advertisers')
+        self.subreddit = sections.get('subreddit')
+        self.help = sections.get('help')
         blurbs = SelfServeBlurb.get_all(return_list=False)
         if 'platform' in blurbs:
             formatted_cpm = format_currency(g.cpm_selfserve.decimal, 'USD', locale=c.locale)
