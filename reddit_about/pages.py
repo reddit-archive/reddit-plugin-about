@@ -6,8 +6,10 @@ from pylons import request, g, c
 from pylons.i18n import _
 from r2.lib.pages import Templated, BoringPage, FormPage
 from r2.lib.menus import NavMenu, NavButton, OffsiteButton
+from r2.lib.db.tdb_cassandra import NotFound
 from r2.models import WikiPage, Frontpage
 from reddit_about.models import *
+
 
 class AboutPage(BoringPage):
     css_class = 'about-page'
@@ -102,5 +104,9 @@ class Advertising(Templated):
         self.blurbs = blurbs.values()
         self.advertiser_logos = SelfServeAdvertiser.get_all()
         self.quotes = SelfServeQuote.get_all()
-        self.help_text = WikiPage.get(Frontpage, g.wiki_page_selfserve_help).content
+        self.help_text = None
+        try:
+            self.help_text = WikiPage.get(Frontpage, g.wiki_page_selfserve_help).content
+        except NotFound:
+            pass
         Templated.__init__(self, *args, **kwargs)
