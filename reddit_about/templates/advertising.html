@@ -47,8 +47,8 @@ from r2.lib.filters import safemarkdown
           <div class="row">
             <div class="col-8">
               <div class="selfserve-banner-text">
-                <h1>${_(thing.banner.title)}</h1>
-                &#32;${_md(thing.banner.text)}
+                <h1>${thing.banner.title}</h1>
+                &#32;${md(thing.banner.text)}
               </div>
             </div>
             <div class="col-4">
@@ -72,13 +72,13 @@ from r2.lib.filters import safemarkdown
 
   %if thing.info:
     <%self:selfserve_section css_class="selfserve-info">
-      <h2>${_(thing.info.title)}</h2>
+      <h2>${thing.info.title}</h2>
       <div class="row">
         %for blurb in thing.blurbs:
           <div class="col-4">
             <div class="selfserve-blurb">
-              <h3>${_(blurb.title)}</h3>
-              ${_md(blurb.text)}
+              <h3>${blurb.title}</h3>
+              ${md(blurb.text)}
             </div>
           </div>
         %endfor
@@ -88,7 +88,7 @@ from r2.lib.filters import safemarkdown
 
   %if thing.advertisers:
     <%self:selfserve_section css_class="advertiser-logos">
-      <h2>${_(thing.advertisers.title)}</h2>
+      <h2>${thing.advertisers.title}</h2>
       <ul>
         %for advertiser in thing.advertiser_logos:
           <li class="advertiser-logo">
@@ -109,7 +109,7 @@ from r2.lib.filters import safemarkdown
 
   %if thing.subreddit:
     <%self:selfserve_section css_class="selfserve-subreddit">
-      <h2>${_(thing.subreddit.title)}</h2>
+      <h2>${thing.subreddit.title}</h2>
       <div class="selfserve-subreddit-links">
         %for link in thing.subreddit_links:
           ${link}
@@ -120,7 +120,7 @@ from r2.lib.filters import safemarkdown
 
   %if thing.help:
     <%self:selfserve_section css_class="selfserve-help">
-      <h2>${_(thing.help.title)}</h2>
+      <h2>${thing.help.title}</h2>
       ${md(thing.help_text)}
     </%self:selfserve_section>
   %endif
