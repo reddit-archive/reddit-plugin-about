@@ -1,6 +1,8 @@
 from pylons import g
+
 from r2.models import Frontpage
 from r2.models.wiki import WikiPageIniItem
+
 
 class SelfServeAdvertiser(WikiPageIniItem):
     """Information about reddit advertisers."""

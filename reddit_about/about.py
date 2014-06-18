@@ -122,7 +122,7 @@ class AboutController(RedditController):
         links = Subreddit._by_name(g.advertising_links_sr).get_links('new', 'all')
         items = Link._by_fullname(links, data=True, return_dict=False)
         id36s = map(lambda x: self.advertising_link_id36_re.match(x.url).group(1), items)
-        ad_links = Link._byID36(id36s, return_dict=False)
+        ad_links = Link._byID36(id36s, return_dict=False, data=True)
         return wrap_links(ad_links, num=count)
 
     def _get_hot_posts(self, sr, count, shuffle=False, filter=None):
