@@ -120,9 +120,7 @@ class AboutController(RedditController):
 
     def _get_selfserve_links(self, count):
         links = Subreddit._by_name(g.advertising_links_sr).get_links('new', 'all')
-        ids = list(links)
-        builder = IDBuilder(ids, skip=True, num=count)
-        items = builder.get_items()[0]
+        items = Link._by_fullname(links, data=True, return_dict=False)
         id36s = map(lambda x: self.advertising_link_id36_re.match(x.url).group(1), items)
         ad_links = Link._byID36(id36s, return_dict=False)
         return wrap_links(ad_links, num=count)
