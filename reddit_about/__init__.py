@@ -16,6 +16,7 @@ class About(Plugin):
             'about_images_min_score',
         ],
         ConfigValue.str: [
+            'advertising_links_sr',
             'wiki_page_selfserve_advertisers',
             'wiki_page_selfserve_content',
             'wiki_page_selfserve_blurbs',
