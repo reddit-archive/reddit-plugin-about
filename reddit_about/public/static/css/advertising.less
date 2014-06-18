@@ -32,12 +32,18 @@
 
 @font-size: (@grid-unit * 0.75);
 
-@air-dancer-snoo-graphic: '/static/advertising/air-dancer-snoo.png';
-@banner-illustration: '/static/advertising/banner-illustration.png';
-@flexible-platform-graphic: '/static/advertising/flexible-platform.png';
-@genuine-engagement-graphic: '/static/advertising/genuine-engagement.png';
-@passionate-communities-graphic: '/static/advertising/passionate-communities.png';
-@tiled-icons: '/static/advertising/tiled-icons.png';
+@air-dancer-snoo-graphic: url(../advertising/air-dancer-snoo.png);
+@air-dancer-snoo-graphic-2x: url(../advertising/air-dancer-snoo@2x.png);
+@banner-illustration: url(../advertising/banner-illustration.png);
+@banner-illustration-2x: url(../advertising/banner-illustration@2x.png);
+@flexible-platform-graphic: url(../advertising/flexible-platform.png);
+@flexible-platform-graphic-2x: url(../advertising/flexible-platform@2x.png);
+@genuine-engagement-graphic: url(../advertising/genuine-engagement.png);
+@genuine-engagement-graphic-2x: url(../advertising/genuine-engagement@2x.png);
+@passionate-communities-graphic: url(../advertising/passionate-communities.png);
+@passionate-communities-graphic-2x: url(../advertising/passionate-communities@2x.png);
+@tiled-icons: url(../advertising/tiled-icons.png);
+@tiled-icons-2x: url(../advertising/tiled-icons@2x.png);
 
 .button {
   @color: desaturate(darken(#CEE3F8, 5%), 15%);
@@ -157,18 +163,16 @@
   background: linear-gradient(to bottom,  @color1 0%, @color2 100%);
 }
 
-.image-2x(@image, @width, @height, @repeat: no-repeat) {
-  @filename  : `/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[1]`;
-  @extension : `/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[2]`;
-  background-image: ~"url(@{filename}.@{extension})";
-  background-repeat: @repeat;
+.image-2x(@image, @image-2x, @width, @height) {
+  background-image: @image;
+  background-repeat: no-repeat;
   
   @media print, screen,
     (-webkit-min-device-pixel-ratio: 1.25),
     (min-device-pixel-ratio: 1.25),
     (min-resolution: 120dpi) {
       /* on retina, use image that's scaled by 2 */
-      background-image: ~"url(@{filename}@2x.@{extension})";
+      background-image: @image-2x;
       background-size: @width @height;
   }
 }
@@ -445,7 +449,7 @@ body {
   }
 
   .selfserve-banner {
-    .image-2x(@tiled-icons, 160px, 80px);
+    .image-2x(@tiled-icons, @tiled-icons-2x, 160px, 80px);
     background-color: @ads-blue;
     background-attachment: fixed;
     background-repeat: repeat;
@@ -478,13 +482,13 @@ body {
   }
 
   .selfserve-banner-illustration {
-    .graphic-2x(@image, @width, @height) {
-      .image-2x(@image, @width, @height);
+    .graphic-2x(@image, @image-2x, @width, @height) {
+      .image-2x(@image, @image-2x, @width, @height);
       width: @width;
       height: @height;
     }
 
-    .image-2x(@banner-illustration, 1330px, 200px);
+    .image-2x(@banner-illustration, @banner-illustration-2x, 1330px, 200px);
     background-position: center top;
 
     > .container {
@@ -493,7 +497,7 @@ body {
     }
 
     .selfserve-passionate-communities-graphic {
-      .graphic-2x(@passionate-communities-graphic, 198px, 179px);
+      .graphic-2x(@passionate-communities-graphic, passionate-communities-graphic-2x, 198px, 179px);
       position: absolute;
       left: 50%;
       bottom: -48px;
@@ -501,7 +505,7 @@ body {
     }
 
     .selfserve-air-dancer-snoo-graphic {
-      .graphic-2x(@air-dancer-snoo-graphic, 79px, 180px);
+      .graphic-2x(@air-dancer-snoo-graphic, @air-dancer-snoo-graphic-2x, 79px, 180px);
       position: absolute;
       left: 50%;
       bottom: 30px;
@@ -509,7 +513,7 @@ body {
     }
 
     .selfserve-genuine-engagement-graphic {
-      .graphic-2x(@genuine-engagement-graphic, 319px, 120px);
+      .graphic-2x(@genuine-engagement-graphic, @genuine-engagement-graphic-2x, 319px, 120px);
       position: absolute;
       right: 50%;
       bottom: 10px;
@@ -517,7 +521,7 @@ body {
     }
 
     .selfserve-flexible-platform-graphic {
-      .graphic-2x(@flexible-platform-graphic, 358px, 112px);
+      .graphic-2x(@flexible-platform-graphic, @flexible-platform-graphic-2x, 358px, 112px);
       position: absolute;
       left: 50%;
       margin-left: 90px;
