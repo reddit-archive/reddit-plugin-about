@@ -167,10 +167,9 @@
   background-image: @image;
   background-repeat: no-repeat;
   
-  @media print, screen,
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-device-pixel-ratio: 1.25),
-    (min-resolution: 120dpi) {
+  @media (-webkit-min-device-pixel-ratio: 1.25),
+         (min-device-pixel-ratio: 1.25),
+         (min-resolution: 120dpi) {
       /* on retina, use image that's scaled by 2 */
       background-image: @image-2x;
       background-size: @width @height;
@@ -497,7 +496,7 @@ body {
     }
 
     .selfserve-passionate-communities-graphic {
-      .graphic-2x(@passionate-communities-graphic, passionate-communities-graphic-2x, 198px, 179px);
+      .graphic-2x(@passionate-communities-graphic, @passionate-communities-graphic-2x, 198px, 179px);
       position: absolute;
       left: 50%;
       bottom: -48px;
