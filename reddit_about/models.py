@@ -6,8 +6,10 @@ from r2.models.wiki import WikiPageIniItem
 
 class SelfServeAdvertiser(WikiPageIniItem):
     """Information about reddit advertisers."""
-    _wiki_page_name = g.wiki_page_selfserve_advertisers
-    _sr = Frontpage
+
+    @classmethod
+    def _get_wiki_config(cls):
+        return Frontpage, g.wiki_page_selfserve_advertisers
 
     def __init__(self, id, name, url, image_url, is_enabled=True, **kwargs):
         self.id = id
@@ -19,8 +21,10 @@ class SelfServeAdvertiser(WikiPageIniItem):
 
 class SelfServeContent(WikiPageIniItem):
     """Content for /advertising page."""
-    _wiki_page_name = g.wiki_page_selfserve_content
-    _sr = Frontpage
+
+    @classmethod
+    def _get_wiki_config(cls):
+        return Frontpage, g.wiki_page_selfserve_content
 
     def __init__(self, id, title, text=None, is_enabled=True, **kwargs):
         self.id = id
@@ -31,8 +35,10 @@ class SelfServeContent(WikiPageIniItem):
 
 class SelfServeBlurb(WikiPageIniItem):
     """Blurb about selfserve platform on /advertising page."""
-    _wiki_page_name = g.wiki_page_selfserve_blurbs
-    _sr = Frontpage
+
+    @classmethod
+    def _get_wiki_config(cls):
+        return Frontpage, g.wiki_page_selfserve_blurbs
 
     def __init__(self, id, title, text, is_enabled=True, **kwargs):
         self.id = id
@@ -43,8 +49,10 @@ class SelfServeBlurb(WikiPageIniItem):
 
 class SelfServeQuote(WikiPageIniItem):
     """Blurb about selfserve platform on /advertising page."""
-    _wiki_page_name = g.wiki_page_selfserve_quotes
-    _sr = Frontpage
+
+    @classmethod
+    def _get_wiki_config(cls):
+        return Frontpage, g.wiki_page_selfserve_quotes
 
     def __init__(self, id, text, cite, source, url, is_enabled=True, **kwargs):
         self.id = id
