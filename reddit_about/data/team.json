@@ -1,6 +1,26 @@
 {
     "alumni": [
         {
+            "beard": 4,
+            "description": "Max makes your web browser do stuff. Occasionally he draws aliens.",
+            "favorite_subreddits": [
+                "/r/starcraft",
+                "/r/programming",
+                "/r/music",
+                "/r/askscience",
+                "/r/theoryofreddit"
+            ],
+            "name": "Max Goodman",
+            "new": 201104,
+            "pyro": 2,
+            "role": "JavaScript Apologist",
+            "role_details": "wearer of many hats",
+            "spy": 9999,
+            "top": 1.68,
+            "username": "chromakode",
+            "wpm": 100
+        },
+        {
             "beard": 7,
             "description": "Did all the hard math and inserts <div><!--iesux-></div> into the DOM.",
             "favorite_subreddits": [
@@ -184,7 +204,7 @@
         {
             "dir": -1,
             "id": "acta",
-            "title": "experential traveler"
+            "title": "experential traveler of the stars"
         },
         {
             "dir": -1,
@@ -318,6 +338,11 @@
         },
         {
             "dir": -1,
+            "id": "oklahoma-ite",
+            "title": "most known oklahoma factoids"
+        },
+        {
+            "dir": -1,
             "id": "physics",
             "title": "bona fide scientist"
         },
@@ -348,6 +373,11 @@
         },
         {
             "dir": -1,
+            "id": "puzzlehunts",
+            "title": "puzzlehunt participation"
+        },
+        {
+            "dir": -1,
             "id": "rabbit children",
             "title": "number of rabbit children"
         },
@@ -360,6 +390,16 @@
             "dir": -1,
             "id": "reality",
             "title": "mentions in who's who"
+        },
+        {
+            "dir": -1,
+            "id": "rugby",
+            "title": "Hatred of condiments"
+        },
+        {
+            "dir": -1,
+            "id": "scale",
+            "title": "doctor who"
         },
         {
             "dir": -1,
@@ -385,6 +425,11 @@
             "dir": -1,
             "id": "snowboards",
             "title": "snowboarding on ALL the things"
+        },
+        {
+            "dir": -1,
+            "id": "soccer",
+            "title": "nightscape photography"
         },
         {
             "dir": -1,
@@ -676,26 +721,6 @@
             "wpm": 98
         },
         {
-            "beard": 4,
-            "description": "Max makes your web browser do stuff. Occasionally he draws aliens.",
-            "favorite_subreddits": [
-                "/r/starcraft",
-                "/r/programming",
-                "/r/music",
-                "/r/askscience",
-                "/r/theoryofreddit"
-            ],
-            "name": "Max Goodman",
-            "new": 201104,
-            "pyro": 2,
-            "role": "JavaScript Apologist",
-            "role_details": "wearer of many hats",
-            "spy": 9999,
-            "top": 1.68,
-            "username": "chromakode",
-            "wpm": 100
-        },
-        {
             "beard": 8,
             "description": "I handle the campaign management for the sales team",
             "favorite_subreddits": [
@@ -724,7 +749,7 @@
             "new": 201006,
             "pokemon": 9999,
             "pyro": 8,
-            "role": "Community Manager",
+            "role": "Head of Community Management",
             "role_details": "bringer of baked goods",
             "top": 1.63,
             "username": "cupcake1713",
@@ -825,6 +850,25 @@
             "skate": 9999,
             "top": 1.7,
             "username": "garyjense"
+        },
+        {
+            "beard": 4,
+            "description": "I was born with trousers around my waist held up by my bible belt. But now, my pants hang low showing the brevity of my undergarments.",
+            "favorite_subreddits": [
+                "/r/nba",
+                "/r/mapporn",
+                "/r/dataisbeautiful",
+                "/r/internetisbeautiful"
+            ],
+            "name": "Heath W. Black",
+            "new": 201406,
+            "oklahoma-ite": "",
+            "pyro": 11,
+            "role": "Product Manager, redditgifts",
+            "role_details": "official poet laureate of reddit",
+            "top": 1.68,
+            "username": "heathwblack",
+            "wpm": 92
         },
         {
             "beard": 0,
@@ -932,6 +976,26 @@
             "username": "jenakalif",
             "wpm": 60,
             "zombies": 9999
+        },
+        {
+            "beard": 0,
+            "description": "I make front end magic in a great company!",
+            "favorite_subreddits": [
+                "/r/javascript",
+                "/r/webdev",
+                "/r/frontend",
+                "/r/cameras",
+                "/r/soccer"
+            ],
+            "name": "Alexandr Marinenko",
+            "new": 201406,
+            "pyro": 6,
+            "role": "Front-End Magician",
+            "role_details": "",
+            "soccer": 7,
+            "top": 1.8,
+            "username": "jo_asakura",
+            "wpm": 58
         },
         {
             "beard": 8,
@@ -1060,6 +1124,24 @@
             "wpm": 90
         },
         {
+            "beard": 0,
+            "description": "Making your iDevices hAPPy",
+            "favorite_subreddits": [
+                "/r/TrollXChromosomes",
+                "/r/iOSProgramming",
+                "/r/sanfrancisco"
+            ],
+            "name": "Michele Titolo",
+            "new": 201405,
+            "pyro": 7,
+            "role": "iEngineer",
+            "role_details": "Time Lord",
+            "scale": 9999,
+            "top": 1.60002,
+            "username": "michelectric",
+            "wpm": 78
+        },
+        {
             "beard": 9,
             "description": "Engineer for redditgifts",
             "favorite_subreddits": [
@@ -1113,6 +1195,27 @@
             "role_details": "stretch armstrong",
             "top": 1.78,
             "username": "notalindsay"
+        },
+        {
+            "beard": 10,
+            "description": "The night time subreddit bestower.",
+            "favorite_subreddits": [
+                "/r/ireland",
+                "/r/asmr",
+                "/r/leedsunited",
+                "/r/gameofthrones",
+                "/r/circlejerk",
+                "/r/rugbyunion"
+            ],
+            "name": "Donall O'Brien",
+            "new": 201406,
+            "pyro": 1,
+            "role": "Community Manager",
+            "role_details": "aggressive hugger",
+            "rugby": 9999,
+            "top": 1.93,
+            "username": "ocrasorm",
+            "wpm": 70
         },
         {
             "beard": 0,
@@ -1189,7 +1292,7 @@
         {
             "acta": "3.14",
             "beard": 10,
-            "description": "I make stuff happen through the power of viking blood, beard presence, refusing to play nice, and being friendly.",
+            "description": "The bearded man born of Norse blood, marked by lightning, and leading new product initiatives for us. He's truly fearless in the face of feature creep.",
             "favorite_subreddits": [
                 "/r/Norse",
                 "/r/scotch",
@@ -1210,6 +1313,22 @@
             "top": 1.854,
             "username": "rhygaar",
             "wpm": 76
+        },
+        {
+            "beard": 0,
+            "description": "Piggy bank disguised as a man...or a man disguised as a piggy bank?",
+            "favorite_subreddits": [
+                "/r/music",
+                "/r/listentothis",
+                "/r/zenhabits",
+                "/r/avacadosgonewild"
+            ],
+            "name": "Andrew Reyes",
+            "new": 201406,
+            "pyro": 0,
+            "role": "Staff Accountant",
+            "role_details": "(\u256f\u00b0\u25a1\u00b0\uff09\u256f\ufe35 \u253b\u2501\u253b",
+            "username": "rhymeswithAndrew"
         },
         {
             "beard": 1,
@@ -1324,6 +1443,26 @@
             "username": "taxidermyunicornhead"
         },
         {
+            "beard": 0,
+            "description": "Counting all the things. Decreasing worldsuck.",
+            "favorite_subreddits": [
+                "/r/subredditoftheday",
+                "/r/mildlyinteresting",
+                "/r/nerdfighters",
+                "/r/AskScience",
+                "/r/ColorizedHistory"
+            ],
+            "name": "Tiffany Dohzen",
+            "new": 201405,
+            "puzzlehunts": 9999,
+            "pyro": 0,
+            "role": "Data && Product",
+            "role_details": "geek of all stripes",
+            "top": 1.57,
+            "username": "tdohz",
+            "wpm": 86
+        },
+        {
             "beard": 1,
             "description": "I like your weird niche interests.",
             "favorite_subreddits": [
@@ -1358,6 +1497,22 @@
             "username": "weffey",
             "wpm": 73,
             "yarn": 1
+        },
+        {
+            "beard": 0,
+            "description": "I pick up some bits and put down others. Sometimes they are 1's sometimes they are 0's.",
+            "favorite_subreddits": [
+                "/r/food",
+                "/r/fractals",
+                "/r/vitamix"
+            ],
+            "name": "George Pang",
+            "new": 201405,
+            "pyro": 0,
+            "role": "Engineer",
+            "role_details": "Peon of peons",
+            "top": 1.7526,
+            "username": "xilvar"
         },
         {
             "beard": 2,
