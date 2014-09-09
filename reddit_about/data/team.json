@@ -475,6 +475,11 @@
             "dir": -1,
             "id": "zombies",
             "title": "last one standing in foot race against zombies"
+        },
+        {
+            "dir": -1,
+            "id": "spiders_ew",
+            "title": "severest arachnophobia"
         }
     ],
     "sorts": [
@@ -1461,6 +1466,26 @@
             "top": 1.57,
             "username": "tdohz",
             "wpm": 86
+        },
+        {
+            "beard": 0,
+            "description": "Diving into reddit's code",
+            "favorite_subreddits": [
+                "/r/scuba",
+                "/r/educationalgifs",
+                "/r/dadjokes",
+                "/r/programmerhumor",
+                "/r/holdmybeer"
+            ],
+            "name": "Melissa Cole",
+            "new": 201409,
+            "spiders_ew": 9999,
+            "pyro": 8,
+            "role": "Software Engineer",
+            "role_details": "She who dances with s'mores",
+            "top": 1.6764,
+            "username": "MiamiZ",
+            "wpm": 112
         },
         {
             "beard": 1,
