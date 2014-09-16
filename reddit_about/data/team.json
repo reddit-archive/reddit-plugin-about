@@ -1595,6 +1595,23 @@
             "top": 1.8034,
             "username": "zeantsoi",
             "wpm": 68
+        },
+        {
+            "beard": 8,
+            "description": "Hacking for a better tomorrow, today.",
+            "favorite_subreddits": [
+                "/r/cscareerquestions",
+                "/r/netsec",
+                "/r/elint"
+            ],
+            "name": "James Pearson",
+            "new": 201409,
+            "pyro": 0,
+            "role": "Software Engineer",
+            "role_details": "Why yes, I *am* a wizard.",
+            "top": 1.791,
+            "username": "xiongchiamiov",
+            "wpm": 86
         }
     ]
 }
