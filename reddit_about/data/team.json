@@ -1612,6 +1612,25 @@
             "top": 1.791,
             "username": "xiongchiamiov",
             "wpm": 86
+        },
+        {
+            "beard": -1,
+            "coffee methods": 3,
+            "description": "Digital dock manager, shipper of bits.",
+            "favorite_subreddits": [
+                "/r/mead",
+                "/r/gonewilder",
+                "/r/fifthworldproblems",
+                "/r/funny"
+            ],
+            "name": "Drew Ditthardt",
+            "new": 201409,
+            "top": 1.905,
+            "pyro": 11,
+            "role": "ngrep",
+            "role_details": "Software engineer",
+            "username": "dditthardt",
+            "wpm": 120
         }
     ]
 }
