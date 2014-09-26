@@ -1,6 +1,41 @@
 {
     "alumni": [
         {
+            "beard": 0,
+            "description": "/u/reostra ditto",
+            "favorite_subreddits": [
+                "/r/TwoXChromosomes",
+                "/r/AskHistorians",
+                "/r/ShowerThoughts"
+            ],
+            "name": "Jena Donlin",
+            "new": 201101,
+            "pyro": 1,
+            "role": "Product Manager, Advertising",
+            "role_details": "seeker",
+            "top": 1.73,
+            "username": "jenakalif",
+            "wpm": 60,
+            "zombies": 9999
+        },
+        {
+            "beard": 0,
+            "description": "hold the cheese, please",
+            "favorite_subreddits": [
+                "/r/MapPorn",
+                "/r/printSF",
+                "/r/geology",
+                "/r/comeonandslam"
+            ],
+            "name": "Lindsey Dorn",
+            "new": 201403,
+            "pyro": 0,
+            "role": "Office Manager, SF",
+            "role_details": "stretch armstrong",
+            "top": 1.78,
+            "username": "notalindsay"
+        },
+        {
             "beard": 4,
             "description": "Max makes your web browser do stuff. Occasionally he draws aliens.",
             "favorite_subreddits": [
@@ -433,6 +468,11 @@
         },
         {
             "dir": -1,
+            "id": "spiders_ew",
+            "title": "severest arachnophobia"
+        },
+        {
+            "dir": -1,
             "id": "spy",
             "title": "likelihood of being a spy"
         },
@@ -475,11 +515,6 @@
             "dir": -1,
             "id": "zombies",
             "title": "last one standing in foot race against zombies"
-        },
-        {
-            "dir": -1,
-            "id": "spiders_ew",
-            "title": "severest arachnophobia"
         }
     ],
     "sorts": [
@@ -966,24 +1001,6 @@
         },
         {
             "beard": 0,
-            "description": "/u/reostra ditto",
-            "favorite_subreddits": [
-                "/r/TwoXChromosomes",
-                "/r/AskHistorians",
-                "/r/ShowerThoughts"
-            ],
-            "name": "Jena Donlin",
-            "new": 201101,
-            "pyro": 1,
-            "role": "Product Manager, Advertising",
-            "role_details": "seeker",
-            "top": 1.73,
-            "username": "jenakalif",
-            "wpm": 60,
-            "zombies": 9999
-        },
-        {
-            "beard": 0,
             "description": "I make front end magic in a great company!",
             "favorite_subreddits": [
                 "/r/javascript",
@@ -1057,17 +1074,19 @@
         },
         {
             "beard": 0,
-            "description": "I deal with people so they don't have to.",
+            "description": "Can often be found in the Party Escort Submission Position, waiting for cake.",
             "favorite_subreddits": [
                 "/r/skyrim",
-                "/r/ladyboners",
-                "/r/AskReddit"
+                "/r/MorbidReality",
+                "/r/tennis",
+                "/r/GoatParkour",
+                "/r/shitkksays"
             ],
-            "name": "Kristine Smith",
+            "name": "Kristine Fasnacht",
             "new": 201104,
             "pyro": 8,
-            "role": "Advertising Support",
-            "role_details": "self serve guru",
+            "role": "Community Manager",
+            "role_details": "goat whisperer",
             "top": 1.52,
             "username": "krispykrackers",
             "whales": 9999,
@@ -1185,23 +1204,6 @@
             "wpm": 97
         },
         {
-            "beard": 0,
-            "description": "hold the cheese, please",
-            "favorite_subreddits": [
-                "/r/MapPorn",
-                "/r/printSF",
-                "/r/geology",
-                "/r/comeonandslam"
-            ],
-            "name": "Lindsey Dorn",
-            "new": 201403,
-            "pyro": 0,
-            "role": "Office Manager, SF",
-            "role_details": "stretch armstrong",
-            "top": 1.78,
-            "username": "notalindsay"
-        },
-        {
             "beard": 10,
             "description": "The night time subreddit bestower.",
             "favorite_subreddits": [
@@ -1259,7 +1261,7 @@
         },
         {
             "beard": 2,
-            "description": "Josh endeavors to make things at reddit slightly more entertaining.",
+            "description": "Dabbling in alchemy.",
             "favorite_subreddits": [
                 "/r/ultimate",
                 "/r/depthhub",
@@ -1271,10 +1273,11 @@
             "new": 201109,
             "pronunciation": 9999,
             "pyro": 1,
-            "role": "Office Artist",
+            "role": "Product Manager, reddit gold",
             "role_details": "erstwhile gremlin",
             "top": 1.82,
-            "username": "powerlanguage"
+            "username": "powerlanguage",
+            "wpm": 11.38
         },
         {
             "beard": 1,
