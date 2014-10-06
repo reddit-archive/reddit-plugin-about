@@ -462,7 +462,7 @@
         {
             "dir": -1,
             "id": "rugby",
-            "title": "Hatred of condiments"
+            "title": "hatred of condiments"
         },
         {
             "dir": -1,
@@ -1680,7 +1680,7 @@
             "username": "thorarakis",
             "name": "Chris Stephens",
             "role": "Drunk Code Monkey",
-            "role_details": "barelypop quaffer",
+            "role_details": "barleypop quaffer",
             "description": "Who's got two thumbs and does homebrewing, pythoning, skitouring and javascripting?",
             "favorite_subreddits": [
                 "/r/homebrewing",
