@@ -2,6 +2,24 @@
     "alumni": [
         {
             "beard": 0,
+            "description": "Valerie drinks a lot of coffee and writes code. She believes almost anything can be improved by adding robots.",
+            "favorite_subreddits": [
+                "/r/depthhub",
+                "/r/QuotesPorn",
+                "/r/dataisbeautiful"
+            ],
+            "mornings": 9999,
+            "name": "Valerie Hajdik",
+            "new": 201204,
+            "pyro": 8,
+            "role": "Programmer",
+            "role_details": "generalist",
+            "top": 1.7,
+            "username": "shlurbee",
+            "wpm": 109
+        },
+        {
+            "beard": 0,
             "description": "/u/reostra ditto",
             "favorite_subreddits": [
                 "/r/TwoXChromosomes",
@@ -263,6 +281,11 @@
         },
         {
             "dir": -1,
+            "id": "catshirt",
+            "title": "largest collection of cat t-shirts"
+        },
+        {
+            "dir": -1,
             "id": "coffee methods",
             "title": "coffee brewing methods practiced"
         },
@@ -358,6 +381,11 @@
         },
         {
             "dir": -1,
+            "id": "mountains",
+            "title": "meetings attended from mountain tops"
+        },
+        {
+            "dir": -1,
             "id": "nerdiness",
             "title": "ultimate grammar nerd"
         },
@@ -428,8 +456,13 @@
         },
         {
             "dir": -1,
+            "id": "redraiders",
+            "title": "madden football skills"
+        },
+        {
+            "dir": -1,
             "id": "rugby",
-            "title": "Hatred of condiments"
+            "title": "hatred of condiments"
         },
         {
             "dir": -1,
@@ -438,8 +471,13 @@
         },
         {
             "dir": -1,
+            "id": "selfies",
+            "title": "selfies taken"
+        },
+        {
+            "dir": -1,
             "id": "scorpions",
-            "title": "fear  of scorpions"
+            "title": "fear of scorpions"
         },
         {
             "dir": -1,
@@ -505,6 +543,11 @@
             "dir": -1,
             "id": "worm",
             "title": "can do the worm forward and backward"
+        },
+        {
+            "dir": -1,
+            "id": "wtf",
+            "title": "tacos"
         },
         {
             "dir": -1,
@@ -1397,24 +1440,6 @@
             "wpm": 60
         },
         {
-            "beard": 0,
-            "description": "Valerie drinks a lot of coffee and writes code. She believes almost anything can be improved by adding robots.",
-            "favorite_subreddits": [
-                "/r/depthhub",
-                "/r/QuotesPorn",
-                "/r/dataisbeautiful"
-            ],
-            "mornings": 9999,
-            "name": "Valerie Hajdik",
-            "new": 201204,
-            "pyro": 8,
-            "role": "Programmer",
-            "role_details": "generalist",
-            "top": 1.7,
-            "username": "shlurbee",
-            "wpm": 109
-        },
-        {
             "beard": 8,
             "description": "Neil does things and sometimes even stuff. For a time, he was the only surviving programmer at reddit.",
             "favorite_subreddits": [
@@ -1630,10 +1655,135 @@
             "new": 201409,
             "top": 1.905,
             "pyro": 11,
-            "role": "ngrep",
-            "role_details": "Software engineer",
+            "role": "Software Engineer",
+            "role_details": "ngrep",
             "username": "dditthardt",
             "wpm": 120
+        },
+        {
+            "beard": 3,
+            "description": "Parties, motorcycles, guns, rock 'n' roll. Also pizza.",
+            "favorite_subreddits": [
+                "/r/gifs",
+                "/r/animalfashionadvice"
+            ],
+            "name": "Dane Hansen",
+            "new": 201405,
+            "top": 1.905,
+            "pyro": 8,
+            "role_details": "fart maker",
+            "role": "Front-End Developer",
+            "username": "danehansen",
+            "wpm": 74
+        },
+        {
+            "username": "thorarakis",
+            "name": "Chris Stephens",
+            "role": "Drunk Code Monkey",
+            "role_details": "barleypop quaffer",
+            "description": "Who's got two thumbs and does homebrewing, pythoning, skitouring and javascripting?",
+            "favorite_subreddits": [
+                "/r/homebrewing",
+                "/r/bikeporn",
+                "/r/skiing",
+                "/r/backcountry", 
+                "/r/earthporn"
+            ],
+            "new": 201408,
+            "top": 1.7,
+            "beard": 2.4,
+            "pyro": 7,
+            "wpm": 70,
+            "mountains": 9898
+        },
+        {
+            "username": "notenoughcharacters9",
+            "name": "John-William Trenholm",
+            "role": "Systems Administrator",
+            "role_details": "sandwich engineer",
+            "description": "builds things from built things",
+            "favorite_subreddits": [
+                "/r/Linux",
+                "/r/startups",
+                "/r/entrepreneur",
+                "/r/texas",
+                "/r/food",
+                "/r/slowcooking"
+            ],
+            "new": 201407,
+            "beard": 0.1,
+            "pyro": 2,
+            "wpm": 87,
+            "wtf": 29
+        },
+        {
+            "username": "Drunken_Economist",
+            "name": "Justin Bassett",
+            "role_details": "Head of Rounding-Up",
+            "role": "Data Analyst",
+            "description": "When reality doesn't fit the data, I change one or the other.",
+            "favorite_subreddits": [
+                "/r/mls",
+                "/r/nfl",
+                "/r/cfb",
+                "/r/dataisbeautiful",
+                "/r/BeachParty"
+            ],
+            "new": 201409,
+            "top": 1.78,
+            "beard": 0.5,
+            "pyro": -1,
+            "selfies": 9999
+        },
+        {
+            "username": "ninatekwani",
+            "name": "Nina Tekwani",
+            "role": "Marketing Manager",
+            "role_details": "obsessive photo taker",
+            "description": "Showing you the many reasons why you should buy cool marketplace products.",
+            "favorite_subreddits": [
+                "/r/aww",
+                "/r/photography",
+                "/r/photoshopbattles"
+            ]
+        },
+        {
+            "username": "ryanmerket",
+            "name": "Ryan Merket",
+            "role": "Product Manager",
+            "role_details": "smooth criminal",
+            "description": "I manage products to help people make ads that don't suck.",
+            "favorite_subreddits": [
+                "/r/cfb",
+                "/r/keto",
+                "/r/publicfreakouts",
+                "/r/GetMotivated",
+                "/r/EarthPorn"
+            ],
+            "new": 201408,
+            "top": 1.905,
+            "beard": 10,
+            "pyro": 11,
+            "wpm": 65,
+            "redraiders": 99
+        },
+        {
+            "username": "curioussavage01",
+            "name": "Adam Winn",
+            "role": "Junior Front-End Developer",
+            "role_details": "recovering cat-o-holic",
+            "description": "I cast spells on your browsers using the magic of HTML/CSS and JavaScript. My favorite day is Caturday.",
+            "favorite_subreddits": [
+                "/r/bitcoin",
+                "/r/cats",
+                "/r/programming"
+            ],
+            "new": 201408,
+            "top": 1.76,
+            "beard": 8,
+            "pyro": 5,
+            "wpm": 60,
+            "catshirt": 9000
         }
     ]
 }
