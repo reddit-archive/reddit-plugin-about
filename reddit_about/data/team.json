@@ -1,61 +1,6 @@
 {
     "alumni": [
         {
-            "beard": 0,
-            "description": "/u/reostra ditto",
-            "favorite_subreddits": [
-                "/r/TwoXChromosomes",
-                "/r/AskHistorians",
-                "/r/ShowerThoughts"
-            ],
-            "name": "Jena Donlin",
-            "new": 201101,
-            "pyro": 1,
-            "role": "Product Manager, Advertising",
-            "role_details": "seeker",
-            "top": 1.73,
-            "username": "jenakalif",
-            "wpm": 60,
-            "zombies": 9999
-        },
-        {
-            "beard": 0,
-            "description": "hold the cheese, please",
-            "favorite_subreddits": [
-                "/r/MapPorn",
-                "/r/printSF",
-                "/r/geology",
-                "/r/comeonandslam"
-            ],
-            "name": "Lindsey Dorn",
-            "new": 201403,
-            "pyro": 0,
-            "role": "Office Manager, SF",
-            "role_details": "stretch armstrong",
-            "top": 1.78,
-            "username": "notalindsay"
-        },
-        {
-            "beard": 4,
-            "description": "Max makes your web browser do stuff. Occasionally he draws aliens.",
-            "favorite_subreddits": [
-                "/r/starcraft",
-                "/r/programming",
-                "/r/music",
-                "/r/askscience",
-                "/r/theoryofreddit"
-            ],
-            "name": "Max Goodman",
-            "new": 201104,
-            "pyro": 2,
-            "role": "JavaScript Apologist",
-            "role_details": "wearer of many hats",
-            "spy": 9999,
-            "top": 1.68,
-            "username": "chromakode",
-            "wpm": 100
-        },
-        {
             "beard": 7,
             "description": "Did all the hard math and inserts <div><!--iesux-></div> into the DOM.",
             "favorite_subreddits": [
@@ -88,6 +33,26 @@
             "shatner": 9999,
             "top": 1.55,
             "username": "bitcrunch"
+        },
+        {
+            "beard": 4,
+            "description": "Max makes your web browser do stuff. Occasionally he draws aliens.",
+            "favorite_subreddits": [
+                "/r/starcraft",
+                "/r/programming",
+                "/r/music",
+                "/r/askscience",
+                "/r/theoryofreddit"
+            ],
+            "name": "Max Goodman",
+            "new": 201104,
+            "pyro": 2,
+            "role": "JavaScript Apologist",
+            "role_details": "wearer of many hats",
+            "spy": 9999,
+            "top": 1.68,
+            "username": "chromakode",
+            "wpm": 100
         },
         {
             "beard": 0,
@@ -146,6 +111,24 @@
             "wpm": 57
         },
         {
+            "beard": 0,
+            "description": "/u/reostra ditto",
+            "favorite_subreddits": [
+                "/r/TwoXChromosomes",
+                "/r/AskHistorians",
+                "/r/ShowerThoughts"
+            ],
+            "name": "Jena Donlin",
+            "new": 201101,
+            "pyro": 1,
+            "role": "Product Manager, Advertising",
+            "role_details": "seeker",
+            "top": 1.73,
+            "username": "jenakalif",
+            "wpm": 60,
+            "zombies": 9999
+        },
+        {
             "beard": 8,
             "description": "If reddit's slow, that's probably my fault",
             "favorite_subreddits": [
@@ -185,6 +168,23 @@
             "wpm": 60
         },
         {
+            "beard": 0,
+            "description": "hold the cheese, please",
+            "favorite_subreddits": [
+                "/r/MapPorn",
+                "/r/printSF",
+                "/r/geology",
+                "/r/comeonandslam"
+            ],
+            "name": "Lindsey Dorn",
+            "new": 201403,
+            "pyro": 0,
+            "role": "Office Manager, SF",
+            "role_details": "stretch armstrong",
+            "top": 1.78,
+            "username": "notalindsay"
+        },
+        {
             "beard": 10,
             "description": "When reddit needed gum to hold itself together, he was there to chew it.",
             "favorite_subreddits": [
@@ -219,6 +219,24 @@
             "top": 1.63,
             "username": "rebecalyn",
             "wpm": 101
+        },
+        {
+            "beard": 0,
+            "description": "Valerie drinks a lot of coffee and writes code. She believes almost anything can be improved by adding robots.",
+            "favorite_subreddits": [
+                "/r/depthhub",
+                "/r/QuotesPorn",
+                "/r/dataisbeautiful"
+            ],
+            "mornings": 9999,
+            "name": "Valerie Hajdik",
+            "new": 201204,
+            "pyro": 8,
+            "role": "Programmer",
+            "role_details": "generalist",
+            "top": 1.7,
+            "username": "shlurbee",
+            "wpm": 109
         },
         {
             "beard": 0,
@@ -260,6 +278,11 @@
             "dir": -1,
             "id": "cartoon",
             "title": "memorialized in cartoon form"
+        },
+        {
+            "dir": -1,
+            "id": "catshirt",
+            "title": "largest collection of cat t-shirts"
         },
         {
             "dir": -1,
@@ -358,6 +381,11 @@
         },
         {
             "dir": -1,
+            "id": "mountains",
+            "title": "meetings attended from mountain tops"
+        },
+        {
+            "dir": -1,
             "id": "nerdiness",
             "title": "ultimate grammar nerd"
         },
@@ -385,6 +413,11 @@
             "dir": -1,
             "id": "pings",
             "title": "number of pings required, vasilly"
+        },
+        {
+            "dir": -1,
+            "id": "plants",
+            "title": "killing plants accidentally"
         },
         {
             "dir": -1,
@@ -428,8 +461,13 @@
         },
         {
             "dir": -1,
+            "id": "redraiders",
+            "title": "madden football skills"
+        },
+        {
+            "dir": -1,
             "id": "rugby",
-            "title": "Hatred of condiments"
+            "title": "hatred of condiments"
         },
         {
             "dir": -1,
@@ -440,6 +478,11 @@
             "dir": -1,
             "id": "scorpions",
             "title": "fear  of scorpions"
+        },
+        {
+            "dir": -1,
+            "id": "selfies",
+            "title": "selfies taken"
         },
         {
             "dir": -1,
@@ -483,6 +526,11 @@
         },
         {
             "dir": -1,
+            "id": "sunshine_rainbows",
+            "title": "fullest of sunshine and rainbows"
+        },
+        {
+            "dir": -1,
             "id": "tennis",
             "title": "hitting targets via tennis serve"
         },
@@ -505,6 +553,11 @@
             "dir": -1,
             "id": "worm",
             "title": "can do the worm forward and backward"
+        },
+        {
+            "dir": -1,
+            "id": "wtf",
+            "title": "tacos"
         },
         {
             "dir": -1,
@@ -629,6 +682,43 @@
             "top": 1.8,
             "username": "Deimorz",
             "wpm": 107
+        },
+        {
+            "beard": 0,
+            "description": "I make sure reddit's sites & products make our users giddy with unfathomable delight.",
+            "favorite_subreddits": [
+                "/r/outside",
+                "/r/fifthworldproblems",
+                "/r/shittyfoodporn"
+            ],
+            "name": "Jennifer Morrow",
+            "new": 201408,
+            "plants": 9999,
+            "pyro": 3,
+            "role": "User Experience Designer",
+            "role_details": "possible robot sympathizer",
+            "top": 1.63,
+            "username": "DoNotLickToaster",
+            "wpm": 100
+        },
+        {
+            "beard": 0,
+            "description": "When reality doesn't fit the data, I change one or the other.",
+            "favorite_subreddits": [
+                "/r/mls",
+                "/r/nfl",
+                "/r/cfb",
+                "/r/dataisbeautiful",
+                "/r/BeachParty"
+            ],
+            "name": "Justin Bassett",
+            "new": 201409,
+            "pyro": -1,
+            "role": "Head of Rounding-Up",
+            "role_details": "Data Analyst",
+            "selfies": 9999,
+            "top": 1.78,
+            "username": "Drunken_Economist"
         },
         {
             "beard": 0,
@@ -794,6 +884,59 @@
             "top": 1.63,
             "username": "cupcake1713",
             "wpm": 88
+        },
+        {
+            "beard": 8,
+            "catshirt": 9000,
+            "description": "I cast spells on your browsers using the magic of HTML/CSS and JavaScript. My favorite day is Caturday.",
+            "favorite_subreddits": [
+                "/r/bitcoin",
+                "/r/cats",
+                "/r/programming"
+            ],
+            "name": "Adam Winn",
+            "new": 201408,
+            "pyro": 5,
+            "role": "Junior Front-End Developer",
+            "role_details": "recovering cat-o-holic",
+            "top": 1.76,
+            "username": "curioussavage01",
+            "wpm": 60
+        },
+        {
+            "beard": 3,
+            "description": "Parties, motorcycles, guns, rock \u2018n\u2019 roll. Also pizza.",
+            "favorite_subreddits": [
+                "/r/gifs",
+                "/r/animalfashionadvice"
+            ],
+            "name": "Dane Hansen",
+            "new": 201405,
+            "pyro": 8,
+            "role": "Front-End Developer",
+            "role_details": "fart maker",
+            "top": 1.905,
+            "username": "danehansen",
+            "wpm": 74
+        },
+        {
+            "beard": -1,
+            "description": "Digital dock manager, shipper of bits.",
+            "favorite_subreddits": [
+                "/r/gonewilder",
+                "/r/fifthworldproblems",
+                "/r/mead",
+                "/r/funny"
+            ],
+            "name": "Drew Ditthardt",
+            "new": 201409,
+            "pyro": 11,
+            "role": "Software Engineer",
+            "role_details": "ngrep",
+            "sunshine_rainbows": "eleventy",
+            "top": 1.905,
+            "username": "dditthardt",
+            "wpm": 120
         },
         {
             "beard": 6,
@@ -1149,6 +1292,26 @@
         },
         {
             "beard": 0,
+            "description": "Diving into reddit's code",
+            "favorite_subreddits": [
+                "/r/scuba",
+                "/r/educationalgifs",
+                "/r/dadjokes",
+                "/r/programmerhumor",
+                "/r/holdmybeer"
+            ],
+            "name": "Melissa Cole",
+            "new": 201409,
+            "pyro": 8,
+            "role": "Software Engineer",
+            "role_details": "she who dances with s'mores",
+            "spiders_ew": 9999,
+            "top": 1.6764,
+            "username": "miamiz",
+            "wpm": 112
+        },
+        {
+            "beard": 0,
             "description": "Making your iDevices hAPPy",
             "favorite_subreddits": [
                 "/r/TrollXChromosomes",
@@ -1185,6 +1348,20 @@
         },
         {
             "beard": 0,
+            "description": "Showing you the many reasons why you should buy cool marketplace products.",
+            "favorite_subreddits": [
+                "/r/aww",
+                "/r/photography",
+                "/r/photoshopbattles"
+            ],
+            "name": "Nina Tekwani",
+            "pyro": 0,
+            "role": "Marketing Manager",
+            "role_details": "obsessive photo taker",
+            "username": "ninatekwani"
+        },
+        {
+            "beard": 0,
             "description": "Writing lots of code for redditgifts! Usually found in the mountains rolling around in snow.",
             "favorite_subreddits": [
                 "/r/wheredidthesodago",
@@ -1202,6 +1379,26 @@
             "top": 1.6002,
             "username": "nnja",
             "wpm": 97
+        },
+        {
+            "beard": 0,
+            "description": "builds things from built things",
+            "favorite_subreddits": [
+                "/r/Linux",
+                "/r/startups",
+                "/r/entrepreneur",
+                "/r/texas",
+                "/r/food",
+                "/r/slowcooking"
+            ],
+            "name": "John-William Trenholm",
+            "new": 201407,
+            "pyro": 2,
+            "role": "Systems Administrator",
+            "role_details": "sandwich engineer",
+            "username": "notenoughcharacters9",
+            "wpm": 87,
+            "wtf": 29
         },
         {
             "beard": 10,
@@ -1311,7 +1508,8 @@
                 "/r/kayaking",
                 "/r/gaming",
                 "/r/animalsbeingjerks",
-                "/r/DIY"
+                "/r/DIY",
+                "/r/StarCitizen"
             ],
             "name": "Sean Forsgren",
             "new": 201404,
@@ -1374,6 +1572,26 @@
             "wpm": 43
         },
         {
+            "beard": 10,
+            "description": "I manage products to help people make ads that don't suck.",
+            "favorite_subreddits": [
+                "/r/cfb",
+                "/r/keto",
+                "/r/publicfreakouts",
+                "/r/GetMotivated",
+                "/r/EarthPorn"
+            ],
+            "name": "Ryan Merket",
+            "new": 201408,
+            "pyro": 11,
+            "redraiders": 99,
+            "role": "Product Manager",
+            "role_details": "smooth criminal",
+            "top": 1.905,
+            "username": "ryanmerket",
+            "wpm": 65
+        },
+        {
             "beard": 2,
             "description": "Makes sure stuff adds up, looking for (non evil) ways to make some numbers bigger and other numbers smaller.",
             "dogs": "1000+",
@@ -1395,24 +1613,6 @@
             "top": 1.8034,
             "username": "sgtjamz",
             "wpm": 60
-        },
-        {
-            "beard": 0,
-            "description": "Valerie drinks a lot of coffee and writes code. She believes almost anything can be improved by adding robots.",
-            "favorite_subreddits": [
-                "/r/depthhub",
-                "/r/QuotesPorn",
-                "/r/dataisbeautiful"
-            ],
-            "mornings": 9999,
-            "name": "Valerie Hajdik",
-            "new": 201204,
-            "pyro": 8,
-            "role": "Programmer",
-            "role_details": "generalist",
-            "top": 1.7,
-            "username": "shlurbee",
-            "wpm": 109
         },
         {
             "beard": 8,
@@ -1445,9 +1645,10 @@
             ],
             "name": "Nicole-Jasmin Clark",
             "new": 201312,
-            "pyro": 0,
+            "pyro": 4,
             "role": "HR Generalist",
             "role_details": "I make the fudge",
+            "top": 1.52,
             "username": "taxidermyunicornhead"
         },
         {
@@ -1472,23 +1673,23 @@
         },
         {
             "beard": 0,
-            "description": "Diving into reddit's code",
+            "description": "Who's got two thumbs and does homebrewing, pythoning, skitouring and javascripting?",
             "favorite_subreddits": [
-                "/r/scuba",
-                "/r/educationalgifs",
-                "/r/dadjokes",
-                "/r/programmerhumor",
-                "/r/holdmybeer"
+                "/r/homebrewing",
+                "/r/bikeporn",
+                "/r/skiing",
+                "/r/backcountry",
+                "/r/earthporn"
             ],
-            "name": "Melissa Cole",
-            "new": 201409,
-            "spiders_ew": 9999,
-            "pyro": 8,
-            "role": "Software Engineer",
-            "role_details": "She who dances with s'mores",
-            "top": 1.6764,
-            "username": "MiamiZ",
-            "wpm": 112
+            "mountains": 9898,
+            "name": "Chris Stephens",
+            "new": 201408,
+            "pyro": 7,
+            "role": "Drunk Code Monkey",
+            "role_details": "barleypop quaffer",
+            "top": 1.7,
+            "username": "thorarakis",
+            "wpm": 70
         },
         {
             "beard": 1,
@@ -1541,6 +1742,23 @@
             "role_details": "Peon of peons",
             "top": 1.7526,
             "username": "xilvar"
+        },
+        {
+            "beard": 8,
+            "description": "Hacking for a better tomorrow, today.",
+            "favorite_subreddits": [
+                "/r/cscareerquestions",
+                "/r/netsec",
+                "/r/elint"
+            ],
+            "name": "James Pearson",
+            "new": 201409,
+            "pyro": 0,
+            "role": "Software Engineer",
+            "role_details": "Why yes, I *am* a wizard.",
+            "top": 1.2345,
+            "username": "xiongchiamiov",
+            "wpm": 86
         },
         {
             "beard": 2,
@@ -1598,42 +1816,6 @@
             "top": 1.8034,
             "username": "zeantsoi",
             "wpm": 68
-        },
-        {
-            "beard": 8,
-            "description": "Hacking for a better tomorrow, today.",
-            "favorite_subreddits": [
-                "/r/cscareerquestions",
-                "/r/netsec",
-                "/r/elint"
-            ],
-            "name": "James Pearson",
-            "new": 201409,
-            "pyro": 0,
-            "role": "Software Engineer",
-            "role_details": "Why yes, I *am* a wizard.",
-            "top": 1.791,
-            "username": "xiongchiamiov",
-            "wpm": 86
-        },
-        {
-            "beard": -1,
-            "coffee methods": 3,
-            "description": "Digital dock manager, shipper of bits.",
-            "favorite_subreddits": [
-                "/r/mead",
-                "/r/gonewilder",
-                "/r/fifthworldproblems",
-                "/r/funny"
-            ],
-            "name": "Drew Ditthardt",
-            "new": 201409,
-            "top": 1.905,
-            "pyro": 11,
-            "role": "ngrep",
-            "role_details": "Software engineer",
-            "username": "dditthardt",
-            "wpm": 120
         }
     ]
 }
