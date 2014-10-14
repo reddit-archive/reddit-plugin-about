@@ -266,6 +266,11 @@
         },
         {
             "dir": -1,
+            "id": "boat_size",
+            "title": "largest boat captained"
+        },
+        {
+            "dir": -1,
             "id": "bugle",
             "title": "drum corps nerd"
         },
@@ -797,6 +802,23 @@
             "uncoordination": 12,
             "username": "aquilaFiera",
             "wpm": 57
+        },
+        {
+            "beard": 5,
+            "boat_size": 30,
+            "description": "I like to write javascript and sail; and sometimes both at the same time.",
+            "favorite_subreddits": [
+                "/r/IAmA",
+                "/r/sailing"
+            ],
+            "name": "David Wick",
+            "new": 201410,
+            "pyro": 1,
+            "role": "Software Engineer",
+            "role_details": "Array.prototype.push = '(\u256f\u00b0\u25a1\u00b0\uff09\u256f\ufe35 \u253b\u2501\u253b';",
+            "top": 1.8034,
+            "username": "aurora-73",
+            "wpm": 72
         },
         {
             "beard": 0,
