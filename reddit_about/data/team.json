@@ -74,6 +74,22 @@
             "wpm": 57
         },
         {
+            "beard": 10,
+            "description": "Erik is our general manager and nerd herder. He has an awesome dog named Mog who can often be found around the office.",
+            "favorite_subreddits": [
+                "/r/fifthworldproblems"
+            ],
+            "name": "Erik Martin",
+            "new": 200810,
+            "pyro": 6,
+            "role": "General Manager",
+            "role_details": "psychic detective",
+            "scorpions": 9999,
+            "top": 1.83,
+            "username": "hueypriest",
+            "wpm": 12
+        },
+        {
             "beard": 3,
             "description": "Hacks reddit by day, races motorcycles by night. Or is it the other way around?",
             "favorite_subreddits": [
@@ -166,6 +182,24 @@
             "top": 1.93,
             "username": "kn0thing",
             "wpm": 60
+        },
+        {
+            "beard": 9,
+            "description": "Engineer for redditgifts",
+            "favorite_subreddits": [
+                "/r/secretsanta",
+                "/r/python",
+                "/r/historyporn"
+            ],
+            "name": "Eric Fish",
+            "new": 201309,
+            "oceans": 9999,
+            "pyro": 4,
+            "role": "Engineer",
+            "role_details": "mysterious fish",
+            "top": 1.8,
+            "username": "mrefish",
+            "wpm": 57
         },
         {
             "beard": 0,
@@ -1112,22 +1146,6 @@
             "wpm": 97
         },
         {
-            "beard": 10,
-            "description": "Erik is our general manager and nerd herder. He has an awesome dog named Mog who can often be found around the office.",
-            "favorite_subreddits": [
-                "/r/fifthworldproblems"
-            ],
-            "name": "Erik Martin",
-            "new": 200810,
-            "pyro": 6,
-            "role": "General Manager",
-            "role_details": "psychic detective",
-            "scorpions": 9999,
-            "top": 1.83,
-            "username": "hueypriest",
-            "wpm": 12
-        },
-        {
             "beard": 0,
             "description": "Not actually a pillow. I help the sales team keep being awesome.",
             "favorite_subreddits": [
@@ -1349,24 +1367,6 @@
             "top": 1.60002,
             "username": "michelectric",
             "wpm": 78
-        },
-        {
-            "beard": 9,
-            "description": "Engineer for redditgifts",
-            "favorite_subreddits": [
-                "/r/secretsanta",
-                "/r/python",
-                "/r/historyporn"
-            ],
-            "name": "Eric Fish",
-            "new": 201309,
-            "oceans": 9999,
-            "pyro": 4,
-            "role": "Engineer",
-            "role_details": "mysterious fish",
-            "top": 1.8,
-            "username": "mrefish",
-            "wpm": 57
         },
         {
             "beard": 0,
