@@ -1,5 +1,9 @@
 from pylons import g
 
+from r2.lib.template_helpers import (
+    make_url_protocol_relative
+)
+
 from r2.models import Frontpage
 from r2.models.wiki import WikiPageIniItem
 
@@ -15,7 +19,7 @@ class SelfServeAdvertiser(WikiPageIniItem):
         self.id = id
         self.name = name
         self.url = url
-        self.image_url = image_url
+        self.image_url = make_url_protocol_relative(image_url)
         self.is_enabled = is_enabled
 
 
