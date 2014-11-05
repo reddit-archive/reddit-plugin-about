@@ -10,6 +10,7 @@ import sqlalchemy as sa
 
 from r2.models import Account, Link, Comment, Vote
 from r2.models.keyvalue import NamedGlobals
+from r2.models.traffic import SitewidePageviews
 from r2.lib.db.tdb_sql import get_thing_table, get_rel_table
 from r2.lib.db.operators import asc, desc
 from r2.lib.utils import timeago
@@ -63,6 +64,18 @@ def vote_stats(config, ranges):
     return stats
 
 
+def traffic_stats(config, ranges):
+    stats = {}
+    last_month_start = ranges['last_month'][0]
+    monthly_traffic = SitewidePageviews.history("month")
+    traffic_by_month = {dt.date(): vals for dt, vals in monthly_traffic}
+    uniques, pageviews = traffic_by_month.get(last_month_start, (0, 0))
+
+    stats['uniques_last_month'] = uniques
+    stats['pageviews_last_month'] = pageviews
+    return stats
+
+
 def ga_stats(config, ranges):
     stats = {}
 
@@ -98,8 +111,6 @@ def ga_stats(config, ranges):
         dimensions='ga:country'
     ).execute()
     stats['country_count_last_month'] = month_stats['totalResults']
-    stats['uniques_last_month'] = int(month_stats['totalsForAllResults']['ga:visitors'])
-    stats['pageviews_last_month'] = int(month_stats['totalsForAllResults']['ga:pageviews'])
 
     # get yesterday's stats
     day_loggedin_stats = analytics.data().ga().get(
@@ -134,6 +145,7 @@ def update_stats(config):
     print >> sys.stderr, 'recalculating reddit stats...'
     run_stats(subreddit_stats)
     run_stats(vote_stats)
+    run_stats(traffic_stats)
     run_stats(ga_stats)
     print >> sys.stderr, 'finished:', stats
     NamedGlobals.set('about_reddit_stats', stats)
