@@ -8,10 +8,11 @@ from collections import defaultdict
 from pylons import g
 import sqlalchemy as sa
 
-from r2.models import Account, Link, Comment, Vote
+from r2.models import Link, Comment
+from r2.models.vote import LinkVoteDetailsByDay, CommentVoteDetailsByDay
 from r2.models.keyvalue import NamedGlobals
 from r2.models.traffic import SitewidePageviews
-from r2.lib.db.tdb_sql import get_thing_table, get_rel_table
+from r2.lib.db.tdb_sql import get_thing_table
 from r2.lib.db.operators import asc, desc
 from r2.lib.utils import timeago
 
@@ -50,16 +51,9 @@ def subreddit_stats(config, ranges):
 def vote_stats(config, ranges):
     stats = {}
 
-    link_votes = Vote.rel(Account, Link)
-    comment_votes = Vote.rel(Account, Comment)
-
-    for name, rel in (('link', link_votes), ('comment', comment_votes)):
-        table = get_rel_table(rel._type_id)[0]
-        q = table.count(
-                (table.c.date > ranges['yesterday'][0])
-                & (table.c.date < ranges['yesterday'][1]))
-        stats[name+'_vote_count_yesterday'] = q.execute().fetchone()[0]
-
+    yesterday = ranges['yesterday'][1]
+    stats['link_vote_count_yesterday'] = LinkVoteDetailsByDay.count_votes(yesterday)
+    stats['comment_vote_count_yesterday'] = CommentVoteDetailsByDay.count_votes(yesterday)
     stats['vote_count_yesterday'] = stats['link_vote_count_yesterday'] + stats['comment_vote_count_yesterday']
     return stats
 
