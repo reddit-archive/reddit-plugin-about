@@ -29,7 +29,6 @@ def read_csv(path):
                 'favorite_subreddits': fields['favorite subreddits'].split(),
                 'new': tryconv(int, fields['new']),
                 'top': tryconv(float, fields['top']),
-                'beard': tryconv(int, fields['beard'], 0),
                 'pyro': tryconv(int, fields['pyro'], 0),
                 'wpm': tryconv(int, fields['wpm']),
             }
