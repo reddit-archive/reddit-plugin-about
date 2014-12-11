@@ -432,6 +432,11 @@
         },
         {
             "dir": -1,
+            "id": "gadgets",
+            "title": "gadget collector"
+        },
+        {
+            "dir": -1,
             "id": "gay politics",
             "title": "politics"
         },
@@ -1255,6 +1260,23 @@
             "wpm": 82
         },
         {
+            "description": "I'm addicted to programming and reddit is my outlet.",
+            "favorite_subreddits": [
+                "/r/programming",
+                "/r/pcgaming",
+                "/r/alienblue",
+                "/r/gadgets",
+                "/r/gamedev"
+            ],
+            "gadgets": 9999,
+            "name": "Jase Morrissey",
+            "new": 201409,
+            "pyro": 0,
+            "role": "Mobile Engineer",
+            "role_details": "phone inspector",
+            "username": "jase"
+        },
+        {
             "description": "I make front end magic in a great company!",
             "favorite_subreddits": [
                 "/r/javascript",
@@ -1783,7 +1805,7 @@
             "name": "Chris Stephens",
             "new": 201408,
             "pyro": 7,
-            "role": "Drunk Code Monkey",
+            "role": "Code Monkey",
             "role_details": "barleypop quaffer",
             "top": 1.7,
             "username": "thorarakis",
