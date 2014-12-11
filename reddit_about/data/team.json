@@ -1,7 +1,6 @@
 {
     "alumni": [
         {
-            "beard": 7,
             "description": "Did all the hard math and inserts <div><!--iesux-></div> into the DOM.",
             "favorite_subreddits": [
                 "/r/shutupandtakemymoney"
@@ -16,7 +15,6 @@
             "username": "KeyserSosa"
         },
         {
-            "beard": 0,
             "description": "Like the night janitor - you know that *someone* is emptying the garbage cans, but you don't really think about it",
             "favorite_subreddits": [
                 "/r/roomporn",
@@ -35,7 +33,6 @@
             "username": "bitcrunch"
         },
         {
-            "beard": 4,
             "description": "Max makes your web browser do stuff. Occasionally he draws aliens.",
             "favorite_subreddits": [
                 "/r/starcraft",
@@ -55,7 +52,6 @@
             "wpm": 100
         },
         {
-            "beard": 0,
             "description": "You think the ads serve themselves?",
             "favorite_subreddits": [
                 "/r/programming",
@@ -74,7 +70,6 @@
             "wpm": 57
         },
         {
-            "beard": 10,
             "description": "Erik is our general manager and nerd herder. He has an awesome dog named Mog who can often be found around the office.",
             "favorite_subreddits": [
                 "/r/fifthworldproblems"
@@ -90,7 +85,6 @@
             "wpm": 12
         },
         {
-            "beard": 3,
             "description": "Hacks reddit by day, races motorcycles by night. Or is it the other way around?",
             "favorite_subreddits": [
                 "/r/motorcycles",
@@ -108,7 +102,6 @@
             "wpm": 9999
         },
         {
-            "beard": 5,
             "cartoon": 5,
             "description": "If reddit is down, that's probably still my fault.",
             "favorite_subreddits": [
@@ -127,7 +120,6 @@
             "wpm": 57
         },
         {
-            "beard": 0,
             "description": "/u/reostra ditto",
             "favorite_subreddits": [
                 "/r/TwoXChromosomes",
@@ -145,7 +137,6 @@
             "zombies": 9999
         },
         {
-            "beard": 8,
             "description": "If reddit's slow, that's probably my fault",
             "favorite_subreddits": [
                 "/r/askscience",
@@ -166,25 +157,6 @@
             "wpm": 80
         },
         {
-            "beard": 4,
-            "description": "Making people love reddit as board member.",
-            "doodles": 420,
-            "favorite_subreddits": [
-                "/r/aww",
-                "/r/worldnews",
-                "/r/redskins"
-            ],
-            "name": "Alexis Ohanian",
-            "new": 200506,
-            "pyro": 2,
-            "role": "Co-founder",
-            "role_details": "alien doodler",
-            "top": 1.93,
-            "username": "kn0thing",
-            "wpm": 60
-        },
-        {
-            "beard": 9,
             "description": "Engineer for redditgifts",
             "favorite_subreddits": [
                 "/r/secretsanta",
@@ -202,7 +174,25 @@
             "wpm": 57
         },
         {
-            "beard": 0,
+            "description": "Writing lots of code for redditgifts! Usually found in the mountains rolling around in snow.",
+            "favorite_subreddits": [
+                "/r/wheredidthesodago",
+                "/r/snowboarding",
+                "/r/programming",
+                "/r/whatcouldgowrong",
+                "/r/secretsanta"
+            ],
+            "name": "Nina Zakharenko",
+            "new": 201403,
+            "pyro": 0,
+            "role": "Senior Programmer",
+            "role_details": "dogengineer - so skills in snake programming. wow",
+            "snowboards": 9999,
+            "top": 1.6002,
+            "username": "nnja",
+            "wpm": 97
+        },
+        {
             "description": "hold the cheese, please",
             "favorite_subreddits": [
                 "/r/MapPorn",
@@ -219,7 +209,6 @@
             "username": "notalindsay"
         },
         {
-            "beard": 10,
             "description": "When reddit needed gum to hold itself together, he was there to chew it.",
             "favorite_subreddits": [
                 "/r/baseball",
@@ -237,7 +226,6 @@
             "wpm": 92
         },
         {
-            "beard": 0,
             "description": "Handles corporate things.",
             "favorite_subreddits": [
                 "/r/sfgiants",
@@ -255,7 +243,23 @@
             "wpm": 101
         },
         {
-            "beard": 0,
+            "description": "I want to die like I lived: Fighting alien cowboy monsters with science.",
+            "favorite_subreddits": [
+                "/r/programming",
+                "/r/AskScience",
+                "/r/gamedev"
+            ],
+            "name": "Roger Ostrander",
+            "new": 201208,
+            "preemption": 9999,
+            "pyro": 4,
+            "role": "Programmer",
+            "role_details": "not a cyborg from the future",
+            "top": 1.77,
+            "username": "reostra",
+            "wpm": 50
+        },
+        {
             "description": "Valerie drinks a lot of coffee and writes code. She believes almost anything can be improved by adding robots.",
             "favorite_subreddits": [
                 "/r/depthhub",
@@ -273,7 +277,6 @@
             "wpm": 109
         },
         {
-            "beard": 0,
             "description": "The original reddit programmer. Steve wrote the first version of reddit in LISP and a huge part of every version since.",
             "favorite_subreddits": [
                 "/r/circlejerk"
@@ -285,9 +288,31 @@
             "role_details": "",
             "top": 1.83,
             "username": "spez"
+        },
+        {
+            "description": "what is this i don't even",
+            "favorite_subreddits": [
+                "/r/yishansucks",
+                "/r/GoForGold",
+                "/r/nameaserver"
+            ],
+            "name": "Yishan Wong",
+            "new": 201202,
+            "pyro": 1,
+            "rabbits": 4,
+            "role": "CEO",
+            "role_details": "sparklepants",
+            "top": 1.74,
+            "username": "yishan",
+            "wpm": 91
         }
     ],
     "extra_sorts": [
+        {
+            "dir": -1,
+            "id": "RI",
+            "title": "Rhode Island general knowledge"
+        },
         {
             "dir": -1,
             "id": "acta",
@@ -360,6 +385,11 @@
         },
         {
             "dir": -1,
+            "id": "ec",
+            "title": "elliptic curves"
+        },
+        {
+            "dir": -1,
             "id": "elves",
             "title": "collector of vintage christmas elves"
         },
@@ -380,6 +410,11 @@
         },
         {
             "dir": -1,
+            "id": "fps",
+            "title": "frames per second"
+        },
+        {
+            "dir": -1,
             "id": "gay politics",
             "title": "politics"
         },
@@ -392,6 +427,11 @@
             "dir": -1,
             "id": "gifts",
             "title": "love of giving"
+        },
+        {
+            "dir": -1,
+            "id": "golf",
+            "title": "asian ex-progolfer"
         },
         {
             "dir": -1,
@@ -445,6 +485,11 @@
         },
         {
             "dir": -1,
+            "id": "patchy",
+            "title": "patchwork ginger-souls"
+        },
+        {
+            "dir": -1,
             "id": "physics",
             "title": "bona fide scientist"
         },
@@ -452,6 +497,11 @@
             "dir": -1,
             "id": "pings",
             "title": "number of pings required, vasilly"
+        },
+        {
+            "dir": -1,
+            "id": "pixel",
+            "title": "pixel arranger"
         },
         {
             "dir": -1,
@@ -560,11 +610,6 @@
         },
         {
             "dir": -1,
-            "id": "starwars",
-            "title": "star wars trivia"
-        },
-        {
-            "dir": -1,
             "id": "sunshine_rainbows",
             "title": "fullest of sunshine and rainbows"
         },
@@ -577,6 +622,11 @@
             "dir": -1,
             "id": "ties",
             "title": "consecutive tie tuesdays"
+        },
+        {
+            "dir": -1,
+            "id": "trivia",
+            "title": "knowledge of 90's irish bands"
         },
         {
             "dir": -1,
@@ -648,7 +698,6 @@
     ],
     "team": [
         {
-            "beard": 0,
             "description": "Keeper of the cupcakes.",
             "elves": 9999,
             "favorite_subreddits": [
@@ -665,7 +714,6 @@
             "username": "5days"
         },
         {
-            "beard": 1,
             "description": "Arranging pixels for the greater good.",
             "favorite_subreddits": [
                 "/r/Showerthoughts",
@@ -675,6 +723,7 @@
             ],
             "name": "Tavish",
             "new": 201403,
+            "pixel": 256,
             "pyro": 10,
             "role": "Design & Product",
             "role_details": "Pigeon portrait photographer",
@@ -683,7 +732,6 @@
             "wpm": 42
         },
         {
-            "beard": 5,
             "cubes": 9999,
             "description": "You can talk to Dac if you need some help. Just pull his head out of his DS before you do.",
             "favorite_subreddits": [
@@ -704,7 +752,6 @@
             "wpm": 85
         },
         {
-            "beard": 1,
             "description": "Chad's job is to make you want to buy reddit gold out of *desire*, not just guilt.",
             "favorite_subreddits": [
                 "/r/Games",
@@ -723,12 +770,12 @@
             "wpm": 107
         },
         {
-            "beard": 0,
             "description": "I make sure reddit's sites & products make our users giddy with unfathomable delight.",
             "favorite_subreddits": [
                 "/r/outside",
                 "/r/fifthworldproblems",
-                "/r/shittyfoodporn"
+                "/r/shittyfoodporn",
+                "/r/burningman"
             ],
             "name": "Jennifer Morrow",
             "new": 201408,
@@ -741,7 +788,6 @@
             "wpm": 100
         },
         {
-            "beard": 0,
             "description": "When reality doesn't fit the data, I change one or the other.",
             "favorite_subreddits": [
                 "/r/mls",
@@ -760,7 +806,6 @@
             "username": "Drunken_Economist"
         },
         {
-            "beard": 0,
             "costumes": 9999,
             "description": "Answers injustice with justice (and/or snark). Fine, mostly snark.",
             "favorite_subreddits": [
@@ -781,7 +826,6 @@
             "wpm": 87
         },
         {
-            "beard": 9,
             "coffee methods": 7,
             "description": "Purveyor of fine javascripts. Insufferable coffee connoisseur and foodie.",
             "favorite_subreddits": [
@@ -800,7 +844,22 @@
             "wpm": 119
         },
         {
-            "beard": 6,
+            "description": "Cryptocurrencies and ads",
+            "favorite_subreddits": [
+                "/r/fantasyfootball",
+                "/r/tifu"
+            ],
+            "golf": 88,
+            "name": "Daniel Lim",
+            "new": 201410,
+            "pyro": 10,
+            "role": "Product Manager",
+            "role_details": "professional craps player",
+            "top": 1.778,
+            "username": "akahotcheetos",
+            "wpm": 56
+        },
+        {
             "description": "\"I don't want a description, just put the word 'description'.\"",
             "favorite_subreddits": [
                 "/r/tldr",
@@ -818,7 +877,6 @@
             "username": "alienth"
         },
         {
-            "beard": 9,
             "description": "Trying to make redditgifts more giftly. Succeeding mildy. Also, puppies.",
             "favorite_subreddits": [
                 "/r/secretsanta",
@@ -838,7 +896,6 @@
             "wpm": 57
         },
         {
-            "beard": 5,
             "boat_size": 30,
             "description": "I like to write javascript and sail; and sometimes both at the same time.",
             "favorite_subreddits": [
@@ -855,7 +912,6 @@
             "wpm": 72
         },
         {
-            "beard": 0,
             "description": "I take care of office things, and whatever else is needed.",
             "favorite_subreddits": [
                 "/r/horror",
@@ -871,7 +927,6 @@
         },
         {
             "arnold": 9999,
-            "beard": 2,
             "description": "I like reddit and I like working at reddit",
             "favorite_subreddits": [
                 "/r/AskReddit",
@@ -888,7 +943,6 @@
             "username": "bsimpson"
         },
         {
-            "beard": 0,
             "description": "That being said... reddit is awesome.",
             "favorite_subreddits": [
                 "/r/onetruegod",
@@ -907,7 +961,6 @@
             "wpm": 98
         },
         {
-            "beard": 8,
             "description": "I handle the campaign management for the sales team",
             "favorite_subreddits": [
                 "/r/bbq",
@@ -917,14 +970,13 @@
             "name": "Chris Khosrovani",
             "new": 201401,
             "pyro": 0,
-            "role": "Sales Associate",
+            "role": "Campaign Manager",
             "role_details": "wannabe bbq taste tester",
             "top": 1.76,
             "username": "ckk524",
             "wpm": 65
         },
         {
-            "beard": 0,
             "description": "Spam killa. I also help subreddits do awesome stuff.",
             "favorite_subreddits": [
                 "/r/fifthworldproblems",
@@ -942,7 +994,6 @@
             "wpm": 88
         },
         {
-            "beard": 8,
             "catshirt": 9000,
             "description": "I cast spells on your browsers using the magic of HTML/CSS and JavaScript. My favorite day is Caturday.",
             "favorite_subreddits": [
@@ -960,7 +1011,6 @@
             "wpm": 60
         },
         {
-            "beard": 3,
             "description": "Parties, motorcycles, guns, rock \u2018n\u2019 roll. Also pizza.",
             "favorite_subreddits": [
                 "/r/gifs",
@@ -976,26 +1026,24 @@
             "wpm": 74
         },
         {
-            "beard": -1,
-            "description": "Digital dock manager, shipper of bits.",
+            "description": "Slaps a keyboard and drinks lots of water. Somehow this produces code that runs on Android devices.",
             "favorite_subreddits": [
-                "/r/gonewilder",
-                "/r/fifthworldproblems",
-                "/r/mead",
-                "/r/funny"
+                "/r/watches",
+                "/r/foodporn",
+                "/r/shittyprogramming",
+                "/r/random"
             ],
-            "name": "Drew Ditthardt",
-            "new": 201409,
-            "pyro": 11,
-            "role": "Software Engineer",
-            "role_details": "ngrep",
-            "sunshine_rainbows": "eleventy",
+            "fps": 9999,
+            "name": "David Forsythe",
+            "new": 201410,
+            "pyro": 4,
+            "role": "Mobile Engineer",
+            "role_details": "Mobile Engineer (LOL)",
             "top": 1.905,
-            "username": "dditthardt",
-            "wpm": 120
+            "username": "dforsyth",
+            "wpm": 92
         },
         {
-            "beard": 6,
             "description": "talk to people about ads while I raid their fridge",
             "favorite_subreddits": [
                 "/r/cfb",
@@ -1016,13 +1064,28 @@
             "wpm": 82
         },
         {
-            "beard": 3,
+            "description": "Digital dock manager, shipper of bits.",
+            "favorite_subreddits": [
+                "/r/gonewilder",
+                "/r/fifthworldproblems",
+                "/r/mead",
+                "/r/funny"
+            ],
+            "name": "Drew Ditthardt",
+            "new": 201409,
+            "pyro": 11,
+            "role": "Software Engineer",
+            "role_details": "ngrep",
+            "sunshine_rainbows": "eleventy",
+            "top": 1.905,
+            "username": "drew",
+            "wpm": 120
+        },
+        {
             "description": "I take the things you write on /r/CrazyIdeas and turn them into ways to help reddit.",
             "favorite_subreddits": [
                 "/r/frogdogs",
                 "/r/askreddit",
-                "/r/nyc",
-                "/r/jailbreak",
                 "/r/crazyideas"
             ],
             "name": "Dylan Hulser",
@@ -1036,16 +1099,16 @@
             "wpm": 93
         },
         {
-            "beard": 0,
-            "description": "Ellen finds partners to do stuff so we can focus on reddit stuff.",
+            "description": "Just don't screw it up.",
             "favorite_subreddits": [
                 "/r/IAmA",
-                "/r/pareidolia"
+                "/r/pareidolia",
+                "/r/happycrowds"
             ],
             "name": "Ellen Pao",
             "new": 201304,
             "pyro": 0,
-            "role": "Strategic Partnerships",
+            "role": "CEO",
             "role_details": "adult",
             "tennis": 9999,
             "top": 1.67,
@@ -1053,13 +1116,13 @@
             "wpm": 74
         },
         {
-            "beard": 0,
+            "RI": 9999,
             "description": "Mike metaphorically tears down walls and constructs bridges. You know, sales.",
             "favorite_subreddits": [
                 "/r/askscience",
                 "/r/bostonsports",
                 "/r/happycrowds",
-                "/r/mysteriesoftheworld",
+                "/r/retrofuturism",
                 "/r/tombradygifs"
             ],
             "name": "Mike Cole",
@@ -1067,12 +1130,10 @@
             "pyro": 4,
             "role": "Sales Director, Brand Strategy",
             "role_details": "international art smuggler",
-            "starwars": 9999,
             "top": 1.8,
             "username": "freedomthebucket"
         },
         {
-            "beard": 0,
             "description": "I find awesome merchants for the redditgifts marketplace.",
             "favorite_subreddits": [
                 "/r/secretsanta",
@@ -1091,7 +1152,6 @@
             "username": "garyjense"
         },
         {
-            "beard": 4,
             "description": "I was born with trousers around my waist held up by my bible belt. But now, my pants hang low showing the brevity of my undergarments.",
             "favorite_subreddits": [
                 "/r/nba",
@@ -1110,13 +1170,11 @@
             "wpm": 92
         },
         {
-            "beard": 0,
-            "description": "Chef de partie. Mixing reddit and ads into one fun casserole dish.",
+            "description": "I help advertisers understand reddit. I help reddit users understand advertisers.",
             "favorite_subreddits": [
-                "/r/movies",
-                "/r/morbidreality",
+                "/r/askreddit",
                 "/r/food",
-                "/r/twitchplayspokemon"
+                "/r/vintageads"
             ],
             "name": "Lilly Oh",
             "new": 201311,
@@ -1128,8 +1186,7 @@
             "wpm": 90
         },
         {
-            "beard": 0,
-            "description": "I try to convince people to give their money to the rg marketplace.",
+            "description": "Spreading happiness around the world.",
             "favorite_subreddits": [
                 "/r/nottheonion",
                 "/r/abandonedporn",
@@ -1139,14 +1196,13 @@
             "nerdiness": 9999,
             "new": 201308,
             "pyro": 2,
-            "role": "Marketing Manager",
+            "role": "Brand and Media Relations",
             "role_details": "marketing guru & grammar nerd",
             "top": 1.65,
             "username": "highshelfofsteam",
             "wpm": 97
         },
         {
-            "beard": 0,
             "description": "Not actually a pillow. I help the sales team keep being awesome.",
             "favorite_subreddits": [
                 "/r/fuckyouimashark",
@@ -1165,7 +1221,6 @@
             "wpm": 81
         },
         {
-            "beard": 0,
             "description": "Makes things easier to use.",
             "favorite_subreddits": [
                 "/r/rabbits",
@@ -1183,7 +1238,6 @@
             "wpm": 82
         },
         {
-            "beard": 0,
             "description": "I make front end magic in a great company!",
             "favorite_subreddits": [
                 "/r/javascript",
@@ -1203,7 +1257,38 @@
             "wpm": 58
         },
         {
-            "beard": 8,
+            "description": "better living through numbers",
+            "favorite_subreddits": [
+                "/r/artisanvideos",
+                "/r/ireland",
+                "/r/dataisbeautiful"
+            ],
+            "name": "Joe Gallagher",
+            "new": 201410,
+            "pyro": 11,
+            "role": "Data Lead",
+            "role_details": "rocket surgery",
+            "top": 1.8,
+            "trivia": 9999,
+            "username": "jophuds",
+            "wpm": 64
+        },
+        {
+            "description": "Backing up wild claims with numbers.",
+            "favorite_subreddits": [
+                "/r/photography",
+                "/r/photocritique"
+            ],
+            "name": "Mike Doherty",
+            "new": 201410,
+            "patchy": 8001,
+            "pyro": 4,
+            "role": "Data Infrastructure Engineer",
+            "role_details": "Nemesis of the sun",
+            "top": 1.4444,
+            "username": "kaitaan"
+        },
+        {
             "cycling": 125,
             "description": "Sneezes chronically. Attempts to make things less annoying. Sometimes fails.",
             "favorite_subreddits": [
@@ -1221,7 +1306,6 @@
             "username": "kemitche"
         },
         {
-            "beard": 0,
             "description": "Loves scented candles and soap that smell like Christmas. Collects toys, loves making people happy.",
             "favorite_subreddits": [
                 "/r/secretsanta",
@@ -1238,13 +1322,12 @@
             "wpm": 72
         },
         {
-            "beard": 0,
             "cartman": 9999,
             "description": "I use the force to spread the good word of reddit ads.",
             "favorite_subreddits": [
-                "/r/foodporn",
-                "/r/LifeProTips",
-                "/r/gifs"
+                "/r/MakeupAddiction",
+                "/r/reactiongifs",
+                "/r/foodporn"
             ],
             "name": "Adriana Gadala-Maria",
             "new": 201106,
@@ -1256,7 +1339,25 @@
             "wpm": 72
         },
         {
-            "beard": 0,
+            "description": "I help people make reddit something people love",
+            "doodles": 420,
+            "favorite_subreddits": [
+                "/r/aww",
+                "/r/AskHistorians",
+                "/r/todayilearned",
+                "/r/askScience",
+                "/r/writingprompts"
+            ],
+            "name": "Alexis Ohanian",
+            "new": 200506,
+            "pyro": 2,
+            "role": "co-founder + Executive Chairman",
+            "role_details": "alien doodler",
+            "top": 1.93,
+            "username": "kn0thing",
+            "wpm": 60
+        },
+        {
             "description": "Can often be found in the Party Escort Submission Position, waiting for cake.",
             "favorite_subreddits": [
                 "/r/skyrim",
@@ -1276,26 +1377,24 @@
             "wpm": 70
         },
         {
-            "beard": 0,
             "bugle": 9999,
             "description": "Turns that frown upside down. Or else.",
             "favorite_subreddits": [
                 "/r/secretsanta",
                 "/r/buffy",
-                "/r/TwoXChromosomes",
+                "/r/AskReddit",
                 "/r/aww"
             ],
             "name": "Erica Carter",
             "new": 201402,
             "pyro": 7,
-            "role": "Community and Marketplace Support, redditgifts",
+            "role": "redditgifts Support",
             "role_details": "herder of cats",
             "top": 1.7,
             "username": "liltrixxy",
             "wpm": 92
         },
         {
-            "beard": 7,
             "description": "I try to make things work.",
             "favorite_subreddits": [
                 "/r/askreddit",
@@ -1315,7 +1414,6 @@
             "wpm": 85
         },
         {
-            "beard": 10,
             "description": "Organizes the redditgifts office, manages Utah political/public image",
             "favorite_subreddits": [
                 "/r/historyporn"
@@ -1331,7 +1429,6 @@
             "wpm": 90
         },
         {
-            "beard": 0,
             "description": "Diving into reddit's code",
             "favorite_subreddits": [
                 "/r/scuba",
@@ -1351,7 +1448,6 @@
             "wpm": 112
         },
         {
-            "beard": 0,
             "description": "Making your iDevices hAPPy",
             "favorite_subreddits": [
                 "/r/TrollXChromosomes",
@@ -1369,7 +1465,6 @@
             "wpm": 78
         },
         {
-            "beard": 0,
             "description": "Showing you the many reasons why you should buy cool marketplace products.",
             "favorite_subreddits": [
                 "/r/aww",
@@ -1377,33 +1472,13 @@
                 "/r/photoshopbattles"
             ],
             "name": "Nina Tekwani",
+            "new": 201408,
             "pyro": 0,
             "role": "Marketing Manager",
             "role_details": "obsessive photo taker",
             "username": "ninatekwani"
         },
         {
-            "beard": 0,
-            "description": "Writing lots of code for redditgifts! Usually found in the mountains rolling around in snow.",
-            "favorite_subreddits": [
-                "/r/wheredidthesodago",
-                "/r/snowboarding",
-                "/r/programming",
-                "/r/whatcouldgowrong",
-                "/r/secretsanta"
-            ],
-            "name": "Nina Zakharenko",
-            "new": 201403,
-            "pyro": 0,
-            "role": "Senior Programmer",
-            "role_details": "dogengineer - so skills in snake programming. wow",
-            "snowboards": 9999,
-            "top": 1.6002,
-            "username": "nnja",
-            "wpm": 97
-        },
-        {
-            "beard": 0,
             "description": "builds things from built things",
             "favorite_subreddits": [
                 "/r/Linux",
@@ -1423,7 +1498,6 @@
             "wtf": 29
         },
         {
-            "beard": 10,
             "description": "The night time subreddit bestower.",
             "favorite_subreddits": [
                 "/r/ireland",
@@ -1444,7 +1518,6 @@
             "wpm": 70
         },
         {
-            "beard": 0,
             "description": "doing what needs to be done.",
             "favorite_subreddits": [
                 "/r/pinwale"
@@ -1460,7 +1533,6 @@
             "wpm": 2
         },
         {
-            "beard": 0,
             "description": "Lia is the go-to gal for entertainment advertising campaigns.",
             "favorite_subreddits": [
                 "/r/LifeProTips",
@@ -1479,7 +1551,6 @@
             "username": "pixelinaa"
         },
         {
-            "beard": 2,
             "description": "Dabbling in alchemy.",
             "favorite_subreddits": [
                 "/r/ultimate",
@@ -1495,30 +1566,10 @@
             "role": "Product Manager, reddit gold",
             "role_details": "erstwhile gremlin",
             "top": 1.82,
-            "username": "powerlanguage",
-            "wpm": 11.38
-        },
-        {
-            "beard": 1,
-            "description": "I want to die like I lived: Fighting alien cowboy monsters with science.",
-            "favorite_subreddits": [
-                "/r/programming",
-                "/r/AskScience",
-                "/r/gamedev"
-            ],
-            "name": "Roger Ostrander",
-            "new": 201208,
-            "preemption": 9999,
-            "pyro": 4,
-            "role": "Programmer",
-            "role_details": "not a cyborg from the future",
-            "top": 1.77,
-            "username": "reostra",
-            "wpm": 50
+            "username": "powerlanguage"
         },
         {
             "acta": "3.14",
-            "beard": 10,
             "description": "The bearded man born of Norse blood, marked by lightning, and leading new product initiatives for us. He's truly fearless in the face of feature creep.",
             "favorite_subreddits": [
                 "/r/Norse",
@@ -1543,13 +1594,11 @@
             "wpm": 76
         },
         {
-            "beard": 0,
             "description": "Piggy bank disguised as a man...or a man disguised as a piggy bank?",
             "favorite_subreddits": [
-                "/r/music",
                 "/r/listentothis",
-                "/r/zenhabits",
-                "/r/avacadosgonewild"
+                "/r/nba",
+                "/r/serendipity"
             ],
             "name": "Andrew Reyes",
             "new": 201406,
@@ -1559,11 +1608,10 @@
             "username": "rhymeswithAndrew"
         },
         {
-            "beard": 1,
             "description": "Our personal puertorrique\u00f1o pyromaniac pilot. The best days for him involve home made sangria, wrangling servers, and plenty of small fires.",
             "favorite_subreddits": [
                 "/r/aviation",
-                "/r/aww",
+                "/r/travel",
                 "/r/photography",
                 "/r/formula1"
             ],
@@ -1575,10 +1623,9 @@
             "role_details": "reboot master",
             "top": 1.65,
             "username": "rram",
-            "wpm": 60
+            "wpm": 67
         },
         {
-            "beard": 9,
             "daysbikedtowork": 9999,
             "description": "I like writing software and studying programming language theory.",
             "favorite_subreddits": [
@@ -1594,12 +1641,28 @@
             "wpm": 43
         },
         {
-            "beard": 10,
+            "description": "Bitcoin javascripter and physicist emeritus. I hope to one day visit the moon.",
+            "ec": 9999,
+            "favorite_subreddits": [
+                "/r/bitcoin",
+                "/r/dogecoin",
+                "/r/sloths"
+            ],
+            "name": "Ryan X. Charles",
+            "new": 201409,
+            "pyro": 1,
+            "role": "Cryptocurrency Engineer",
+            "role_details": "Satoshi Nakamoto Fan Club Leader",
+            "top": 1.778,
+            "username": "ryancarnated",
+            "wpm": 90
+        },
+        {
             "description": "I manage products to help people make ads that don't suck.",
             "favorite_subreddits": [
                 "/r/cfb",
                 "/r/keto",
-                "/r/publicfreakout",
+                "/r/publicfreakouts",
                 "/r/GetMotivated",
                 "/r/EarthPorn"
             ],
@@ -1614,7 +1677,23 @@
             "wpm": 65
         },
         {
-            "beard": 2,
+            "description": "Interim Interim CEO",
+            "favorite_subreddits": [
+                "/r/askscience",
+                "/r/askreddit",
+                "/r/iama",
+                "/r/earthporn"
+            ],
+            "name": "Sam Altman",
+            "new": 201410,
+            "pyro": 6,
+            "role": "Figurehead",
+            "role_details": "Michael Scott",
+            "top": 1.74,
+            "username": "samaltman",
+            "wpm": 90
+        },
+        {
             "description": "Makes sure stuff adds up, looking for (non evil) ways to make some numbers bigger and other numbers smaller.",
             "dogs": "1000+",
             "favorite_subreddits": [
@@ -1637,26 +1716,24 @@
             "wpm": 60
         },
         {
-            "beard": 8,
             "description": "Neil does things and sometimes even stuff. For a time, he was the only surviving programmer at reddit.",
             "favorite_subreddits": [
-                "/r/dogs",
                 "/r/AskHistorians",
                 "/r/AskReddit",
+                "/r/dogpictures",
                 "/r/boardgames"
             ],
             "name": "Neil Williams",
             "new": 201011,
             "pings": 1,
             "pyro": 3,
-            "role": "Lead Programmancer",
+            "role": "Lead Programmer",
             "role_details": "breaker of things",
             "top": 1.72,
             "username": "spladug",
             "wpm": 111
         },
         {
-            "beard": 0,
             "description": "making sure the humans working at reddit have resources.",
             "favorite_subreddits": [
                 "/r/Delightfullychubby",
@@ -1669,32 +1746,31 @@
             "new": 201312,
             "pyro": 4,
             "role": "HR Generalist",
-            "role_details": "I make the fudge",
+            "role_details": "kitten wrangler",
             "top": 1.52,
             "username": "taxidermyunicornhead"
         },
         {
-            "beard": 0,
-            "description": "Counting all the things. Decreasing worldsuck.",
+            "description": "Building a better reddit. Decreasing worldsuck.",
             "favorite_subreddits": [
-                "/r/subredditoftheday",
+                "/r/knitting",
                 "/r/mildlyinteresting",
                 "/r/nerdfighters",
                 "/r/AskScience",
-                "/r/ColorizedHistory"
+                "/r/dataisbeautiful",
+                "/r/IAmA"
             ],
             "name": "Tiffany Dohzen",
             "new": 201405,
             "puzzlehunts": 9999,
             "pyro": 0,
-            "role": "Data && Product",
+            "role": "Product Manager",
             "role_details": "geek of all stripes",
             "top": 1.57,
             "username": "tdohz",
             "wpm": 86
         },
         {
-            "beard": 0,
             "description": "Who's got two thumbs and does homebrewing, pythoning, skitouring and javascripting?",
             "favorite_subreddits": [
                 "/r/homebrewing",
@@ -1714,7 +1790,6 @@
             "wpm": 70
         },
         {
-            "beard": 1,
             "description": "I like your weird niche interests.",
             "favorite_subreddits": [
                 "/r/serendipity",
@@ -1724,14 +1799,13 @@
             "name": "Chris Dary",
             "new": 201402,
             "pyro": 1,
-            "role": "Programming and <3s",
+            "role": "Eng Mgr and <3s, reddit.com",
             "role_details": "Mumble mumble products, mumble mumble communities",
             "top": 1.11,
             "username": "umbrae",
             "wpm": 95
         },
         {
-            "beard": 0,
             "description": "I divvy my time pretty consistently between redditgifts, reddit, and yarn. Trying to excel in *not* breaking redditgifts.",
             "favorite_subreddits": [
                 "/r/secretsanta",
@@ -1750,7 +1824,6 @@
             "yarn": 1
         },
         {
-            "beard": 0,
             "description": "I pick up some bits and put down others. Sometimes they are 1's sometimes they are 0's.",
             "favorite_subreddits": [
                 "/r/food",
@@ -1766,7 +1839,6 @@
             "username": "xilvar"
         },
         {
-            "beard": 8,
             "description": "Hacking for a better tomorrow, today.",
             "favorite_subreddits": [
                 "/r/cscareerquestions",
@@ -1783,25 +1855,6 @@
             "wpm": 86
         },
         {
-            "beard": 2,
-            "description": "what is this i don't even",
-            "favorite_subreddits": [
-                "/r/yishansucks",
-                "/r/GoForGold",
-                "/r/nameaserver"
-            ],
-            "name": "Yishan Wong",
-            "new": 201202,
-            "pyro": 1,
-            "rabbits": 4,
-            "role": "CEO",
-            "role_details": "sparklepants",
-            "top": 1.74,
-            "username": "yishan",
-            "wpm": 91
-        },
-        {
-            "beard": 4,
             "description": "I like laughing obnoxiously loud. Every single piece of clothing I own is covered in paint.",
             "favorite_subreddits": [
                 "/r/secretsanta",
@@ -1822,7 +1875,6 @@
             "wpm": 42
         },
         {
-            "beard": -10,
             "description": "Astral projecting through Alan Turing's nightmares",
             "favorite_subreddits": [
                 "/r/sandwiches",
