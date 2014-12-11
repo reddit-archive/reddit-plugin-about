@@ -260,6 +260,23 @@
             "wpm": 50
         },
         {
+            "description": "Interim Interim CEO",
+            "favorite_subreddits": [
+                "/r/askscience",
+                "/r/askreddit",
+                "/r/iama",
+                "/r/earthporn"
+            ],
+            "name": "Sam Altman",
+            "new": 201410,
+            "pyro": 6,
+            "role": "Figurehead",
+            "role_details": "Michael Scott",
+            "top": 1.74,
+            "username": "samaltman",
+            "wpm": 90
+        },
+        {
             "description": "Valerie drinks a lot of coffee and writes code. She believes almost anything can be improved by adding robots.",
             "favorite_subreddits": [
                 "/r/depthhub",
@@ -1675,23 +1692,6 @@
             "top": 1.905,
             "username": "ryanmerket",
             "wpm": 65
-        },
-        {
-            "description": "Interim Interim CEO",
-            "favorite_subreddits": [
-                "/r/askscience",
-                "/r/askreddit",
-                "/r/iama",
-                "/r/earthporn"
-            ],
-            "name": "Sam Altman",
-            "new": 201410,
-            "pyro": 6,
-            "role": "Figurehead",
-            "role_details": "Michael Scott",
-            "top": 1.74,
-            "username": "samaltman",
-            "wpm": 90
         },
         {
             "description": "Makes sure stuff adds up, looking for (non evil) ways to make some numbers bigger and other numbers smaller.",
