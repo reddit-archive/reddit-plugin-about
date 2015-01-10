@@ -98,7 +98,7 @@ class Advertising(Templated):
         self.help = sections.get('help')
         blurbs = SelfServeBlurb.get_all(return_dict=True)
         if 'platform' in blurbs:
-            formatted_cpm = format_currency(g.cpm_selfserve.decimal, 'USD', locale=c.locale)
+            formatted_cpm = format_currency(g.cpm_selfserve_collection.decimal, 'USD', locale=c.locale)
             formatted_min_bid = format_currency(g.min_promote_bid, 'USD', locale=c.locale)
             blurbs['platform'].text = blurbs['platform'].text.replace(
                 '[min_promote_bid]', formatted_min_bid).replace(
