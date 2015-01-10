@@ -24,10 +24,9 @@
     {"date": "2012-08-29", "class": "culture important", "title": "first presidential AMA", "url": "http://www.reddit.com/r/blog/comments/z5ftg/potus_iama_stats"},
     {"date": "2012-11-14", "class": "org", "title": "secret santa world record", "url": "http://redditgifts.com/blog/view/reddit-guinness-world-record"},
     {"date": "2013-04-01", "class": "culture aprilfools", "title": "reddit buys Team Fortress 2", "url": "http://www.redditblog.com/2013/04/reddit-buys-team-fortress-2.html"},
-    {"date": "2013-11-08", "class": "org important", "title": "name a reddit server", "url": "http://www.redditblog.com/2013/11/a-server-by-any-other-name.html"},    
+    {"date": "2013-11-08", "class": "org", "title": "name a reddit server", "url": "http://www.redditblog.com/2013/11/a-server-by-any-other-name.html"},
     {"date": "2013-12-20", "class": "culture", "title": "121,000 secret santas", "url": "http://redditgifts.com/exchanges/secret-santa-2013"},
-    {"date": "2013-12-20", "class": "org", "title": "121,000 secret santas", "url": "http://redditgifts.com/exchanges/secret-santa-2013"},
-    {"date": "2014-01-28", "class": "org important", "title": "important reddit annoucement", "url": "http://www.redditblog.com/2014/01/important-reddit-announcement.html"},
+    {"date": "2014-01-28", "class": "org", "title": "important reddit annoucement", "url": "http://www.redditblog.com/2014/01/important-reddit-announcement.html"},
     {"date": "2014-04-01", "class": "culture aprilfools", "title": "headdit mode launched", "url": "http://www.redditblog.com/2014/03/headdit-revolutionary-new-way-to-browse.html"},
     {"date": "2014-05-07", "class": "org important", "title": "the front page gets bigger", "url": "http://www.redditblog.com/2014/05/whats-that-lassie-old-defaults-fell.html"}
 ]
