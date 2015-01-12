@@ -9,6 +9,7 @@
     {"date": "2008-04-01", "class": "culture aprilfools", "title": "karma exchange marketplace opens", "url": "http://blog.reddit.com/2008/04/put-those-dollars-into-something-safe.html"},
     {"date": "2008-06-17", "class": "org important", "title": "reddit goes open source", "url": "http://blog.reddit.com/2008/06/reddit-goes-open-source.html"},
     {"date": "2008-09-09", "class": "culture important", "title": "crowbar shipped to CERN", "url": "http://blog.reddit.com/2008/09/crowbar-headcrab-and-half-life-strategy.html"},
+    {"date": "2009-10-29", "class": "culture", "title": "time traveller AMA", "url": "https://www.reddit.com/r/IAmA/comments/9z4d5/10_years_from_now_i_am_a_scientist_working_at_the"},
     {"date": "2009-11-10", "class": "org important", "title": "move to the cloud", "url": "http://blog.reddit.com/2009/11/moving-to-cloud.html"},
     {"date": "2009-04-01", "class": "culture aprilfools", "title": "long overdue styling update", "url": "http://blog.reddit.com/2009/04/long-overdue-update.html"},
     {"date": "2009-08-24", "class": "culture", "title": "reddit's fantastic voyage", "url": "http://blog.reddit.com/2009/08/reddits-fatastic-voyage-reddit.html"},
@@ -25,6 +26,7 @@
     {"date": "2012-11-14", "class": "org", "title": "secret santa world record", "url": "http://redditgifts.com/blog/view/reddit-guinness-world-record"},
     {"date": "2013-04-01", "class": "culture aprilfools", "title": "reddit buys Team Fortress 2", "url": "http://www.redditblog.com/2013/04/reddit-buys-team-fortress-2.html"},
     {"date": "2013-11-08", "class": "org", "title": "name a reddit server", "url": "http://www.redditblog.com/2013/11/a-server-by-any-other-name.html"},
+    {"date": "2013-11-13", "class": "culture", "title": "banana for scale", "url": "https://www.reddit.com/r/WTF/comments/1qkd9x/secret_staircase_reveals_terrifying_secret"},
     {"date": "2013-12-20", "class": "culture", "title": "121,000 secret santas", "url": "http://redditgifts.com/exchanges/secret-santa-2013"},
     {"date": "2014-01-28", "class": "org", "title": "important reddit annoucement", "url": "http://www.redditblog.com/2014/01/important-reddit-announcement.html"},
     {"date": "2014-04-01", "class": "culture aprilfools", "title": "headdit mode launched", "url": "http://www.redditblog.com/2014/03/headdit-revolutionary-new-way-to-browse.html"},
@@ -36,5 +38,6 @@
     {"date": "2014-09-30", "class": "org important", "title": "outside funding", "url": "http://www.redditblog.com/2014/09/fundraising-for-reddit.html"},
     {"date": "2014-10-15", "class": "org", "title": "Alien Blue acquired", "url": "http://www.redditblog.com/2014/10/the-alien-has-landed.html"},
     {"date": "2014-11-13", "class": "org important", "title": "new CEO and return of kn0thing", "url": "http://www.redditblog.com/2014/11/coming-home.html"},
+    {"date": "2014-11-28", "class": "culture", "title": "foods over rice", "url": "https://www.reddit.com/r/WTF/comments/1qkd9x/secret_staircase_reveals_terrifying_secret"},
     {"date": "2014-12-19", "class": "org", "title": "reddit notes announced", "url": "http://www.redditblog.com/2014/12/announcing-reddit-notes.html"}
 ]
