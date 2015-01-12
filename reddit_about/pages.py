@@ -98,11 +98,16 @@ class Advertising(Templated):
         self.help = sections.get('help')
         blurbs = SelfServeBlurb.get_all(return_dict=True)
         if 'platform' in blurbs:
-            formatted_cpm = format_currency(g.cpm_selfserve_collection.decimal, 'USD', locale=c.locale)
+            min_cpm = min([
+                g.cpm_selfserve_collection,
+                g.cpm_selfserve,
+                g.cpm_selfserve_geotarget_metro,
+            ]).decimal
+            formatted_min_cpm = format_currency(min_cpm, 'USD', locale=c.locale)
             formatted_min_bid = format_currency(g.min_promote_bid, 'USD', locale=c.locale)
             blurbs['platform'].text = blurbs['platform'].text.replace(
                 '[min_promote_bid]', formatted_min_bid).replace(
-                '[cpm_selfserve]', formatted_cpm)
+                '[cpm_selfserve]', formatted_min_cpm)
         self.blurbs = blurbs.values()
         self.advertiser_logos = SelfServeAdvertiser.get_all()
         self.quotes = SelfServeQuote.get_all()
