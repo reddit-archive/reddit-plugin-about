@@ -1138,6 +1138,21 @@
             "wpm": 74
         },
         {
+            "description": "Hamster trainer.",
+            "favorite_subreddits": [
+                "/r/aww",
+                "/r/pottery"
+            ],
+            "name": "Florence Yeun",
+            "new": 201501,
+            "pyro": 0,
+            "role": "Software Engineer",
+            "role_details": "Hampster Dance",
+            "top": 1.6256,
+            "username": "florwat",
+            "wpm": 78
+        },
+        {
             "RI": 9999,
             "description": "Mike metaphorically tears down walls and constructs bridges. You know, sales.",
             "favorite_subreddits": [
