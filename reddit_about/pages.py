@@ -42,21 +42,23 @@ class About(Templated):
 
 
 class Team(Templated):
-    def __init__(self, team, alumni, sorts, extra_sorts):
-        Templated.__init__(self, team=team, alumni=alumni, sorts=sorts + extra_sorts)
+    def __init__(self, sorts, team, alumni):
+        Templated.__init__(self, sorts=sorts, team=team, alumni=alumni)
 
-        sort_buttons = []
-        extra_sort_index = random.randint(len(sorts), len(self.sorts)-1)
-        for idx, sort in enumerate(self.sorts):
-            css_class = 'choice-'+sort['id']
-            if sort in extra_sorts and idx != extra_sort_index:
-                css_class += ' hidden-sort'
-            button = OffsiteButton(sort['title'], '#sort/'+sort['id'], css_class=css_class)
-            sort_buttons.append(button)
-        self.sort_menu = NavMenu(sort_buttons, title=_('sorted by'), base_path=request.path, type='lightdrop', default='#sort/random')
-
-        # The caching check won't catch the hidden-sort classes
-        self.sort_menu.cachable = False
+        sort_buttons = [
+            OffsiteButton(
+                sort["title"],
+                "#sort/" + sort["id"],
+                css_class="choice-" + sort["id"],
+            )
+            for sort in sorts.values()]
+        self.sort_menu = NavMenu(
+            sort_buttons, 
+            title=_("sorted by"),
+            base_path=request.path,
+            type="lightdrop",
+            default="#sort/random",
+        )
 
 
 class AdvertisingPage(FormPage):

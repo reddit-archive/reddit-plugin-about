@@ -14,6 +14,7 @@ from r2.models.builder import IDBuilder
 from r2.models.keyvalue import NamedGlobals
 from r2.lib.db.queries import CachedResults
 from r2.lib.template_helpers import static, comment_label
+from reddit_about.models import TeamMember
 from reddit_about.pages import (
     About,
     AboutPage,
@@ -64,12 +65,23 @@ class AboutController(RedditController):
         ).render()
 
     def GET_team(self):
-        team_data = g.plugins['about'].team_data
-        all_sorts = team_data['sorts'] + team_data['extra_sorts']
-        c.js_preload.set('#sorts', all_sorts)
-        c.js_preload.set('#team', team_data['team'])
-        c.js_preload.set('#alumni', team_data['alumni'])
-        content = Team(**team_data)
+        sort_names = ["random", "username", "new", "height", "pyromania", "wpm"]
+        sorts = {name: {"id": name, "title": name, "dir": -1}
+            for name in sort_names}
+        sorts["height"]["title"] = "top"
+        sorts["wpm"]["title"] = "words per minute"
+        sorts["username"]["dir"] = 1
+
+        all_members = TeamMember.get_all()
+        team = [member for member in all_members if not member.is_alumni]
+        alumni = [member for member in all_members if member.is_alumni]
+
+        c.js_preload.set('#sorts', sorts.values())
+        c.js_preload.set('#team', [member.__dict__ for member in team])
+        c.js_preload.set('#alumni', [member.__dict__ for member in alumni])
+
+        content = Team(sorts, team, alumni)
+
         return AboutPage(
             content_id='about-team',
             title_msg=_('we spend our days building reddit.'),

@@ -22,6 +22,7 @@ class About(Plugin):
             'wiki_page_selfserve_blurbs',
             'wiki_page_selfserve_quotes',
             'wiki_page_selfserve_help',
+            'wiki_page_team_members',
         ],
     }
 
@@ -61,5 +62,4 @@ class About(Plugin):
         for idx, event in enumerate(self.timeline_data):
             self.timeline_data[idx]['date'] = parse_date_text(event['date'])
         self.sites_data = load('sites.json')
-        self.team_data = load('team.json')
         self.colors_data = load('colors.json')

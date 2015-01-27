@@ -8,6 +8,38 @@ from r2.models import Frontpage
 from r2.models.wiki import WikiPageIniItem
 
 
+class TeamMember(WikiPageIniItem):
+    """Information about reddit team members."""
+
+    _bool_values = WikiPageIniItem._bool_values + ("is_alumni",)
+
+    @classmethod
+    def _get_wiki_config(cls):
+        return Frontpage, g.wiki_page_team_members
+
+    def __init__(self, id, name, description, role, role_details, new,
+            image_url, hover_image_url=None, favorite_subreddits=None,
+            pyromania=None, height=None, wpm=None, is_alumni=False):
+        self.is_enabled = True
+        self.username = id
+        self.name = name
+        self.description = description
+        self.role = role
+        self.role_details = role_details
+        self.new = new
+        self.image_url = image_url
+        self.hover_image_url = hover_image_url
+        if favorite_subreddits:
+            self.favorite_subreddits = [sr.strip()
+                for sr in favorite_subreddits.split(",")]
+        else:
+            favorite_subreddits = []
+        self.pyromania = int(pyromania) if pyromania else None
+        self.height = float(height) if height else None
+        self.wpm = int(wpm) if wpm else None
+        self.is_alumni = is_alumni
+
+
 class SelfServeAdvertiser(WikiPageIniItem):
     """Information about reddit advertisers."""
 
