@@ -5,3 +5,9 @@
   ${parent.stylesheet()}
   ${less_stylesheet('selfserve.less')}
 </%def>
+
+<%def name="javascript_bottom()">
+  ${parent.javascript_bottom()}
+  <% from r2.lib import js %>
+  ${unsafe(js.use('advertising'))}
+</%def>
