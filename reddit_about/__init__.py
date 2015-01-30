@@ -38,7 +38,11 @@ class About(Plugin):
             'about-team.js',
             'about-postcards.js',
             prefix='about/',
-        )
+        ),
+        'advertising': Module('advertising.js',
+            'advertising.js',
+            prefix='advertising/',
+        ),
     }
 
     def add_routes(self, mc):
