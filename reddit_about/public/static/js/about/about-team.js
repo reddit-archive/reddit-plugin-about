@@ -106,20 +106,31 @@ SortableCollection = Backbone.Collection.extend({
         this.state.on('change:sort', this.sort, this)
     },
 
-    comparator: function(model) {
-        var sort = this.sorts.get(this.state.get('sort'))
-        if (!sort) {
-            return
+    comparator: function(modelA, modelB) {
+        var sort = this.sorts.get(this.state.get('sort'));
+        var sortKey, sortDir;
+
+        if (sort) {
+            sortKey = sort.id;
+            sortDir = sort.get('dir');
+        } else {
+            sortKey = 'random';
+            sortDir = 1;
         }
 
-        var sortVal = model.get(sort.id)
-        if (_.isNumber(sortVal)) {
-            sortVal = sortVal * sort.get('dir')
-        } else if (_.isString(sortVal)) {
-            sortVal = sortVal.toLowerCase()
+        var a = modelA.get(sortKey);
+        var b = modelB.get(sortKey);
+
+        if (typeof a === 'string') {
+            a = a.toLowerCase();
         }
-        return sortVal || model.get('random')
-    }
+
+        if (typeof b === 'string') {
+            b = b.toLowerCase();
+        }
+
+        return sortDir * (a < b ? -1 : a > b ? 1 : 0);
+    },
 })
 
 PersonDetailsPopup = Backbone.View.extend({
