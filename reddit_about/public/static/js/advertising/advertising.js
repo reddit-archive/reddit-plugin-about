@@ -9,7 +9,7 @@
     $('a[href*=redditadvertising]').on('click', function() {
       // get the name of the nearest parent element with a selfserve-* css class
       // so the sales team can tell which instance of the link it is
-      var parentClass = $(this).parents('[class^=selfserve]').eq(0).attr('class');
+      var parentClass = $(this).closest('[class^=selfserve]').attr('class');
       r.analytics.fireGAEvent('advertising', 'contactLinkClicked', parentClass, this.href);
     });
   });
