@@ -121,6 +121,14 @@ SortableCollection = Backbone.Collection.extend({
         var a = modelA.get(sortKey);
         var b = modelB.get(sortKey);
 
+        if (typeof a === 'string') {
+            a = a.toLowerCase();
+        }
+
+        if (typeof b === 'string') {
+            b = b.toLowerCase();
+        }
+
         return sortDir * (a < b ? -1 : a > b ? 1 : 0);
     },
 })
