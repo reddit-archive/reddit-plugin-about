@@ -73,6 +73,10 @@ def traffic_stats(config, ranges):
 def ga_stats(config, ranges):
     stats = {}
 
+    # We currently sample google analytics sessions, so we need to
+    # multiply to determine the true visitor count. e.g. '50' for 50%.
+    SAMPLE_MULTIPLIER = 100 / float(g.googleanalytics_sample_rate)
+
     from apiclient.discovery import build
     from oauth2client.file import Storage
     from oauth2client.client import OAuth2WebServerFlow
@@ -114,7 +118,9 @@ def ga_stats(config, ranges):
         metrics='ga:visitors',
         filters='ga:customVarValue3=@loggedin'
     ).execute()
-    stats['redditors_visited_yesterday'] = int(day_loggedin_stats['totalsForAllResults']['ga:visitors'])
+
+    visitors = int(day_loggedin_stats['totalsForAllResults']['ga:visitors'])
+    stats['redditors_visited_yesterday'] = int(visitors * SAMPLE_MULTIPLIER)
     return stats
 
 
