@@ -75,7 +75,7 @@ def ga_stats(config, ranges):
 
     # We currently sample google analytics sessions, so we need to
     # multiply to determine the true visitor count. e.g. '50' for 50%.
-    SAMPLE_MULTIPLIER = 100 / int(g.googleanalytics_sample_rate)
+    SAMPLE_MULTIPLIER = 100 / float(g.googleanalytics_sample_rate)
 
     from apiclient.discovery import build
     from oauth2client.file import Storage
@@ -120,7 +120,7 @@ def ga_stats(config, ranges):
     ).execute()
 
     visitors = int(day_loggedin_stats['totalsForAllResults']['ga:visitors'])
-    stats['redditors_visited_yesterday'] = visitors * SAMPLE_MULTIPLIER
+    stats['redditors_visited_yesterday'] = int(visitors * SAMPLE_MULTIPLIER)
     return stats
 
 
