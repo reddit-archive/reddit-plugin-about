@@ -79,7 +79,7 @@ class Advertising(Templated):
             NavButton(_('overview'), '/advertising'),
             NavButton(_('getting started'), '/wiki/selfservenew?utm_source=advertising&utm_medium=button&utm_term=getting%20started&utm_campaign=buttons'),
             NavButton(_('audience'), '/wiki/mediakit?utm_source=advertising&utm_medium=button&utm_term=audience&utm_campaign=buttons'),
-            NavButton(_('best practices'), '/wiki/selfserve?utm_source=advertising&utm_medium=button&utm_term=best%20practices&utm_campaign=buttons#wiki_what_are_the_best_practices_for_reddit_advertising.3F'),
+            NavButton(_('best practices'), '/wiki/brandiquette?utm_source=advertising&utm_medium=button&utm_term=best%20practices&utm_campaign=buttons'),
             NavButton(_('help center'), '/wiki/selfserve?utm_source=advertising&utm_medium=button&utm_term=help%20center&utm_campaign=buttons'),
             NavButton(_('manage ads'), '/promoted?utm_source=advertising&utm_medium=button&utm_term=manage%20ads&utm_campaign=buttons'),
         ]
