@@ -1,8 +1,11 @@
+@import "components/mixins.less";
+
 @uitext: #336699;
 @lightbg: #eff7ff;
 @accentblue: #5f99cf;
 @accentblue-hover: lighten(desaturate(@accentblue, 7%), 30%);
 @lightblue: #cee3f8;
+@lightgray: #555;
 
 .transition (@property, @duration, @function: ease, @delay: 0s) {
     -webkit-transition: @arguments;
@@ -150,8 +153,8 @@
         background: @lightbg;
         border-bottom: 3px solid @accentblue;
         margin: 0;
-        width: 815px;
-        padding-left: 135px;
+        width: 895px;
+        padding-left: 55px;
 
         & li {
             margin-right: 15px;
@@ -169,7 +172,7 @@
                 text-align: center;
 
                 &:hover {
-                    color: #555;
+                    color: @lightgray;
                     border-color: darken(@accentblue-hover, 10%);
                     background: @accentblue-hover;
                 }
@@ -285,7 +288,7 @@
 
     #slideshow {
         margin-top: 20px;
-        color: #555;
+        color: @lightgray;
 
         .image {
             position: relative;
@@ -370,7 +373,7 @@
             }
 
             .value {
-                color: #555;
+                color: @lightgray;
                 font-weight: bold;
                 font-size: 44px;
                 letter-spacing: -.1em;
@@ -836,9 +839,9 @@
                 background: url('../throbber.gif') center center no-repeat;
                 cursor: pointer;
 
-                box-shadow: 0 0 4px #555;
+                box-shadow: 0 0 4px @lightgray;
                 .no-boxshadow & {
-                    border: 1px solid #555;
+                    border: 1px solid @lightgray;
                 }
             }
         }
@@ -966,7 +969,7 @@
             width: 25px;
             height: 25px;
             background: #f7f7f7 url('../about/close.png') center center no-repeat;
-            border: 2px solid #555;
+            border: 2px solid @lightgray;
             border-radius: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,.5);
             opacity: .9;
@@ -1060,6 +1063,61 @@
             .color-code {
                 display: block;
                 font-weight: bold;
+            }
+        }
+    }
+}
+
+#about-values {
+
+    .container {
+        width: 950px;
+    }
+
+    .image-container {
+        width: 300px;
+        float: left;
+        box-sizing: border-box;
+        padding: 2em 1em;
+    }
+
+    .angel-snoo-graphic {
+        width: 276px;
+        height: 913px;
+        .hdpi-bg-image(@1x: url(../about/angelic-alien.png); @2x: url(../about/angelic-alien@2x.png););
+    }
+
+    .core-values-container {
+        float: right;
+        width: 650px;
+        box-sizing: border-box;
+        padding: 2em 1em 0em 1.5em;
+
+        h1 {
+            color: @lightgray;
+            font-size: 1.7em;
+            line-height: 1.5em;
+            margin: 0 0 1em 0;
+        }
+    }
+
+    ol.core-values {
+
+        h3 {
+            font-size: 1.3em;
+            margin-bottom: 0.7em;
+        }
+
+        ul.value-detail {
+            margin-left: 2em;
+            margin-bottom: 2em;
+            list-style: disc;
+            color: @lightgray;
+
+            li {
+                font-size: 0.9em;
+                line-height: 1.5em;
+                padding-bottom: 0.2em;
             }
         }
     }

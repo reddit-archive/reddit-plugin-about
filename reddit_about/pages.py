@@ -22,6 +22,7 @@ class AboutPage(BoringPage):
     def content(self):
         about_buttons = [
             NavButton(_('about reddit'), '/'),
+            NavButton(_('values'), '/values'),
             NavButton(_('team'), '/team'),
             NavButton(_('postcards'), '/postcards'),
             NavButton(_('alien'), '/alien'),
@@ -38,6 +39,10 @@ class AboutTitle(Templated):
 
 
 class About(Templated):
+    pass
+
+
+class Values(Templated):
     pass
 
 

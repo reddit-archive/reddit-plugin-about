@@ -24,6 +24,7 @@ from reddit_about.pages import (
     AlienMedia,
     Postcards,
     Team,
+    Values,
 )
 from r2.lib.pages.things import wrap_links
 from r2.models import Link, WikiPage
@@ -113,6 +114,15 @@ class AboutController(RedditController):
             content_id='about-guide',
             title_msg=_('new to reddit? welcome.'),
             pagename=_('guide'),
+        ).render()
+
+    def GET_values(self):
+        content = Values()
+        return AboutPage(
+            content_id='about-values',
+            title_msg=_('these are our core values'),
+            pagename=_('values'),
+            content=content,
         ).render()
 
     def GET_advertising(self):
