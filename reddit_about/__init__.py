@@ -49,7 +49,7 @@ class About(Plugin):
         # handle wildcard after /about/:action/ for postcard pushState URLs.
         for route in ('/about/:action', '/about/:action/*etc'):
             mc(route, controller='about', conditions={'function':not_in_sr},
-               requirements={'action':'team|postcards|alien'})
+               requirements={'action':'team|postcards|alien|values'})
         mc('/ad_inq', controller='redirect', action='redirect',
             dest='/advertising')
         mc('/advertising', controller='about', action='advertising', 
