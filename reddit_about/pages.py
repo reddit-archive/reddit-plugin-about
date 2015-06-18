@@ -82,10 +82,10 @@ class Advertising(Templated):
     def __init__(self, *args, **kwargs):
         nav_buttons = [
             NavButton(_('overview'), '/advertising'),
-            NavButton(_('getting started'), '/wiki/selfservenew?utm_source=advertising&utm_medium=button&utm_term=getting%20started&utm_campaign=buttons'),
-            NavButton(_('audience'), '/wiki/mediakit?utm_source=advertising&utm_medium=button&utm_term=audience&utm_campaign=buttons'),
-            NavButton(_('best practices'), '/wiki/brandiquette?utm_source=advertising&utm_medium=button&utm_term=best%20practices&utm_campaign=buttons'),
-            NavButton(_('help center'), '/wiki/selfserve?utm_source=advertising&utm_medium=button&utm_term=help%20center&utm_campaign=buttons'),
+            OffsiteButton(_('getting started'), 'https://reddit.zendesk.com/hc/en-us/articles/205118995-Step-by-step-How-to-create-an-ad'),
+            OffsiteButton(_('audience'), 'https://reddit.zendesk.com/hc/en-us/articles/205183225-Audience-and-Demographics'),
+            OffsiteButton(_('best practices'), 'https://reddit.zendesk.com/hc/en-us/sections/200863319-Best-Practices-Tips'),
+            OffsiteButton(_('help center'), 'https://reddit.zendesk.com/hc/en-us/categories/200352595-Advertising-'),
             NavButton(_('manage ads'), '/promoted?utm_source=advertising&utm_medium=button&utm_term=manage%20ads&utm_campaign=buttons'),
         ]
 
