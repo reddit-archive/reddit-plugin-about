@@ -1,8 +1,21 @@
 !function(r, $) {
   'use strict';
+
+  var _getActionDetails = r.login.ui._getActionDetails;
+
+  r.login.ui._getActionDetails = function(el) {
+    var $el = $(el);
+    var details = $el.data('action-details');
+
+    if (details) {
+      return details;
+    }
+
+    return _getActionDetails.apply(this, arguments);
+  };
   
   $(function() {
-    $('a[href]').on('click', function(e) {
+    $('a[href]:not(.login-required)').on('click', function(e) {
       var el = this;
       var $el = $(el);
       var href = $el.attr('href');
