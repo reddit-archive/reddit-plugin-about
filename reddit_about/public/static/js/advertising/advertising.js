@@ -2,6 +2,7 @@
   'use strict';
 
   var _getActionDetails = r.login.ui._getActionDetails;
+  var _showLogin = r.ui.LoginPopup.prototype.showLogin;
 
   r.login.ui._getActionDetails = function(el) {
     var $el = $(el);
@@ -12,6 +13,24 @@
     }
 
     return _getActionDetails.apply(this, arguments);
+  };
+
+  r.ui.LoginPopup.prototype.showLogin = function() {
+    var $email = this.$.find('[name=email]');
+    var $form = $email.closest('form');
+    var label = r._('email');
+
+    $form.append('<input type="hidden" name="sponsor" value="true">');
+
+    $email
+      .attr('placeholder', label)
+      .data('validate-url', '/api/check_email.json?sponsor=true')
+      .data('validate-noclear', true);
+    $email.closest('.c-form-group')
+      .find('label')
+      .text(label);
+
+    return _showLogin.apply(this, arguments);
   };
   
   $(function() {
