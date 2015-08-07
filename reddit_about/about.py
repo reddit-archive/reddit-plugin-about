@@ -136,6 +136,7 @@ class AboutController(RedditController):
             "advertise",
             content=content,
             loginbox=False,
+            header=False,
         ).render()
 
     advertising_link_id36_re = re.compile("^.*/comments/(\w+).*$")
