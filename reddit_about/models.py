@@ -1,4 +1,4 @@
-from pylons import g
+from pylons import app_globals as g
 
 from r2.lib.template_helpers import (
     make_url_protocol_relative

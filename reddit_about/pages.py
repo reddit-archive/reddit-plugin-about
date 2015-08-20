@@ -2,7 +2,9 @@ import random
 import string
 
 from babel.numbers import format_currency
-from pylons import request, g, c
+from pylons import request
+from pylons import app_globals as g
+from pylons import tmpl_context as c
 from pylons.i18n import _
 from r2.lib.pages import Templated, BoringPage, FormPage
 from r2.lib.menus import NavMenu, NavButton, OffsiteButton

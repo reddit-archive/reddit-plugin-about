@@ -4,7 +4,8 @@ from os import path
 from itertools import chain
 from datetime import datetime
 
-from pylons import g, c
+from pylons import app_globals as g
+from pylons import tmpl_context as c
 from pylons.i18n import _
 
 from r2.controllers import add_controller
