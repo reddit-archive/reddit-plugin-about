@@ -168,10 +168,11 @@ PersonDetailsPopup = Backbone.View.extend({
         this.$el.empty().append(this.template(this.model.toJSON()))
         var favorite_srs = this.$('.favorite-subreddits ul')
         _.each(this.model.get('favorite_subreddits'), function(sr) {
+            sr = sr.replace(/^\/?r\//, '');
             $('<li>').append(
                 $('<a>')
-                    .attr('href', sr)
-                    .text(sr)
+                    .attr('href', '/r/' + sr)
+                    .text('r/' + sr)
             ).appendTo(favorite_srs)
         })
     },
