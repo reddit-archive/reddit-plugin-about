@@ -10,7 +10,7 @@ from r2.lib.pages import Templated, BoringPage, FormPage
 from r2.lib.menus import NavMenu, NavButton, OffsiteButton
 from r2.lib.db.tdb_cassandra import NotFound
 from r2.models import WikiPage, Frontpage
-from reddit_about.models import *
+from reddit_skeleton.models import *
 
 
 class AboutPage(BoringPage):

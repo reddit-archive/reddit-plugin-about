@@ -1,3 +1,3 @@
-recursive-include reddit_about/public *
-recursive-include reddit_about/templates *
-recursive-include reddit_about/data *
+recursive-include reddit_skeleton/public *
+recursive-include reddit_skeleton/templates *
+recursive-include reddit_skeleton/data *
