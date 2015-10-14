@@ -1,21 +1,20 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
 
-setup(name='reddit_about',
-    description='reddit about pages',
+setup(name='reddit_skeleton',
+    description='reddit skeleton plugin based on about plugin: https://github.com/reddit/reddit-plugin-about',
     version='0.1',
-    author='Max Goodman',
-    author_email='max@reddit.com',
+    author='James Jones',
+    author_email='james.voip+reddit-dev@gmail.com',
     packages=find_packages(),
     install_requires=[
         'r2',
     ],
     extras_require={
-        'stats': ['google-api-python-client'],
     },
     entry_points={
         'r2.plugin':
-            ['about = reddit_about:About']
+            ['skeleton = reddit_skeleton:Skeleton']
     },
     include_package_data=True,
     zip_safe=False,
