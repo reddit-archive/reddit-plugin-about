@@ -1,8 +1,9 @@
-# reddit about pages plugin
+# reddit skeleton plugin
 
-This plugin adds a series of /about/ pages to reddit containing quotes, photos,
-postcards, stats, and the reddit team bios.
+This plugin is a skeleton to give you an idea about where to start when writting plugins
+reddit.
 
+This skeleton is based on the the about plugin found here: https://github.com/reddit/reddit-plugin-about
 ## installation
 
 First, install the python package:
@@ -12,18 +13,10 @@ First, install the python package:
 To enable the plugin, you will need to add it to the plugins line of your
 reddit .ini file:
 
-    plugins = about
+    plugins = skeleton
 
-Finally, configure the plugin in your reddit .ini file:
-
-    # set which subreddits the about page pulls its source data from
-    # make sure you create the subreddits as well, otherwise you'll get an error
-    about_sr_quotes = about_quotes
-    about_sr_images = about_images
-    
-    # these options place a size limit on the slideshow
-    about_images_count = 50
-    about_images_min_score = 1
+Finally, configure the plugin in your reddit .ini file. The settings will depend on what you are looking
+for in your code.
 
 To build static files for production, run `make` in the main reddit repository.
 It will detect, build, and merge in the about plugin static files for

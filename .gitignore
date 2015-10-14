@@ -2,3 +2,5 @@
 reddit_about.egg-info
 .DS_Store
 build/
+.idea
+
