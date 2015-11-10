@@ -15,6 +15,7 @@ from r2.models.builder import IDBuilder
 from r2.models.keyvalue import NamedGlobals
 from r2.lib.db.queries import CachedResults
 from r2.lib.template_helpers import static, comment_label
+from r2.lib.validator import VNotInTimeout
 from reddit_about.models import TeamMember
 from reddit_about.pages import (
     About,
@@ -127,6 +128,7 @@ class AboutController(RedditController):
         ).render()
 
     def GET_advertising(self):
+        VNotInTimeout().run(action_name="pageview", details_text="advertising")
         subreddit_links = self._get_selfserve_links(3)
 
         content = Advertising(
