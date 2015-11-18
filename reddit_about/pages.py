@@ -113,9 +113,10 @@ class Advertising(Templated):
                 g.cpm_selfserve_geotarget_metro.decimal,
             ])
             formatted_min_cpm = format_currency(min_cpm, 'USD', locale=c.locale)
-            formatted_min_bid = format_currency(g.min_promote_bid, 'USD', locale=c.locale)
+            formatted_min_budget = format_currency(
+                g.min_total_budget_pennies / 100., 'USD', locale=c.locale)
             blurbs['platform'].text = blurbs['platform'].text.replace(
-                '[min_promote_bid]', formatted_min_bid).replace(
+                '[min_promote_bid]', formatted_min_budget).replace(
                 '[cpm_selfserve]', formatted_min_cpm)
         self.blurbs = blurbs.values()
         self.advertiser_logos = SelfServeAdvertiser.get_all()
