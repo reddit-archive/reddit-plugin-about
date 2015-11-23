@@ -5,7 +5,7 @@ import httplib2
 import ConfigParser
 from collections import defaultdict
 
-from pylons import g
+from pylons import app_globals as g
 import sqlalchemy as sa
 
 from r2.models import Link, Comment
