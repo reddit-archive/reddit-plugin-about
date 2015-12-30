@@ -74,8 +74,8 @@ def query_graphite(config, time_range, query):
     # looks like [{"target": query, "datapoints": [[value, time]]}]
     json_response = response.json()
     target_data = json_response[0]
-    value, timestamp = target_data["datapoints"][0]
-    return value
+    value, timestamp = target_data["datapoints"][-1]  # the most recent value
+    return int(value)
 
 
 def vote_stats(config, ranges):
