@@ -3,18 +3,20 @@ import time
 import datetime
 import httplib2
 import ConfigParser
+import urllib
+import urlparse
+import posixpath
 from collections import defaultdict
 
 from pylons import app_globals as g
 import sqlalchemy as sa
+import requests
 
 from r2.models import Link, Comment
-from r2.models.vote import LinkVoteDetailsByDay, CommentVoteDetailsByDay
 from r2.models.keyvalue import NamedGlobals
 from r2.models.traffic import SitewidePageviews
 from r2.lib.db.tdb_sql import get_thing_table
 from r2.lib.db.operators import asc, desc
-from r2.lib.utils import timeago
 
 
 def subreddit_stats(config, ranges):
@@ -48,12 +50,40 @@ def subreddit_stats(config, ranges):
     return {'subreddits_active_yesterday': len(list(count for count in sr_counts.itervalues() if count > 5))}
 
 
+def query_graphite(config, time_range, query):
+    graphite_url = urlparse.urlparse(config.get("about_stats", "graphite_url"))
+
+    start_time, end_time = time_range
+    query_url = urlparse.urlunsplit((
+        graphite_url.scheme,
+        graphite_url.netloc,
+        posixpath.join(graphite_url.path, "render"),
+        urllib.urlencode((
+            ("format", "json"),
+            ("from", start_time.strftime("%H:%M_%Y%m%d")),
+            ("to", end_time.strftime("%H:%M_%Y%m%d")),
+            ("target", query),
+            ("tz", "America/Los_Angeles"),
+        )),
+        None,
+    ))
+
+    response = requests.get(query_url, timeout=30)
+    response.raise_for_status()
+
+    # looks like [{"target": query, "datapoints": [[value, time]]}]
+    json_response = response.json()
+    target_data = json_response[0]
+    value, timestamp = target_data["datapoints"][0]
+    return value
+
+
 def vote_stats(config, ranges):
     stats = {}
 
-    yesterday = ranges['yesterday'][1]
-    stats['link_vote_count_yesterday'] = LinkVoteDetailsByDay.count_votes(yesterday)
-    stats['comment_vote_count_yesterday'] = CommentVoteDetailsByDay.count_votes(yesterday)
+    yesterday = ranges['yesterday']
+    stats['link_vote_count_yesterday'] = query_graphite(config, yesterday, 'hitcount(stats.timers.cassandra.LinkVotesByAccount.batch_mutate.ok.rate, "1d")')
+    stats['comment_vote_count_yesterday'] = query_graphite(config, yesterday, 'hitcount(stats.timers.cassandra.CommentVotesByAccount.batch_mutate.ok.rate, "1d")')
     stats['vote_count_yesterday'] = stats['link_vote_count_yesterday'] + stats['comment_vote_count_yesterday']
     return stats
 
