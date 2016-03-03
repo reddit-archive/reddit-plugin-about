@@ -1,30 +1,9 @@
 <%!
-  from r2.lib.template_helpers import make_url_protocol_relative
+  from r2.lib.template_helpers import static
 %>
 
-<%def name="person_grid(id, data)">
-  <ul id="${id}" class="inner people-grid">
-    %for person in data:
-      <li class="person ${person.username}">
-        <img class="avatar"
-          src="${make_url_protocol_relative(person.image_url)}"
-          alt="${person.username}'s avatar"
-          %if person.hover_image_url:
-            onmouseover="this.src='${make_url_protocol_relative(person.hover_image_url)}'"
-            onmouseout="this.src='${make_url_protocol_relative(person.image_url)}'"
-          %endif
-        >
-          <div class="username">${person.username}</div>
-      </li>
-    %endfor
-  </ul>
-</%def>
-
-<div class="sort-menu">
-  ${thing.sort_menu}
+<div class="future">
+  <h1>${_("We're cooking something up.")}</h1>
+  <img src="${static('about/future.png')}" srcset="${static('about/future@2x.png')} 2x" alt="${_("snoos at work")}">
+  <h2>${_("Watch this space for something new soon.")}</h2>
 </div>
-${person_grid('team-grid', thing.team)}
-<h2 class="centered">reddit alumni</h2>
-${person_grid('alumni-grid', thing.alumni)}
-
-<script>$('.people-grid').addClass('loading')</script>
