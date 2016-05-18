@@ -22,16 +22,7 @@ class AboutPage(BoringPage):
         self.title_msg = title_msg
 
     def content(self):
-        about_buttons = [
-            NavButton(_('about reddit'), '/'),
-            NavButton(_('values'), '/values'),
-            NavButton(_('team'), '/team'),
-            NavButton(_('postcards'), '/postcards'),
-            NavButton(_('alien'), '/alien'),
-            #NavButton(_('guide'), '/guide')
-        ]
-        about_menu = NavMenu(about_buttons, type='tabmenu', base_path='/about/', css_class='about-menu')
-        return self.content_stack([AboutTitle(self.title_msg), about_menu, self._content])
+        return self.content_stack([AboutTitle(self.title_msg), self._content])
 
 
 class AboutTitle(Templated):
