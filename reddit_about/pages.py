@@ -10,7 +10,8 @@ from r2.lib.pages import Templated, BoringPage, FormPage
 from r2.lib.menus import NavMenu, NavButton, OffsiteButton
 from r2.lib.db.tdb_cassandra import NotFound
 from r2.models import WikiPage, Frontpage
-from reddit_about.models import *
+from reddit_about.models import SelfServeContent, SelfServeBlurb
+from reddit_about.models import SelfServeAdvertiser, SelfServeQuote
 
 
 class AboutPage(BoringPage):
@@ -31,43 +32,12 @@ class AboutTitle(Templated):
         self.message = message
 
 
-class About(Templated):
-    pass
-
-
-class Values(Templated):
-    pass
-
-
-class Team(Templated):
-    def __init__(self, sorts, team, alumni):
-        Templated.__init__(self, sorts=sorts, team=team, alumni=alumni)
-
-        sort_buttons = [
-            OffsiteButton(
-                sort["title"],
-                "#sort/" + sort["id"],
-                css_class="choice-" + sort["id"],
-            )
-            for sort in sorts.values()]
-        self.sort_menu = NavMenu(
-            sort_buttons, 
-            title=_("sorted by"),
-            base_path=request.path,
-            type="lightdrop",
-            default="#sort/random",
-        )
-
 
 class AdvertisingPage(FormPage):
     pass
 
 
 class Postcards(Templated):
-    pass
-
-
-class AlienMedia(Templated):
     pass
 
 
