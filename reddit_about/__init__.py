@@ -1,6 +1,3 @@
-from os import path
-import json
-
 from r2.lib.plugin import Plugin
 from r2.lib.configparse import ConfigValue
 from r2.lib.js import Module
@@ -11,10 +8,6 @@ class About(Plugin):
     needs_static_build = True
 
     config = {
-        ConfigValue.int: [
-            'about_images_count',
-            'about_images_min_score',
-        ],
         ConfigValue.str: [
             'advertising_links_sr',
             'wiki_page_selfserve_advertisers',
@@ -48,7 +41,7 @@ class About(Plugin):
     def add_routes(self, mc):
         mc('/about/postcards', controller='about', action='postcards',
             conditions={'function': not_in_sr})
-        # handle wildcard after /about/:action/ from postcard pushState URLs.
+        # handle wildcard from postcard pushState URLs.
         mc('/about/postcards/*etc', controller='about', action='postcards',
             conditions={'function': not_in_sr})
         mc('/ad_inq', controller='redirect', action='redirect',
@@ -57,14 +50,4 @@ class About(Plugin):
             conditions={'function':not_in_sr})
 
     def load_controllers(self):
-        def load(name):
-            with open(path.join(path.dirname(__file__), 'data', name)) as f:
-                data = json.load(f)
-            return data
-
-        from about import AboutController, parse_date_text
-        self.timeline_data = load('timeline.json')
-        for idx, event in enumerate(self.timeline_data):
-            self.timeline_data[idx]['date'] = parse_date_text(event['date'])
-        self.sites_data = load('sites.json')
-        self.colors_data = load('colors.json')
+        from about import AboutController
