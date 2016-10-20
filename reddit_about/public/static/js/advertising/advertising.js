@@ -64,5 +64,4 @@
       return newTab;
     });
   });
-
 }(r, jQuery);
