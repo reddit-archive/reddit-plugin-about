@@ -65,11 +65,4 @@
     });
   });
 
-  $(function() {
-    var conversion = document.createElement('img');
-
-    conversion.onload = conversion.onerror = changeLocation;
-    conversion.src = '//engine.a.redditmedia.com/e/5146/130267/e.gif?_=' + (new Date().getTime());
-  });
-
 }(r, jQuery);
