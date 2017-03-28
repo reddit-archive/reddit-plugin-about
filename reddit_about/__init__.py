@@ -46,8 +46,8 @@ class About(Plugin):
             conditions={'function': not_in_sr})
         mc('/ad_inq', controller='redirect', action='redirect',
             dest='/advertising')
-        mc('/advertising', controller='about', action='advertising', 
-            conditions={'function':not_in_sr})
+        mc('/advertising', controller='redirect', action='redirect', 
+            dest='https://about.reddit.com/advertise')
 
     def load_controllers(self):
         from about import AboutController
