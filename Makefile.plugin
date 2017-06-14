@@ -1,1 +1,1 @@
-LESS_STYLESHEETS += about.less selfserve.less
+LESS_STYLESHEETS += about.less
